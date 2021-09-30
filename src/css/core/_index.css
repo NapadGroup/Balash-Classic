@@ -1,0 +1,22 @@
+:root {
+  --primary-color: #ca8f21;
+  --secondary-color: #af7b19;
+  --bg-primary-color: #fff;
+  --bg-secondary-color: #f3f3f6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+*:before, *:after, * {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary-color);
+}
