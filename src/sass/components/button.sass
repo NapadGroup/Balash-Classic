@@ -1,0 +1,27 @@
+button
+    padding: 7.5px 10px
+    color: var(--color)
+    display: inline-block
+    transition: .2s
+    cursor: pointer
+    border: var(--secondary-color) 1px solid
+    border-radius: 5px
+    min-height: 25px
+    font-weight: 400
+    &:hover
+        color: var(--hover-color)
+        a
+            &:visited, &:active
+                color: var(--hover-color)
+    a
+        &:visited, &:active
+            color:  var(--color)
+    &:active
+        transform: scale(0.9)
+    &[theme="inline"]
+        background-color: var(--secondary-color)
+        &:hover
+            background: none
+    &[theme="outline"]
+        &:hover
+            background-color: var(--secondary-color)
