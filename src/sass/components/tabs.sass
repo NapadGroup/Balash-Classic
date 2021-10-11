@@ -1,6 +1,4 @@
-$primary-color: var(--primary-color)
-
-@import ../../../../Gass/design/color
+@import ../../../../GodUi-Mixin/src/GodUi-Mixin
 
 tabs
     display: flex
@@ -8,7 +6,7 @@ tabs
         padding: 5px
         flex: 0 1 auto
         a:hover, &[active]
-            color: $primary-color
+            color: var(--primary-color)
         padding: 5px 7.5px
         transition-duration: 200ms
         &:hover
