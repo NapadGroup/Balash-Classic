@@ -1,6 +1,12 @@
 button
     --color: var(--secondary-color)
-    padding: 7.5px 10px
+    &.erorr
+        --color: #d12222
+    &.warn
+        --color: #ce6504
+    &.success
+        --color: #0bca15
+    padding: 10px 15px
     color: var(--text)
     display: inline-block
     transition: .2s
@@ -9,6 +15,7 @@ button
     border-radius: 5px
     min-height: 25px
     font-weight: 400
+    font-size: 16px
     &:hover
         color: var(--hover-text)
         a
