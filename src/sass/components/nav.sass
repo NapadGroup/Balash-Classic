@@ -1,0 +1,44 @@
+navbar
+    --bg-color: var(--bg-secondary-color)
+    --color: var(--secondary-color)
+    position: fixed
+    top: 0
+    background-color: var(--bg-color)
+    width: 100%
+    &[theme="boxed"]
+        padding: 15px
+        nav
+            display: flex
+            item
+                cursor: pointer
+                padding: 5px
+                flex: 0 1 auto
+                border-radius: 2.5px
+                margin-right: 5px
+                a
+                    transition: 300ms
+                a:visited
+                    color: initial
+                &:hover, &[active], a:hover
+                    color: var(--primary-color)
+                    
+    &[theme="simple"]
+        nav
+            display: flex
+            item
+                padding: 15px
+    nav
+        display: flex
+        flex-wrap: warp
+        item
+            right: 0
+            transition: 300ms
+            &[logo]
+                display: block
+                padding: 2px
+                @media screen and (min-width: 765px) 
+                    margin-right: auto
+            &:last-child
+                margin-right: 75px
+            &:not(&[logo]):hover, &[active]
+                background-color: var(--color)
