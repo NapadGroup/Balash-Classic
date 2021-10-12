@@ -18,11 +18,15 @@ button
         &:visited, &:active
             color:  var(--text)
     &:active
-        transform: scale(0.9)
+        transform: scale(.95)
     &[theme="inline"]
+        --text:#fff
+        --hover-text:#000
         background-color: var(--color)
         &:hover
             background: none
     &[theme="outline"]
+        --text:#000
+        --hover-text:#fff
         &:hover
             background-color: var(--color)
