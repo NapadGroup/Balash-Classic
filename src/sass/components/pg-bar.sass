@@ -1,0 +1,23 @@
+pgbar
+    --bar-color: var(--bg-secondary-color)
+    --active-color: var(--primary-color)
+    --color: #ffffff
+    display: inline-block
+    position: relative
+    min-width: 70%
+    min-height: 20px
+    border-radius: 2.5px
+    background-color: var(--bar-color)
+    filter: brightness(.75)
+    overflow: hidden
+    bar
+        position: absolute
+        display: flex
+        align-items: center
+        padding: 2px 5px
+        padding-left: calc( var(--active) / 2)
+        background-color: var(--active-color)
+        width: var(--active)
+        height: 100%
+        color: var(--color)
+        filter: brightness(1.15)
