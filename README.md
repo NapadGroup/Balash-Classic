@@ -1,3 +1,9 @@
-<div align="center">
+<div align="center" style=
+"background: linear-gradient(60deg, grey, lightgrey);border-radius: 5px;">
 
-# ![Github Banner](images/github-baner.png)
+<br>
+
+<img src="./images/GodUi-Logo.png">
+
+---
+</div>
