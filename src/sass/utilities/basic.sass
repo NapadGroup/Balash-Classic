@@ -1,0 +1,46 @@
+@import ../mixin/Mixin
+
+*[primary]
+    color: var(--primary-color)
+
+*[error]
+    color: $erorr-color
+
+*[warning]
+    color: $warn-color
+
+*[success]
+    color: $success-color
+
+*[bg-primary]
+    background-color: var(--primary-color)
+
+*[bg-error]
+    background-color: $erorr-color
+
+*[bg-warning]
+    background-color: $warn-color
+
+*[bg-success]
+    background-color: $success-color
+
+
+%bd
+    --bd-w: 1px
+    border: solid var(--bd-w)
+
+*[bd-primary]
+    @extend %bd
+    border-color: var(--primary-color)    
+
+*[bd-error]
+    @extend %bd
+    border-color: $erorr-color
+
+*[bd-warning]
+    @extend %bd
+    border-color: $warn-color
+
+*[bd-success]
+    @extend %bd
+    border-color: $success-color
