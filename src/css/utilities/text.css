@@ -1,0 +1,23 @@
+:is(p, h1, h2, h3, h4, h5, h6)[to-uppercase] {
+  text-transform: uppercase;
+}
+
+:is(p, h1, h2, h3, h4, h5, h6)[to-lowercase] {
+  text-transform: lowercase;
+}
+
+:is(p, h1, h2, h3, h4, h5, h6)[align-left] {
+  text-align: left;
+}
+
+:is(p, h1, h2, h3, h4, h5, h6)[align-right] {
+  text-align: right;
+}
+
+:is(p, h1, h2, h3, h4, h5, h6)[align-center] {
+  text-align: center;
+}
+
+:is(p, h1, h2, h3, h4, h5, h6)[align-justify] {
+  text-align: justify;
+}

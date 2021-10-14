@@ -11,6 +11,7 @@ navbar[theme=boxed] {
 }
 navbar[theme=boxed] nav {
   display: flex;
+  align-items: center;
 }
 navbar[theme=boxed] nav item {
   cursor: pointer;
