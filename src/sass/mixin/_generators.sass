@@ -1,4 +1,14 @@
-// Google font import generator
-
 @mixin google-font($family)
   @import url("http://fonts.googleapis.com/css?family=#{$family}")
+
+@mixin for-atter($atter-name, $name, $var-name...)
+  @for $num from 1 to length($var-name) + 1
+      $var: #{nth($var-name, $num)}
+      *[#{$atter-name + $var}]
+          #{$name}: $var
+
+@mixin for-class($class-name, $name, $var-name...)
+  @for $num from 1 to length($var-name) + 1
+      $var: #{nth($var-name, $num)}
+      .#{$class-name + $var}
+          #{$name}: $var
