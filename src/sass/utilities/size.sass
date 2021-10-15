@@ -1,0 +1,9 @@
+@for $width from 0 to 5
+    $w: $width * 25
+    *[#{'w-' + $w}]
+        width: #{$w + '%'}
+
+@for $height from 0 to 5
+    $h: $height * 25
+    *[#{'h-' + $h}]
+        height: #{$h + '%'}
