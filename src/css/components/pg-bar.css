@@ -8,8 +8,9 @@ pgbar {
   min-height: 20px;
   border-radius: 2.5px;
   background-color: var(--bar-color);
-  filter: brightness(0.75);
+  filter: none;
   overflow: hidden;
+  border-radius: 10px;
 }
 pgbar bar {
   position: absolute;
@@ -18,8 +19,9 @@ pgbar bar {
   padding: 2px 5px;
   padding-left: calc( var(--active) / 2);
   background-color: var(--active-color);
+  box-shadow: 2.5px 0px 0.5px var(--secondary-color);
   width: var(--active);
   height: 100%;
   color: var(--color);
-  filter: brightness(1.15);
+  filter: none;
 }
