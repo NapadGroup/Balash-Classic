@@ -1,0 +1,16 @@
+html {
+  background: url(../flash.svg);
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: 55% -40%;
+}
+
+.comming {
+  position: absolute;
+  top: 50vh;
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0px -10px 50px rgba(0, 0, 0, 0.2);
+}
