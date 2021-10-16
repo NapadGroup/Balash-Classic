@@ -1,0 +1,36 @@
+@import ../mixin/Mixin
+    
+input[type="checkbox"]
+    --color: var(--primary-color)
+    &[state="error"]
+        --color: #{$erorr-color}
+    &[state="warn"]
+        --color: #{$warn-color}
+    &[state="success"]
+        --color: #{$success-color}
+    -webkit-appearance: none
+    border: 1px solid $grey-600
+    border-radius: 5px
+    width: 20px
+    height: 20px
+    overflow: hidden
+    transition: 150ms
+    margin-right: 5px
+    cursor: pointer
+    &:checked
+        background-color: var(--color)
+        &::before
+            // content: "\2713"
+            position: absolute
+            content: "\2718"
+            padding: .25px 2px
+            color: white
+            font-size: 16px
+    &:focus
+        box-shadow: 0 0 5px var(--color)
+    &:disabled
+        cursor: default
+        &:checked
+            background-color: $grey-600
+            &::before
+                color: $grey-300
