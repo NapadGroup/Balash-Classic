@@ -14,7 +14,8 @@ input[type="checkbox"][toggle]
     transition: 250ms
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .2)
     &::before
-        cursor: pointer
+        &:not(&:disabled)
+            cursor: pointer
         content: ""
         z-index: 1
         position: absolute
@@ -27,6 +28,8 @@ input[type="checkbox"][toggle]
         box-shadow: 0 0 2px $grey-500
     &:checked
         background: var(--color)
+        &:disabled
+            background-color: $grey-700
         &::before
             left: 60%
             background: #fff
