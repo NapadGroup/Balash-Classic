@@ -1,0 +1,33 @@
+@import ../mixin/Mixin
+    
+input:is([type="text"], [type="email"], [type="password"])
+    --color: var(--primary-color)
+    position: relative
+    -webkit-appearance: none
+    border: 1px solid $grey-600
+    border-radius: 5px
+    min-height: 30px
+    min-width: 250px
+    padding: 7.5px
+    font-size: 16px
+    overflow: hidden
+    margin-right: 5px
+    cursor: pointer
+    transition: 150ms
+    &:focus
+        outline: none
+        box-shadow: 0 0 2.5px var(--color)
+
+// input[type="email"]
+//     padding-left: 30px
+//     z-index: 0
+//     &::before
+//         z-index: 1
+//         position: absolute
+//         content: "@"
+//         color: black
+//         background-color: black
+//         left: 0
+//         width: 30%
+//         height: 100%
+//         font-size: 16px
