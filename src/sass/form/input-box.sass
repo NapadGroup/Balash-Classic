@@ -1,0 +1,23 @@
+@import ../mixin/Mixin
+    
+inputbox
+    display: flex
+    min-height: 50px
+    align-items: center
+    width: 80%
+    position: relative
+    &[icon]
+        border: 1px solid $grey-600
+        border-radius: 10px
+        i
+            padding: 5px 10px
+            font-size: 28px
+            flex: 0 1 auto
+        input
+            border: none
+            flex: 1 1 auto
+            min-width: auto
+            &:focus
+                box-shadow: none
+    &[disable]
+        color: $grey-700
