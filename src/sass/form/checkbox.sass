@@ -1,6 +1,6 @@
 @import ../mixin/Mixin
     
-input[type="checkbox"]
+input[type="checkbox"]:not(input[type="checkbox"][toggle])
     --color: var(--primary-color)
     &[state="error"]
         --color: #{$erorr-color}
