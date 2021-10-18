@@ -1,6 +1,7 @@
 .tooltip-box
     position: relative
     tooltip
+        --width: -75px
         z-index: 1
         display: inline-block
         opacity: 0
@@ -16,6 +17,8 @@
         font-size: 12px
         border-radius: 2.5px
         text-align: center
+        min-width: 50px
+        max-width: var(--width)
         &[top-left]
             left: 0
             transform: none
@@ -48,24 +51,24 @@
     &:hover > tooltip, &:focus > tooltip
         opacity: 1
         display: inline-block
-        bottom: 115%
+        bottom: calc( 100% + 10px )
         &[top-left]
-            left: -50%
-            bottom: 110%
+            left: var(--width)
+            bottom: calc( 100% + 10px )
         &[top-right]
-            right: -50%
-            bottom: 110%
+            right: var(--width)
+            bottom: calc( 100% + 10px )
         &[left]
-            left: -50%
-            bottom: 50%
+            left: var(--width)
+            bottom: calc( 100% + 10px )
         &[right]
-            right: -50%
-            bottom: 50%
+            right: var(--width)
+            bottom: calc( 100% + 10px )
         &[bottom]
-            bottom: -65%
+            bottom: calc( -50% + -10px )
         &[bottom-left]
-            left: -50%
-            bottom: -65%
+            left: var(--width)
+            bottom: calc( -50% + -10px )
         &[bottom-right]
-            right: -50%
-            bottom: -65%
+            right: var(--width)
+            bottom: calc( -50% + -10px )
