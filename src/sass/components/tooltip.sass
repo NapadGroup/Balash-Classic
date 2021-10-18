@@ -1,0 +1,71 @@
+.tooltip-box
+    position: relative
+    tooltip
+        z-index: 1
+        display: inline-block
+        opacity: 0
+        background-color: rgba(0, 0, 0, .75)
+        position: absolute
+        left: 50%
+        bottom: 95%
+        transition: .5s
+        transform: translate(-50%, 0%)
+        color: white
+        padding: 5px 10px
+        font-weight: 300
+        font-size: 12px
+        border-radius: 2.5px
+        text-align: center
+        &[top-left]
+            left: 0
+            transform: none
+            bottom: 100%
+        &[top-right]
+            left: auto
+            right: 0
+            transform: none
+            bottom: 100%
+        &[left]
+            left: 0
+            transform: translate(0, 50%)
+            bottom: 50%
+        &[right]
+            left: auto
+            right: 0
+            transform: translate(0, 50%)
+            bottom: 50%
+        &[bottom]
+            bottom: 5%
+        &[bottom-left]
+            left: 0
+            transform: none
+            bottom: 5%
+        &[bottom-right]
+            left: auto
+            transform: none
+            right: 0
+            bottom: 5%
+    &:hover > tooltip, &:focus > tooltip
+        opacity: 1
+        display: inline-block
+        bottom: 115%
+        &[top-left]
+            left: -50%
+            bottom: 110%
+        &[top-right]
+            right: -50%
+            bottom: 110%
+        &[left]
+            left: -50%
+            bottom: 50%
+        &[right]
+            right: -50%
+            bottom: 50%
+        &[bottom]
+            bottom: -65%
+        &[bottom-left]
+            left: -50%
+            bottom: -65%
+        &[bottom-right]
+            right: -50%
+            bottom: -65%
