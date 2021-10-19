@@ -1,0 +1,27 @@
+inputbox {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  width: 80%;
+  position: relative;
+}
+inputbox[icon] {
+  border: 1px solid #757575;
+  border-radius: 10px;
+}
+inputbox[icon] i {
+  padding: 5px 10px;
+  font-size: 28px;
+  flex: 0 1 auto;
+}
+inputbox[icon] input {
+  border: none;
+  flex: 1 1 auto;
+  min-width: auto;
+}
+inputbox[icon] input:focus {
+  box-shadow: none;
+}
+inputbox[disable] {
+  color: #616161;
+}

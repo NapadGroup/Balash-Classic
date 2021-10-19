@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --primary-color: #ca8f21;
   --secondary-color: #af7b19;
@@ -332,6 +333,98 @@ pagi item:hover:not(pagi item[active], pagi item[disable]) {
 }
 pagi item:not(pagi item:first-child) {
   border-left: none;
+}
+
+.tooltip-box {
+  position: relative;
+}
+.tooltip-box tooltip {
+  --width: -75px;
+  z-index: 1;
+  display: inline-block;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  left: 50%;
+  bottom: 95%;
+  transition: 0.5s;
+  transform: translate(-50%, 0%);
+  color: white;
+  padding: 5px 10px;
+  font-weight: 300;
+  font-size: 12px;
+  border-radius: 2.5px;
+  text-align: center;
+  min-width: 50px;
+  max-width: var(--width);
+}
+.tooltip-box tooltip[top-left] {
+  left: 0;
+  transform: none;
+  bottom: 100%;
+}
+.tooltip-box tooltip[top-right] {
+  left: auto;
+  right: 0;
+  transform: none;
+  bottom: 100%;
+}
+.tooltip-box tooltip[left] {
+  left: 0;
+  transform: translate(0, 50%);
+  bottom: 50%;
+}
+.tooltip-box tooltip[right] {
+  left: auto;
+  right: 0;
+  transform: translate(0, 50%);
+  bottom: 50%;
+}
+.tooltip-box tooltip[bottom] {
+  bottom: 5%;
+}
+.tooltip-box tooltip[bottom-left] {
+  left: 0;
+  transform: none;
+  bottom: 5%;
+}
+.tooltip-box tooltip[bottom-right] {
+  left: auto;
+  transform: none;
+  right: 0;
+  bottom: 5%;
+}
+.tooltip-box:hover > tooltip, .tooltip-box:focus > tooltip {
+  opacity: 1;
+  display: inline-block;
+  bottom: calc( 100% + 10px );
+}
+.tooltip-box:hover > tooltip[top-left], .tooltip-box:focus > tooltip[top-left] {
+  left: var(--width);
+  bottom: calc( 100% + 10px );
+}
+.tooltip-box:hover > tooltip[top-right], .tooltip-box:focus > tooltip[top-right] {
+  right: var(--width);
+  bottom: calc( 100% + 10px );
+}
+.tooltip-box:hover > tooltip[left], .tooltip-box:focus > tooltip[left] {
+  left: var(--width);
+  bottom: calc( 100% + 10px );
+}
+.tooltip-box:hover > tooltip[right], .tooltip-box:focus > tooltip[right] {
+  right: var(--width);
+  bottom: calc( 100% + 10px );
+}
+.tooltip-box:hover > tooltip[bottom], .tooltip-box:focus > tooltip[bottom] {
+  bottom: calc( -50% + -10px );
+}
+.tooltip-box:hover > tooltip[bottom-left], .tooltip-box:focus > tooltip[bottom-left] {
+  left: var(--width);
+  bottom: calc( -50% + -10px );
+}
+.tooltip-box:hover > tooltip[bottom-right], .tooltip-box:focus > tooltip[bottom-right] {
+  right: var(--width);
+  bottom: calc( -50% + -10px );
 }
 
 *[primary] {
@@ -880,6 +973,174 @@ pagi item:not(pagi item:first-child) {
 
 *[h-100] {
   height: 100%;
+}
+
+input[type=checkbox]:not(input[type=checkbox][toggle]) {
+  --color: var(--primary-color);
+  -webkit-appearance: none;
+  border: 1px solid #757575;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  transition: 150ms;
+  margin-right: 5px;
+  cursor: pointer;
+}
+input[type=checkbox]:not(input[type=checkbox][toggle])[state=error] {
+  --color: #d12222;
+}
+input[type=checkbox]:not(input[type=checkbox][toggle])[state=warn] {
+  --color: #ce6504;
+}
+input[type=checkbox]:not(input[type=checkbox][toggle])[state=success] {
+  --color: #0bca15;
+}
+input[type=checkbox]:not(input[type=checkbox][toggle]):checked {
+  background-color: var(--color);
+}
+input[type=checkbox]:not(input[type=checkbox][toggle]):checked::before {
+  position: absolute;
+  content: "✘";
+  padding: 0.25px 2px;
+  color: white;
+  font-size: 16px;
+}
+input[type=checkbox]:not(input[type=checkbox][toggle]):focus {
+  box-shadow: 0 0 5px var(--color);
+}
+input[type=checkbox]:not(input[type=checkbox][toggle]):disabled {
+  cursor: default;
+}
+input[type=checkbox]:not(input[type=checkbox][toggle]):disabled:checked {
+  background-color: #757575;
+}
+input[type=checkbox]:not(input[type=checkbox][toggle]):disabled:checked::before {
+  color: #e0e0e0;
+}
+
+inputbox {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  width: 80%;
+  position: relative;
+}
+inputbox[icon] {
+  border: 1px solid #757575;
+  border-radius: 10px;
+}
+inputbox[icon] i {
+  padding: 5px 10px;
+  font-size: 28px;
+  flex: 0 1 auto;
+}
+inputbox[icon] input {
+  border: none;
+  flex: 1 1 auto;
+  min-width: auto;
+}
+inputbox[icon] input:focus {
+  box-shadow: none;
+}
+inputbox[disable] {
+  color: #616161;
+}
+
+input[type=radio] {
+  --color: var(--primary-color);
+  position: relative;
+  -webkit-appearance: none;
+  border: 1px solid #757575;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  background: var(--color);
+  margin-right: 5px;
+  cursor: pointer;
+}
+input[type=radio]::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: 250ms;
+}
+input[type=radio]:checked::before {
+  content: "";
+  width: 60%;
+  height: 60%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+input[type=radio]:focus {
+  box-shadow: 0 0 2.5px var(--color);
+}
+
+input:is([type="text"], [type="email"], [type="password"]) {
+  --color: var(--primary-color);
+  position: relative;
+  -webkit-appearance: none;
+  border: 1px solid #757575;
+  border-radius: 5px;
+  min-height: 30px;
+  min-width: 250px;
+  padding: 7.5px;
+  font-size: 16px;
+  overflow: hidden;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 150ms;
+}
+input:is([type="text"], [type="email"], [type="password"]):focus {
+  outline: none;
+  box-shadow: 0 0 2.5px var(--color);
+}
+
+input[type=checkbox][toggle] {
+  --color: var(--primary-color);
+  -webkit-appearance: none;
+  border: 1px solid #757575;
+  border-radius: 15px;
+  width: 45px;
+  height: 20px;
+  margin-right: 5px;
+  overflow: hidden;
+  position: relative;
+  padding: 2px;
+  transition: 250ms;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+input[type=checkbox][toggle]::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  background: #bdbdbd;
+  width: 32.5%;
+  height: 80%;
+  border-radius: 50%;
+  left: 7.5%;
+  transition: left 0.5s, background 50ms;
+  box-shadow: 0 0 2px #9e9e9e;
+}
+input[type=checkbox][toggle]::before:not(input[type=checkbox][toggle]::before:disabled) {
+  cursor: pointer;
+}
+input[type=checkbox][toggle]:checked {
+  background: var(--color);
+}
+input[type=checkbox][toggle]:checked:disabled {
+  background-color: #616161;
+}
+input[type=checkbox][toggle]:checked::before {
+  left: 60%;
+  background: #fff;
+  box-shadow: 0 0 2px #f5f5f5;
 }
 
 .flex-dir-column {
@@ -1832,4 +2093,41 @@ pagi item:not(pagi item:first-child) {
   .flex-xl-wrap-reverse {
     flex-wrap: wrap-reverse;
   }
+}
+
+.row .col-1 {
+  flex: 1;
+}
+.row .col-2 {
+  flex: 2;
+}
+.row .col-3 {
+  flex: 3;
+}
+.row .col-4 {
+  flex: 4;
+}
+.row .col-5 {
+  flex: 5;
+}
+.row .col-6 {
+  flex: 6;
+}
+.row .col-7 {
+  flex: 7;
+}
+.row .col-8 {
+  flex: 8;
+}
+.row .col-9 {
+  flex: 9;
+}
+.row .col-10 {
+  flex: 10;
+}
+.row .col-11 {
+  flex: 11;
+}
+.row .col-12 {
+  flex: 12;
 }
