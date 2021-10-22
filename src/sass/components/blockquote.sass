@@ -1,0 +1,35 @@
+blockquote
+    text-indent: 10px
+    position: relative
+    padding: 2.5px
+    padding: 5px 10px
+    font-weight: 400
+    font-size: 1.05rem
+    subquote
+        font-size: 1rem
+        font-weight: 300
+        position: absolute
+        bottom: -20px
+        left: -5px
+        &::before
+            content: "- "
+    &::after
+        font-size: 1.25rem
+        content: "\301E"
+        position: absolute
+    &::before
+        font-size: 1.25rem
+        content: "\301E"
+        position: absolute
+        left: -5px
+    &[modern]
+        padding: 5px 10px
+        font-weight: 400
+        font-size: 1.05rem
+        &::before
+            left: -5px
+        border-left: 2.5px solid var(--primary-color)
+        border-radius: 10px
+        background-color: var(--bg-secondary-color)
+        subquote
+            display: inline
