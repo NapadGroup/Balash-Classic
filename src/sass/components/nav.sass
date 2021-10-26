@@ -1,9 +1,13 @@
 navbar
-    --bg-color: var(--bg-secondary-color)
     --color: var(--secondary-color)
     position: fixed
-    top: 0
-    background-color: var(--bg-color)
+    background-color: rgba(255, 255, 255, 0.75)
+    &[dark]
+        background-color: rgba(0, 0, 0, .75)
+        nav
+            item 
+                color: #dbdbdb
+    z-index: 10
     width: 100%
     &[theme="boxed"]
         padding: 15px
@@ -21,7 +25,7 @@ navbar
                 a:visited
                     color: initial
                 &:hover, &[active], a:hover
-                    color: var(--primary-color)
+                    color: white
                     
     &[theme="simple"]
         nav
