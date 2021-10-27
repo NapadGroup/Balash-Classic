@@ -1,12 +1,11 @@
-<div align="center" style=
-"background: linear-gradient(60deg, grey, lightgrey);border-radius: 5px;">
+<div align="center">
 
-<br>
+<img src="./images/banner.jpg" width="750px">
 
-<img src="./images/GodUi-Logo.png">
+**GodUi** the Fast, lightweight & esey Web Ui Framework
+
+[GNU Affero General Public License version 3](https://opensource.org/licenses/AGPL-3.0)
 
 ---
 
-</div>
-
-GodUi the Fast and Esey Web Ui Framework
+**By** [GGroup](https://github.com/GodratGroup) &copy;
