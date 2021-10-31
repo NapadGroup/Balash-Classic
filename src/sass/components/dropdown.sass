@@ -1,0 +1,28 @@
+dropdown
+    position: relative
+    display: inline-block
+    drop
+        z-index: 10
+        min-width: 100px
+        transition: 250ms
+        opacity: 0
+        visibility: hidden
+        border-radius: 2.5px
+        background-color: var(--bg-secondary-color)
+        position: absolute
+        top: calc( 100% + 15px )
+        display: flex
+        flex-direction: column
+        padding: 5px 7.5px
+        item
+            padding: 2px 5px
+            border-radius: 1px
+            transition: 50ms
+            margin-bottom: 2px
+            color: #000
+            &:hover
+                background-color: var(--secondary-color)
+                color: #fff
+    &:hover drop
+        opacity: 1
+        visibility: visible
