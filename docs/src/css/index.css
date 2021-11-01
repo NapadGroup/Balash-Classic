@@ -1,6 +1,6 @@
 body {
   z-index: -1;
-  background: url(../flash.svg);
+  background: url(../flash.png);
   background-size: 300px;
   background-position-x: center;
   background-position-y: -50%;
@@ -24,11 +24,11 @@ body::before {
   max-width: 960px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
-.main div:not(#import) {
+.main div:not(#static) {
   position: absolute;
   visibility: hidden;
 }
-.main div:not(#import):target {
+.main div:not(#static):target {
   position: inherit;
   visibility: visible;
 }
