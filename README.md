@@ -4,7 +4,7 @@
 
 **GodUi** the Fast, lightweight & esey Web Ui Framework
 
-[GNU Affero General Public License version 3](https://opensource.org/licenses/AGPL-3.0)
+[GNU Lesser General Public License version 3](https://opensource.org/licenses/LGPL-3.0)
 
 ---
 
