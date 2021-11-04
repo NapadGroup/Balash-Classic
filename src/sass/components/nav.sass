@@ -1,19 +1,22 @@
 navbar
     --color: var(--secondary-color)
-    position: fixed
-    background-color: rgba(255, 255, 255, 0.75)
+    --bg-color: var(--bg-secondary-color)
     &[dark]
-        background-color: rgba(0, 0, 0, .75)
         nav
             item 
                 color: #dbdbdb
+            & > input[menu]
+                border-bottom: 1px solid white
+            & > input[menu]:checked
+                &::before
+                    color: white
+    background-color: var(--bg-color)
     z-index: 10
+    display: block
     width: 100%
     &[theme="boxed"]
         padding: 15px
         nav
-            display: flex
-            align-items: center
             item
                 cursor: pointer
                 padding: 5px
@@ -29,13 +32,14 @@ navbar
                     
     &[theme="simple"]
         nav
-            display: flex
-            item
+            @media screen and (max-width: 654px)
+                padding-top: 15px
+            & > item
                 padding: 15px
     nav
         display: flex
-        flex-wrap: warp
-        item
+        align-items: center
+        & > item
             right: 0
             transition: 300ms
             &[logo]
@@ -43,7 +47,51 @@ navbar
                 padding: 2px
                 @media screen and (min-width: 765px) 
                     margin-right: auto
-            &:last-child
-                margin-right: 75px
+                    &:last-child
+                        margin-right: 75px
             &:not(&[logo]):hover, &[active]
                 background-color: var(--color)
+        & > input[menu]
+            position: absolute
+            visibility: visible
+            -webkit-appearance: none
+            border-radius: 5px
+            border-bottom: 1px solid black
+            width: 20px
+            height: 20px
+            overflow: hidden
+            transition: 50ms
+            cursor: pointer
+            left: 15px
+            &::before
+                content: "\2718"
+                position: absolute
+                padding: .25px 2px
+                color: grey
+                font-size: 16px
+        & > input[menu]:checked
+            &::before
+                // content: "\2713"
+                position: absolute
+                content: "\2718"
+                padding: .25px 2px
+                color: black
+                font-size: 16px
+        @media screen and (min-width: 654px)     
+            & > input[menu]
+                visibility: hidden
+        @media screen and (max-width: 654px)
+            flex-direction: column
+            & > item 
+                margin-bottom: 2.5px
+                transition: background-color 150ms, opacity 500ms, margin-bottom 500ms
+                &:not(&[logo])
+                    opacity: 0
+                    visibility: hidden
+                    position: absolute
+            & > input[menu]:checked ~ item
+                opacity: 1
+                visibility: visible
+                position: inherit
+                &[logo]
+                    margin-bottom: 15px
