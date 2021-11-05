@@ -1,17 +1,23 @@
+@charset "UTF-8";
 navbar {
-  --bg-color: var(--bg-secondary-color);
   --color: var(--secondary-color);
-  position: fixed;
-  top: 0;
+  --bg-color: var(--bg-secondary-color);
   background-color: var(--bg-color);
+  z-index: 10;
+  display: block;
   width: 100%;
+}
+navbar[dark] nav item {
+  color: #dbdbdb;
+}
+navbar[dark] nav > input[menu] {
+  border-bottom: 1px solid white;
+}
+navbar[dark] nav > input[menu]:checked::before {
+  color: white;
 }
 navbar[theme=boxed] {
   padding: 15px;
-}
-navbar[theme=boxed] nav {
-  display: flex;
-  align-items: center;
 }
 navbar[theme=boxed] nav item {
   cursor: pointer;
@@ -27,34 +33,90 @@ navbar[theme=boxed] nav item a:visited {
   color: initial;
 }
 navbar[theme=boxed] nav item:hover, navbar[theme=boxed] nav item[active], navbar[theme=boxed] nav item a:hover {
-  color: var(--primary-color);
+  color: white;
 }
-navbar[theme=simple] nav {
-  display: flex;
+@media screen and (max-width: 654px) {
+  navbar[theme=simple] nav {
+    padding-top: 15px;
+  }
 }
-navbar[theme=simple] nav item {
+navbar[theme=simple] nav > item {
   padding: 15px;
 }
 navbar nav {
   display: flex;
-  flex-wrap: warp;
+  align-items: center;
 }
-navbar nav item {
+navbar nav > item {
   right: 0;
   transition: 300ms;
 }
-navbar nav item[logo] {
+navbar nav > item[logo] {
   display: block;
   padding: 2px;
 }
 @media screen and (min-width: 765px) {
-  navbar nav item[logo] {
+  navbar nav > item[logo] {
     margin-right: auto;
   }
+  navbar nav > item[logo]:last-child {
+    margin-right: 75px;
+  }
 }
-navbar nav item:last-child {
-  margin-right: 75px;
-}
-navbar nav item:not(navbar nav item[logo]):hover, navbar nav item[active] {
+navbar nav > item:not(navbar nav > item[logo]):hover, navbar nav > item[active] {
   background-color: var(--color);
+}
+navbar nav > input[menu] {
+  position: absolute;
+  visibility: visible;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  border-bottom: 1px solid black;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  transition: 50ms;
+  cursor: pointer;
+  left: 15px;
+}
+navbar nav > input[menu]::before {
+  content: "✘";
+  position: absolute;
+  padding: 0.25px 2px;
+  color: grey;
+  font-size: 16px;
+}
+navbar nav > input[menu]:checked::before {
+  position: absolute;
+  content: "✘";
+  padding: 0.25px 2px;
+  color: black;
+  font-size: 16px;
+}
+@media screen and (min-width: 654px) {
+  navbar nav > input[menu] {
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 654px) {
+  navbar nav {
+    flex-direction: column;
+  }
+  navbar nav > item {
+    margin-bottom: 2.5px;
+    transition: background-color 150ms, opacity 500ms, margin-bottom 500ms;
+  }
+  navbar nav > item:not(navbar nav > item[logo]) {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  navbar nav > input[menu]:checked ~ item {
+    opacity: 1;
+    visibility: visible;
+    position: inherit;
+  }
+  navbar nav > input[menu]:checked ~ item[logo] {
+    margin-bottom: 15px;
+  }
 }

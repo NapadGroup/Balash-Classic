@@ -1,0 +1,47 @@
+@charset "UTF-8";
+blockquote {
+  text-indent: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 1.05rem;
+}
+blockquote subquote {
+  font-size: 1rem;
+  font-weight: 300;
+}
+blockquote subquote::before {
+  content: "- ";
+}
+blockquote quote {
+  padding: 1px 5px;
+  margin-bottom: 5px;
+}
+blockquote quote::after {
+  font-size: 1.25rem;
+  content: "〞";
+  position: absolute;
+}
+blockquote quote::before {
+  font-size: 1.25rem;
+  content: "〞";
+  position: absolute;
+  left: -2px;
+}
+blockquote[modern] {
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 1.05rem;
+  border-left: 2.5px solid var(--primary-color);
+  border-radius: 10px;
+  background-color: var(--bg-secondary-color);
+}
+blockquote[modern]::before {
+  left: -5px;
+}
+blockquote[modern] subquote {
+  display: inline;
+  margin-bottom: 2.5px;
+}

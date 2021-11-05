@@ -10,8 +10,8 @@
   margin: 0;
   text-decoration: none;
 }
-*:visited {
-  color: auto;
+*:any-link {
+  color: var(--primary-color);
 }
 *:before, *:after, * {
   box-sizing: inherit;
