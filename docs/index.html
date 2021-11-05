@@ -6,7 +6,6 @@
     <title>GodUi</title>
     <meta name="description" content="Godratmand Web Ui Framework">
     <link rel="shortcut icon" href="./src/GodUi-Logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="src/css/GodUi.css">
     <link rel="stylesheet" href="src/css/index.min.css">
 </head>
 <body theme="phonix"><shaft>
@@ -73,7 +72,256 @@
 }</code></pre>
         </div>
         <div id="components">
-            
+            <h4>Components</h4>
+            <p>the GodUi Components..</p>
+            <br><br>
+            <p title>PG Bar</p>
+            <pgbar>
+                <bar style="--active:25%">25%</bar>
+            </pgbar>
+            <br>
+            <pre><code><xmp><pgbar>
+    <bar style="--active:25%">25%</bar>
+</pgbar></xmp></code></pre>
+            <br>
+            <p>use <code>--color</code> & <code>--active-color</code> css var to chenge color's</p>
+            <br><br>
+            <p title>Tabs</p>
+            <tabs theme="toggle">
+                <tab active>tab 1</tab>
+                <tab>tab 2</tab>
+                <tab>tab 3</tab>
+                <tab>tab 4</tab>
+                <tab>tab 5</tab>
+            </tabs>
+            <pre><code><xmp><tabs theme="toggle">
+    <tab active>tab 1</tab>
+    <tab>tab 2</tab>
+    <tab>tab 3</tab>
+    <tab>tab 4</tab>
+    <tab>tab 5</tab>
+</tabs></xmp></code></pre>
+            <br>
+            <tabs theme="box">
+                <tab active>tab 1</tab>
+                <tab>tab 2</tab>
+                <tab>tab 3</tab>
+                <tab>tab 4</tab>
+                <tab>tab 5</tab>
+            </tabs>
+            <pre><code><xmp><tabs theme="box">
+    <tab active>tab 1</tab>
+    <tab>tab 2</tab>
+    <tab>tab 3</tab>
+    <tab>tab 4</tab>
+    <tab>tab 5</tab>
+</tabs></xmp></code></pre>
+            <br>
+            <tabs theme="modern">
+                <tab active>tab 1</tab>
+                <tab>tab 2</tab>
+                <tab>tab 3</tab>
+                <tab>tab 4</tab>
+                <tab>tab 5</tab>
+            </tabs>
+            <pre><code><xmp><tabs theme="modern">
+    <tab active>tab 1</tab>
+    <tab>tab 2</tab>
+    <tab>tab 3</tab>
+    <tab>tab 4</tab>
+    <tab>tab 5</tab>
+</tabs></xmp></code></pre>
+            <br><br>
+            <p title>Navbar</p>
+            <navbar theme="boxed">
+                <nav>
+                    <input type="checkbox" menu>
+                    <item logo>item 1</item>
+                    <item>item 2</item>
+                    <item>item 3</item>
+                    <item>item 4</item>
+                    <item>item 5</item>
+                </nav>
+            </navbar>
+            <pre><code><xmp><navbar theme="boxed">
+    <nav>
+        <input type="checkbox" menu>
+        <item logo>item 1</item>
+        <item>item 2</item>
+        <item>item 3</item>
+        <item>item 4</item>
+        <item>item 5</item>
+    </nav>
+</navbar></xmp></code></pre>
+            <navbar theme="simple">
+                <nav>
+                    <input type="checkbox" menu>
+                    <item logo>item 1</item>
+                    <item>item 2</item>
+                    <item>item 3</item>
+                    <item>item 4</item>
+                    <item>item 5</item>
+                </nav>
+            </navbar>
+            <pre><code><xmp><navbar theme="simple">
+    <nav>
+        <input type="checkbox" menu>
+        <item logo>item 1</item>
+        <item>item 2</item>
+        <item>item 3</item>
+        <item>item 4</item>
+        <item>item 5</item>
+    </nav>
+</navbar></xmp></code></pre>
+            <p>To change the color mode of texts from <code>dark</code> attribute use</p>
+            <p>and chenge bg color with <code>--bg-color</code> css var</p>
+            <br><br>
+            <p title>Pagination</p>
+            <pagi>
+                <item disable></item>
+                <item>1</item>
+                <item>2</item>
+                <item active>3</item>
+                <item>4</item>
+                <item>5</item>
+                <item></item>
+            </pagi>
+            <pre><code><xmp><pagi>
+    <item disable></item>
+    <item>1</item>
+    <item>2</item>
+    <item active>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item></item>
+</pagi></xmp></code></pre>
+            <br><br>
+            <p title>Button</p>
+            <button theme="inline">Button</button>
+            <pre><code><xmp><button theme="inline">Button</button></xmp></code></pre>
+            <br>
+            <button theme="outline">Button</button>
+            <pre><code><xmp><button theme="outline">Button</button></xmp></code></pre>
+            <br>
+            <p>use <code>warn</code>, <code>error</code>, <code>success</code> Class to Chenge button color</p>
+            <p>and <code>--color</code> css var for chenge button color to custom color</p>
+            <br><br>
+            <p title>Alert</p>
+            <button theme="outline"><a href="#alert">Click to show</a></button>
+            <alert id="alert">
+                <p title>Title</p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis repudiandae, delectus fuga, necessitatibus illo sapiente consequuntur, vitae optio eaque neque? Est itaque cupiditate inventore cumque suscipit, quod aspernatur, illum dolore voluptatem necessitatibus consequuntur impedit. Quasi accusamus non cupiditate omnis minima corrupti, voluptatum cum. Praesentium consequatur molestiae aliquid doloremque eveniet!
+            <a href="#components" close></a></alert>
+            <pre><code><xmp><button theme="outline"><a href="#alert">Click to show</a></button>
+<alert id="alert">
+    <p title>Title</p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus debitis repudiandae, delectus fuga, necessitatibus illo sapiente consequuntur, vitae optio eaque neque? Est itaque cupiditate inventore cumque suscipit, quod aspernatur, illum dolore voluptatem necessitatibus consequuntur impedit. Quasi accusamus non cupiditate omnis minima corrupti, voluptatum cum. Praesentium consequatur molestiae aliquid doloremque eveniet!
+<a href="#" close></a></alert></xmp></code></pre>
+            <br><br>
+            <p title>Blockquote</p>
+            <blockquote>
+                <quote> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptate laborum enim voluptatem? Accusantium quia sed molestiae dolore ad! Ullam cupiditate, vel quidem fugit eligendi quod error porro ea repellat, quas deserunt cum corrupti quia accusantium enim facilis beatae dignissimos! Numquam officia ea ratione, dolor excepturi aperiam eveniet at beatae. </quote>
+            <subquote>pedaret</subquote> 
+            </blockquote>
+            <pre><code><xmp><blockquote>
+    <quote> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptate laborum enim voluptatem? Accusantium quia sed molestiae dolore ad! Ullam cupiditate, vel quidem fugit eligendi quod error porro ea repellat, quas deserunt cum corrupti quia accusantium enim facilis beatae dignissimos! Numquam officia ea ratione, dolor excepturi aperiam eveniet at beatae. </quote>
+    <subquote>pedaret</subquote> 
+</blockquote></xmp></code></pre>
+            <blockquote modern>
+                <quote> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptate laborum enim voluptatem? Accusantium quia sed molestiae dolore ad! Ullam cupiditate, vel quidem fugit eligendi quod error porro ea repellat, quas deserunt cum corrupti quia accusantium enim facilis beatae dignissimos! Numquam officia ea ratione, dolor excepturi aperiam eveniet at beatae. </quote>
+                <subquote>pedaret</subquote> 
+            </blockquote>
+        <pre><code><xmp><blockquote modern>
+    <quote> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptate laborum enim voluptatem? Accusantium quia sed molestiae dolore ad! Ullam cupiditate, vel quidem fugit eligendi quod error porro ea repellat, quas deserunt cum corrupti quia accusantium enim facilis beatae dignissimos! Numquam officia ea ratione, dolor excepturi aperiam eveniet at beatae. </quote>
+    <subquote>pedaret</subquote> 
+</blockquote></xmp></code></pre>
+            <br><br>
+            <p title>Tooltip</p>
+            <div class="tooltips d-flex flex-wrap">
+                <div class="tooltip-box" bd-primary>
+                    ToolTip
+                    <tooltip>Tool Tip</tooltip>
+                </div>
+                <div class="tooltip-box" bd-primary>
+                    ToolTip top left
+                    <tooltip top-left>Tool Tip</tooltip>
+                </div>
+                <div class="tooltip-box" bd-primary>
+                    ToolTip top right
+                    <tooltip top-right>Tool Tip</tooltip>
+                </div>
+                <div class="tooltip-box" bd-primary>
+                    ToolTip left
+                    <tooltip left>Tool Tip</tooltip>
+                </div>
+                <div class="tooltip-box" bd-primary>
+                    ToolTip right
+                    <tooltip right>Tool Tip</tooltip>
+                </div>
+                <div class="tooltip-box" bd-primary>
+                    ToolTip bottom
+                    <tooltip bottom>Tool Tip</tooltip>
+                </div>
+                <div class="tooltip-box" bd-primary>
+                    ToolTip bottom left
+                    <tooltip bottom-left>Tool Tip</tooltip>
+                </div>
+                <div class="tooltip-box" bd-primary>
+                    ToolTip bottom right
+                    <tooltip bottom-right>Tool Tip</tooltip>
+                </div>
+            </div>
+            <pre><code><xmp><div class="tooltip-box" bd-primary>
+    ToolTip
+    <tooltip>Tool Tip</tooltip>
+</div>
+<div class="tooltip-box" bd-primary>
+    ToolTip top left
+    <tooltip top-left>Tool Tip</tooltip>
+</div>
+<div class="tooltip-box" bd-primary>
+    ToolTip top right
+    <tooltip top-right>Tool Tip</tooltip>
+</div>
+<div class="tooltip-box" bd-primary>
+    ToolTip left
+    <tooltip left>Tool Tip</tooltip>
+</div>
+<div class="tooltip-box" bd-primary>
+    ToolTip right
+    <tooltip right>Tool Tip</tooltip>
+</div>
+<div class="tooltip-box" bd-primary>
+    ToolTip bottom
+    <tooltip bottom>Tool Tip</tooltip>
+</div>
+<div class="tooltip-box" bd-primary>
+    ToolTip bottom left
+    <tooltip bottom-left>Tool Tip</tooltip>
+</div>
+<div class="tooltip-box" bd-primary>
+    ToolTip bottom right
+    <tooltip bottom-right>Tool Tip</tooltip>
+</div></xmp></code></pre>
+        <br><br>
+        <p title>Dropdown</p>
+        <dropdown>Dropdown<drop>
+        <item>item 1</item>
+        <item>item 2</item>
+        <item>item 3</item>
+        <item>item 4</item>
+        <item>item 5</item>
+        </drop></dropdown>
+        <br><br>
+        <pre><code><xmp><dropdown>Dropdown<drop>
+<item>item 1</item>
+<item>item 2</item>
+<item>item 3</item>
+<item>item 4</item>
+<item>item 5</item>
+</drop></dropdown></xmp></code></pre>
+        <br>
+        <p>you can use dropdown in button, tab and nav item..</p>
         </div>
         <div id="utilities">
             

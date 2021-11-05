@@ -1,6 +1,8 @@
+@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/GodUi.css)
+    
 .main
     padding: 20px
-    div
+    & > div
         &:not(#static)
             position: absolute
             visibility: hidden
@@ -8,6 +10,11 @@
                 position: inherit
                 visibility: visible
 
+.tooltips
+    div
+        padding: 10px 15px
+        margin-right: 15px
+        margin-bottom: 10px
 pre
     text-align: left
     border-radius: 6px
@@ -20,3 +27,6 @@ code
     font-size: 14px
     display: inline-block
     line-height: 1.4em
+
+button
+    border-width: 1px
