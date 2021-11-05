@@ -6,24 +6,71 @@
     <title>GodUi</title>
     <meta name="description" content="Godratmand Web Ui Framework">
     <link rel="shortcut icon" href="./src/GodUi-Logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://ghcdn.rawgit.org/GodratGroup/GodUi/main/src/css/GodUi.min.css">
-    <link rel="stylesheet" href="../src/css/GodUi.css">
+    <link rel="stylesheet" href="src/css/GodUi.css">
     <link rel="stylesheet" href="src/css/index.min.css">
 </head>
-<body>
-    <div class="main d-flex flex-dir-column align-items-center position-relative of-hidden" center block>
+<body theme="phonix"><shaft>
+    <navbar theme="boxed" style="--bg-color:transparent">
+        <nav>
+            <input type="checkbox" menu>
+            <item logo><img src="./src/GodUi-Logo.png"></item>
+            <item><a href="#setup">Setup</a></item>
+            <item><a href="#components">Components</a></item>
+            <item><a href="#utilities">Utilities</a></item>
+            <item><a href="#layout">Layout</a></item>
+            <item><a href="#about">About</a></item>
+        </nav>
+    </navbar>
+    <div class="main d-flex flex-dir-column position-relative of-hidden" center block text-left>
         <div id="static">
-            <a href="#"><img src="./src/GodUi-Logo.png" width="300px"></a>
-            <tabs theme="toggle">
-                <tab><a href="#setup">Setup</a></tab>
-                <tab><a href="#components">Components</a></tab>
-                <tab><a href="#utilities">Utilities</a></tab>
-                <tab><a href="#layout">Layout</a></tab>
-                <tab><a href="#about">About</a></tab>
-            </tabs>
         </div>
         <div id="setup">
-            
+            <h4>Setup</h4>
+            <p>To use GodUi, you need to add it to your project and setup it in the first step...</p>
+            <h5>Import</h5>
+            <p>To add GodUi, you can use two methods: Full Import and Advanced Import.</p>
+            <p title>Full Import</p>
+            <p>In this method you will add GodUi to your project in full using the following code.</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/GodUi.css);</code></pre>
+            <p title>Advanced Import</p>
+            <p>In this way you will import only the items from GodUi that you need.</p>
+            <br><p>core</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/core/core.css);</code></pre>
+            <br><p>utilities</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/utilities/utilities.css);</code></pre>
+            <br><p>form</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/form/form.css);</code></pre>
+            <br><p>flex system</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/layout/flex.css);</code></pre>
+            <br><p>shaft system</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/layout/shaft.css);</code></pre>
+            <br><p>button</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/components/button.css);</code></pre>
+            <br><p>alert</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/components/alert.css);</code></pre>
+            <br><p>blockquote</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/components/blockquote.css);</code></pre>
+            <br><p>dropdown</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/components/dropdown.css);</code></pre>
+            <br><p>navbar</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/components/nav.css);</code></pre>
+            <br><p>pagination</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/components/pagi.css);</code></pre>
+            <br><p>pg bar</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/components/pg-bar.css);</code></pre>
+            <br><p>tabs</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/components/tabs.css);</code></pre>
+            <br><p>tooltip</p>
+            <pre><code>@import url(https://raw.githubusercontent.com/GodratGroup/GodUi/main/src/css/components/tooltip.css);</code></pre>
+            <h5>Config</h5>
+            <p>You can easily adjust the primary and secondary color in GodUi.</p>
+            <p>Follow the code below</p>
+            <pre><code>:root {
+    --primary-color: [primary color hex, rgb & ...]
+    --secondary-color: [secondary color hex, rgb & ...]
+    --bg-primary-color: [background primary color hex, rgb & ...]
+    --bg-secondary-color: [background secondary color hex, rgb & ...]
+}</code></pre>
         </div>
         <div id="components">
             
@@ -38,5 +85,5 @@
             
         </div>
     </div>
-</body>
+</shaft></body>
 </html>
