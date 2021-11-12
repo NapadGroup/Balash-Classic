@@ -19,47 +19,56 @@
         text-align: center
         min-width: 50px
         max-width: var(--width)
-        &:not(&[left], &[right], &[bottom], &)
-            transform: none
-        &:is(&[left], &[right])
-            transform: translate(0, 50%)
-            bottom: 50%
         &[top-left]
             left: 0
+            transform: none
+            bottom: 100%
         &[top-right]
             left: auto
             right: 0
+            transform: none
+            bottom: 100%
         &[left]
             left: 0
+            transform: translate(0, 50%)
+            bottom: 50%
         &[right]
             left: auto
             right: 0
+            transform: translate(0, 50%)
+            bottom: 50%
         &[bottom]
             bottom: 5%
         &[bottom-left]
             left: 0
+            transform: none
             bottom: 5%
         &[bottom-right]
             left: auto
+            transform: none
             right: 0
             bottom: 5%
     &:hover > tooltip, &:focus > tooltip
         opacity: 1
         display: inline-block
         bottom: calc( 100% + 10px )
-        &:is(&[bottom], &[bottom-left], &[bottom-right])
-            bottom: calc( -50% + -10px )
-        &:is(&[right], &[left])
-            bottom: 50%
         &[top-left]
             left: var(--width)
+            bottom: calc( 100% + 10px )
         &[top-right]
             right: var(--width)
+            bottom: calc( 100% + 10px )
         &[left]
             left: var(--width)
+            bottom: 50%
         &[right]
             right: var(--width)
+            bottom: 50%
+        &[bottom]
+            bottom: calc( -50% + -10px )
         &[bottom-left]
             left: var(--width)
+            bottom: calc( -50% + -10px )
         &[bottom-right]
             right: var(--width)
+            bottom: calc( -50% + -10px )

@@ -42,5 +42,3 @@ input[type=checkbox]:not(input[type=checkbox][toggle], input[type=checkbox][menu
 input[type=checkbox]:not(input[type=checkbox][toggle], input[type=checkbox][menu]):disabled:checked::before {
   color: #e0e0e0;
 }
-
-/*# sourceMappingURL=checkbox.css.map */

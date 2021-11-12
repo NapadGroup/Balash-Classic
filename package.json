@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "compile": "sass --watch src/sass:src/css | sass --watch src/sass:src/css.minify --style compressed --no-source-map"
+    "compile": "sass --watch src/sass:src/css --no-source-map | sass --watch src/sass:src/css.minify --style compressed --no-source-map"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,10 @@
   "homepage": "https://godui.pages.dev",
   "devDependencies": {
     "sass": "^1.43.4"
-  }
+  },
+  "files": [
+    "src",
+    "LICENSE",
+    "README.md"
+  ]
 }

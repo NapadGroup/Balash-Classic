@@ -48,5 +48,3 @@ pagi item:hover:not(pagi item[active], pagi item[disable]) {
 pagi item:not(pagi item:first-child) {
   border-left: none;
 }
-
-/*# sourceMappingURL=pagi.css.map */

@@ -17,5 +17,3 @@ input:is([type=text], [type=email], [type=password]):focus {
   outline: none;
   box-shadow: 0 0 2.5px var(--color);
 }
-
-/*# sourceMappingURL=text.css.map */
