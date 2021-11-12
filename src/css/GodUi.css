@@ -277,7 +277,7 @@ dropdown drop {
   border-radius: 2.5px;
   background-color: var(--bg-secondary-color);
   position: absolute;
-  top: calc( 100% + 15px );
+  top: calc(100% + 15px);
   display: flex;
   flex-direction: column;
   padding: 5px 7.5px;
@@ -490,7 +490,7 @@ pgbar bar {
   display: flex;
   align-items: center;
   padding: 2px 5px;
-  padding-left: calc( var(--active) / 2);
+  padding-left: calc(var(--active) / 2);
   background-color: var(--active-color);
   box-shadow: 2.5px 0px 0.5px var(--secondary-color);
   width: var(--active);
@@ -584,7 +584,7 @@ tabs[theme=toggle] tab:not(tabs[theme=toggle] tab:first-child) {
 .tooltip-box tooltip:not(.tooltip-box tooltip[left], .tooltip-box tooltip[right], .tooltip-box tooltip[bottom], .tooltip-box tooltip) {
   transform: none;
 }
-.tooltip-box tooltip:is(&[left], &[right]) {
+.tooltip-box tooltip:is(.tooltip-box tooltip[left], .tooltip-box tooltip[right]) {
   transform: translate(0, 50%);
   bottom: 50%;
 }
@@ -617,12 +617,12 @@ tabs[theme=toggle] tab:not(tabs[theme=toggle] tab:first-child) {
 .tooltip-box:hover > tooltip, .tooltip-box:focus > tooltip {
   opacity: 1;
   display: inline-block;
-  bottom: calc( 100% + 10px );
+  bottom: calc(100% + 10px);
 }
-.tooltip-box:hover > tooltip:is(&[bottom], &[bottom-left], &[bottom-right]), .tooltip-box:focus > tooltip:is(&[bottom], &[bottom-left], &[bottom-right]) {
-  bottom: calc( -50% + -10px );
+.tooltip-box:hover > tooltip:is(.tooltip-box:hover > tooltip[bottom], .tooltip-box:hover > tooltip[bottom-left], .tooltip-box:hover > tooltip[bottom-right], .tooltip-box:focus > tooltip[bottom], .tooltip-box:focus > tooltip[bottom-left], .tooltip-box:focus > tooltip[bottom-right]), .tooltip-box:focus > tooltip:is(.tooltip-box:hover > tooltip[bottom], .tooltip-box:hover > tooltip[bottom-left], .tooltip-box:hover > tooltip[bottom-right], .tooltip-box:focus > tooltip[bottom], .tooltip-box:focus > tooltip[bottom-left], .tooltip-box:focus > tooltip[bottom-right]) {
+  bottom: calc(-50% - 10px);
 }
-.tooltip-box:hover > tooltip:is(&[right], &[left]), .tooltip-box:focus > tooltip:is(&[right], &[left]) {
+.tooltip-box:hover > tooltip:is(.tooltip-box:hover > tooltip[right], .tooltip-box:hover > tooltip[left], .tooltip-box:focus > tooltip[right], .tooltip-box:focus > tooltip[left]), .tooltip-box:focus > tooltip:is(.tooltip-box:hover > tooltip[right], .tooltip-box:hover > tooltip[left], .tooltip-box:focus > tooltip[right], .tooltip-box:focus > tooltip[left]) {
   bottom: 50%;
 }
 .tooltip-box:hover > tooltip[top-left], .tooltip-box:focus > tooltip[top-left] {
@@ -1299,7 +1299,7 @@ input[type=radio]:focus {
   box-shadow: 0 0 2.5px var(--color);
 }
 
-input:is([type="text"], [type="email"], [type="password"]) {
+input:is([type=text], [type=email], [type=password]) {
   --color: var(--primary-color);
   position: relative;
   -webkit-appearance: none;
@@ -1314,7 +1314,7 @@ input:is([type="text"], [type="email"], [type="password"]) {
   cursor: pointer;
   transition: 150ms;
 }
-input:is([type="text"], [type="email"], [type="password"]):focus {
+input:is([type=text], [type=email], [type=password]):focus {
   outline: none;
   box-shadow: 0 0 2.5px var(--color);
 }
@@ -2415,3 +2415,5 @@ body[theme=center-box] shaft {
     width: 95%;
   }
 }
+
+/*# sourceMappingURL=GodUi.css.map */

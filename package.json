@@ -1,0 +1,31 @@
+{
+  "name": "godratmand-ui",
+  "version": "0.5.0",
+  "description": "Godratmand Web Ui Framework",
+  "main": "src/sass/GodUi.sass",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "compile": "sass --watch src/sass:src/css | sass --watch src/sass:src/css.minify --style compressed --no-source-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GodratGroup/GodUi.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "ui-framework",
+    "web"
+  ],
+  "author": "GGroup",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/GodratGroup/GodUi/issues"
+  },
+  "homepage": "https://godui.pages.dev",
+  "devDependencies": {
+    "sass": "^1.43.4"
+  }
+}

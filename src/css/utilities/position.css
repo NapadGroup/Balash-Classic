@@ -1,0 +1,171 @@
+.position-static {
+  position: static;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.position-sticky {
+  position: sticky;
+}
+
+@media screen and (min-width: 540px) {
+  .position-sm-static {
+    position: static;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .position-md-static {
+    position: static;
+  }
+}
+
+@media screen and (min-width: 765px) {
+  .position-mobile-static {
+    position: static;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .position-lg-static {
+    position: static;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .position-xl-static {
+    position: static;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .position-sm-relative {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .position-md-relative {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 765px) {
+  .position-mobile-relative {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .position-lg-relative {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .position-xl-relative {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .position-sm-absolute {
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .position-md-absolute {
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 765px) {
+  .position-mobile-absolute {
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .position-lg-absolute {
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .position-xl-absolute {
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .position-sm-fixed {
+    position: fixed;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .position-md-fixed {
+    position: fixed;
+  }
+}
+
+@media screen and (min-width: 765px) {
+  .position-mobile-fixed {
+    position: fixed;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .position-lg-fixed {
+    position: fixed;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .position-xl-fixed {
+    position: fixed;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .position-sm-sticky {
+    position: sticky;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .position-md-sticky {
+    position: sticky;
+  }
+}
+
+@media screen and (min-width: 765px) {
+  .position-mobile-sticky {
+    position: sticky;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .position-lg-sticky {
+    position: sticky;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .position-xl-sticky {
+    position: sticky;
+  }
+}
+
+/*# sourceMappingURL=position.css.map */

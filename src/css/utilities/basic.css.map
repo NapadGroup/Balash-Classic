@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../sass/utilities/basic.sass","../../sass/mixin/_color.sass"],"names":[],"mappings":"AAEA;EACI;;;AAEJ;EACI,OCqPU;;;ADnPd;EACI,OCmPS;;;ADjPb;EACI,OCiPY;;;AD/OhB;EACI;;;AAEJ;EACI,kBCyOU;;;ADvOd;EACI,kBCuOS;;;ADrOb;EACI,kBCqOY;;;ADlOhB;EACI;EACA;;;AAEJ;EAEI;;;AAEJ;EAEI,cCsNU;;;ADpNd;EAEI,cCmNS;;;ADjNb;EAEI,cCgNY","file":"basic.css"}

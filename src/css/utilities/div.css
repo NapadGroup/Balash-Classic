@@ -1,0 +1,29 @@
+*[hide] {
+  visibility: hidden;
+}
+
+*[show] {
+  visibility: visible;
+}
+
+*[center] {
+  margin: auto;
+}
+
+.of-auto {
+  overflow: auto;
+}
+
+.of-hidden {
+  overflow: hidden;
+}
+
+.of-visible {
+  overflow: visible;
+}
+
+.of-scroll {
+  overflow: scroll;
+}
+
+/*# sourceMappingURL=div.css.map */

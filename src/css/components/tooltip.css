@@ -24,7 +24,7 @@
 .tooltip-box tooltip:not(.tooltip-box tooltip[left], .tooltip-box tooltip[right], .tooltip-box tooltip[bottom], .tooltip-box tooltip) {
   transform: none;
 }
-.tooltip-box tooltip:is(&[left], &[right]) {
+.tooltip-box tooltip:is(.tooltip-box tooltip[left], .tooltip-box tooltip[right]) {
   transform: translate(0, 50%);
   bottom: 50%;
 }
@@ -57,12 +57,12 @@
 .tooltip-box:hover > tooltip, .tooltip-box:focus > tooltip {
   opacity: 1;
   display: inline-block;
-  bottom: calc( 100% + 10px );
+  bottom: calc(100% + 10px);
 }
-.tooltip-box:hover > tooltip:is(&[bottom], &[bottom-left], &[bottom-right]), .tooltip-box:focus > tooltip:is(&[bottom], &[bottom-left], &[bottom-right]) {
-  bottom: calc( -50% + -10px );
+.tooltip-box:hover > tooltip:is(.tooltip-box:hover > tooltip[bottom], .tooltip-box:hover > tooltip[bottom-left], .tooltip-box:hover > tooltip[bottom-right], .tooltip-box:focus > tooltip[bottom], .tooltip-box:focus > tooltip[bottom-left], .tooltip-box:focus > tooltip[bottom-right]), .tooltip-box:focus > tooltip:is(.tooltip-box:hover > tooltip[bottom], .tooltip-box:hover > tooltip[bottom-left], .tooltip-box:hover > tooltip[bottom-right], .tooltip-box:focus > tooltip[bottom], .tooltip-box:focus > tooltip[bottom-left], .tooltip-box:focus > tooltip[bottom-right]) {
+  bottom: calc(-50% - 10px);
 }
-.tooltip-box:hover > tooltip:is(&[right], &[left]), .tooltip-box:focus > tooltip:is(&[right], &[left]) {
+.tooltip-box:hover > tooltip:is(.tooltip-box:hover > tooltip[right], .tooltip-box:hover > tooltip[left], .tooltip-box:focus > tooltip[right], .tooltip-box:focus > tooltip[left]), .tooltip-box:focus > tooltip:is(.tooltip-box:hover > tooltip[right], .tooltip-box:hover > tooltip[left], .tooltip-box:focus > tooltip[right], .tooltip-box:focus > tooltip[left]) {
   bottom: 50%;
 }
 .tooltip-box:hover > tooltip[top-left], .tooltip-box:focus > tooltip[top-left] {
@@ -83,3 +83,5 @@
 .tooltip-box:hover > tooltip[bottom-right], .tooltip-box:focus > tooltip[bottom-right] {
   right: var(--width);
 }
+
+/*# sourceMappingURL=tooltip.css.map */

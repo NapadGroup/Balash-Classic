@@ -56,3 +56,5 @@ tabs[theme=toggle] tab[active] a:hover, tabs[theme=toggle] tab:hover a:hover {
 tabs[theme=toggle] tab:not(tabs[theme=toggle] tab:first-child) {
   border-left: none;
 }
+
+/*# sourceMappingURL=tabs.css.map */
