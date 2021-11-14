@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "compile": "sass --watch src/sass:src/css --no-source-map | sass --watch src/sass:src/css.minify --style compressed --no-source-map"
+    "sass:compile": "sass --watch src/sass:src/css --no-source-map | sass --watch src/sass:src/css.minify --style compressed --no-source-map"
   },
   "repository": {
     "type": "git",

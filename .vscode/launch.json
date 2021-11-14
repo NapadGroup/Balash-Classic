@@ -1,0 +1,10 @@
+{
+    "configurations": [
+    {
+        "command": "npm run sass:compile",
+        "name": "Run npm sass:compile",
+        "request": "launch",
+        "type": "node-terminal"
+    }
+    ]
+}
