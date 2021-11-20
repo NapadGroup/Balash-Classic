@@ -1,0 +1,28 @@
+breadcrumb
+    display: flex
+    item 
+        padding: 2px 5px
+        // margin-left: 5px
+        &:first-child
+            margin-left: 0
+        &::after   
+            color: #bdbdbd
+            padding-left: 10px
+            content: ">"
+    &[slash]
+        item 
+            &::after
+                content: "/"
+    &[arrow]
+        item 
+            &::after
+                content: "\02192"
+    &[dot]
+        item 
+            &::after
+                content: "\02022"
+    item 
+        &:last-child
+            padding-right: 10px
+            &::after
+                content: ""
