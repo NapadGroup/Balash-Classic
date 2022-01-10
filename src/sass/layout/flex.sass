@@ -1,28 +1,45 @@
 @import '../abstracts/index'
 
-+for-class(flex-dir-, flex-direction, "column", "column-reverse", "row", "row-reverse")
+container[type="flex"]
+  display: flex
 
-+for-media(flex-dir, flex-direction, "column", "column-reverse", "row", "row-reverse")
+row
+  +Generator("col", $selectors, "flex", $values, false)
 
-+for-class(jus-content-, justify-content, "start", "end", "center", "between", "around", "evenly")
+  +Generator("col", $selectors, "flex", $values, true)
 
-+for-media(jus-content, justify-content, "start", "end", "center", "between", "around", "evenly")
+$flex-dirs: [column, column-reverse, row, row-reverse]
 
-+for-class(align-items-, align-items, "start", "end", "center", "baseline", "stretch")
++Generator(".flex-dir", $flex-dirs, "flex-direction", $flex-dirs, false)
+
++Generator(".flex-dir", $flex-dirs, "flex-direction", $flex-dirs, true)
     
-+for-media(align-items, align-items, "start", "end", "center", "baseline", "stretch")
+$justify-contents: [flex-start, flex-end, center, space-between, space-around]
 
-+for-class(align-content-, align-content, "start", "end", "center", "around", "stretch")
++Generator(".jus-content", $justify-contents, "justify-content", $justify-contents, false)
 
-+for-media(align-content, align-content, "start", "end", "center", "around", "stretch")
++Generator(".jus-content", $justify-contents, "justify-content", $justify-contents, true)
 
-+for-class(align-self-, align-self, "start", "end", "center", "baseline", "stretch")
+$align-items: [flex-start, flex-end, center, baseline, stretch]
 
-+for-media(align-self, align-self, "start", "end", "center", "baseline", "stretch")
++Generator(".align-items", $align-items, "align-items", $align-items, false)
 
-+for-class(flex-, flex-wrap, "wrap", "nowarp", "wrap-reverse")
++Generator(".align-items", $align-items, "align-items", $align-items, true)
 
-+for-media(flex, flex-wrap, "wrap", "nowarp", "wrap-reverse")
+$align-contents: [flex-start, flex-end, center, space-between, space-around, stretch]
 
-.row
-    +for-class(col-, flex, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
++Generator(".align-content", $align-contents, "align-content", $align-contents, false)
+
++Generator(".align-content", $align-contents, "align-content", $align-contents, true)
+
+$align-selfs: [auto, flex-start, flex-end, center, baseline, stretch]
+
++Generator(".align-self", $align-selfs, "align-self", $align-selfs, false)
+
++Generator(".align-self", $align-selfs, "align-self", $align-selfs, true)
+
+$flex-wraps: [nowrap, wrap, wrap-reverse]
+
++Generator(".flex-wrap", $flex-wraps, "flex-wrap", $flex-wraps, false)
+
++Generator(".flex-wrap", $flex-wraps, "flex-wrap", $flex-wraps, true)

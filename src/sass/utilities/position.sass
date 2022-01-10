@@ -1,5 +1,7 @@
 @import '../abstracts/index'
     
-+for-class(position-, position, "static", "relative", "absolute", "fixed", "sticky")
+$positions: [static, relative, absolute, fixed, sticky]
 
-+for-media(position, position, "static", "relative", "absolute", "fixed", "sticky")
++Generator(".position", $positions, "position", $positions, false)
+
++Generator(".position", $positions, "position", $positions, true)

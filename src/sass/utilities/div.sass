@@ -9,4 +9,7 @@
 *[center]
     margin: auto
 
-+for-class(of-, overflow, "auto", "hidden", "visible", "scroll")
+$overflows: [auto, hidden, visible, scroll]
+$overflows-name: ["a", "h", "v", "s"]
+
++Generator(".of", $overflows-name, "overflow", $overflows, false)
