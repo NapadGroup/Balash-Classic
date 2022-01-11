@@ -4,42 +4,29 @@ container[type="flex"]
   display: flex
 
 row
-  +Generator("col", $selectors, "flex", $values, false)
-
+  display: flex
   +Generator("col", $selectors, "flex", $values, true)
 
 $flex-dirs: [column, column-reverse, row, row-reverse]
-
-+Generator(".flex-dir", $flex-dirs, "flex-direction", $flex-dirs, false)
 
 +Generator(".flex-dir", $flex-dirs, "flex-direction", $flex-dirs, true)
     
 $justify-contents: [flex-start, flex-end, center, space-between, space-around]
 
-+Generator(".jus-content", $justify-contents, "justify-content", $justify-contents, false)
-
 +Generator(".jus-content", $justify-contents, "justify-content", $justify-contents, true)
 
 $align-items: [flex-start, flex-end, center, baseline, stretch]
-
-+Generator(".align-items", $align-items, "align-items", $align-items, false)
 
 +Generator(".align-items", $align-items, "align-items", $align-items, true)
 
 $align-contents: [flex-start, flex-end, center, space-between, space-around, stretch]
 
-+Generator(".align-content", $align-contents, "align-content", $align-contents, false)
-
 +Generator(".align-content", $align-contents, "align-content", $align-contents, true)
 
 $align-selfs: [auto, flex-start, flex-end, center, baseline, stretch]
 
-+Generator(".align-self", $align-selfs, "align-self", $align-selfs, false)
-
 +Generator(".align-self", $align-selfs, "align-self", $align-selfs, true)
 
 $flex-wraps: [nowrap, wrap, wrap-reverse]
-
-+Generator(".flex-wrap", $flex-wraps, "flex-wrap", $flex-wraps, false)
 
 +Generator(".flex-wrap", $flex-wraps, "flex-wrap", $flex-wraps, true)

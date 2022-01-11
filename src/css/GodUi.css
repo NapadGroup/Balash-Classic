@@ -1471,6 +1471,9 @@ container[type=flex] {
   display: flex;
 }
 
+row {
+  display: flex;
+}
 row col-1 {
   flex: 1;
 }
