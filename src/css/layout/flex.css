@@ -1,343 +1,342 @@
 container[type=flex] {
   display: flex;
 }
-
-row {
+container[type=flex] row {
   display: flex;
 }
-row col-1 {
+container[type=flex] row col-1 {
   flex: 1;
 }
-row col-2 {
+container[type=flex] row col-2 {
   flex: 2;
 }
-row col-3 {
+container[type=flex] row col-3 {
   flex: 3;
 }
-row col-4 {
+container[type=flex] row col-4 {
   flex: 4;
 }
-row col-5 {
+container[type=flex] row col-5 {
   flex: 5;
 }
-row col-6 {
+container[type=flex] row col-6 {
   flex: 6;
 }
-row col-7 {
+container[type=flex] row col-7 {
   flex: 7;
 }
-row col-8 {
+container[type=flex] row col-8 {
   flex: 8;
 }
-row col-9 {
+container[type=flex] row col-9 {
   flex: 9;
 }
-row col-10 {
+container[type=flex] row col-10 {
   flex: 10;
 }
-row col-11 {
+container[type=flex] row col-11 {
   flex: 11;
 }
-row col-12 {
+container[type=flex] row col-12 {
   flex: 12;
 }
 @media screen and (min-width: 540px) {
-  row col-1-sm {
+  container[type=flex] row col-1-sm {
     flex: 1;
   }
 }
 @media screen and (min-width: 540px) {
-  row col-2-sm {
+  container[type=flex] row col-2-sm {
     flex: 2;
   }
 }
 @media screen and (min-width: 540px) {
-  row col-3-sm {
+  container[type=flex] row col-3-sm {
     flex: 3;
   }
 }
 @media screen and (min-width: 540px) {
-  row col-4-sm {
+  container[type=flex] row col-4-sm {
     flex: 4;
   }
 }
 @media screen and (min-width: 540px) {
-  row col-5-sm {
+  container[type=flex] row col-5-sm {
     flex: 5;
   }
 }
 @media screen and (min-width: 540px) {
-  row col-6-sm {
+  container[type=flex] row col-6-sm {
     flex: 6;
   }
 }
 @media screen and (min-width: 540px) {
-  row col-7-sm {
+  container[type=flex] row col-7-sm {
     flex: 7;
   }
 }
 @media screen and (min-width: 540px) {
-  row col-8-sm {
+  container[type=flex] row col-8-sm {
     flex: 8;
   }
 }
 @media screen and (min-width: 540px) {
-  row col-9-sm {
+  container[type=flex] row col-9-sm {
     flex: 9;
   }
 }
 @media screen and (min-width: 540px) {
-  row col-10-sm {
+  container[type=flex] row col-10-sm {
     flex: 10;
   }
 }
 @media screen and (min-width: 540px) {
-  row col-11-sm {
+  container[type=flex] row col-11-sm {
     flex: 11;
   }
 }
 @media screen and (min-width: 540px) {
-  row col-12-sm {
+  container[type=flex] row col-12-sm {
     flex: 12;
   }
 }
 @media screen and (min-width: 720px) {
-  row col-1-md {
+  container[type=flex] row col-1-md {
     flex: 1;
   }
 }
 @media screen and (min-width: 720px) {
-  row col-2-md {
+  container[type=flex] row col-2-md {
     flex: 2;
   }
 }
 @media screen and (min-width: 720px) {
-  row col-3-md {
+  container[type=flex] row col-3-md {
     flex: 3;
   }
 }
 @media screen and (min-width: 720px) {
-  row col-4-md {
+  container[type=flex] row col-4-md {
     flex: 4;
   }
 }
 @media screen and (min-width: 720px) {
-  row col-5-md {
+  container[type=flex] row col-5-md {
     flex: 5;
   }
 }
 @media screen and (min-width: 720px) {
-  row col-6-md {
+  container[type=flex] row col-6-md {
     flex: 6;
   }
 }
 @media screen and (min-width: 720px) {
-  row col-7-md {
+  container[type=flex] row col-7-md {
     flex: 7;
   }
 }
 @media screen and (min-width: 720px) {
-  row col-8-md {
+  container[type=flex] row col-8-md {
     flex: 8;
   }
 }
 @media screen and (min-width: 720px) {
-  row col-9-md {
+  container[type=flex] row col-9-md {
     flex: 9;
   }
 }
 @media screen and (min-width: 720px) {
-  row col-10-md {
+  container[type=flex] row col-10-md {
     flex: 10;
   }
 }
 @media screen and (min-width: 720px) {
-  row col-11-md {
+  container[type=flex] row col-11-md {
     flex: 11;
   }
 }
 @media screen and (min-width: 720px) {
-  row col-12-md {
+  container[type=flex] row col-12-md {
     flex: 12;
   }
 }
 @media screen and (min-width: 765px) {
-  row col-1-mobile {
+  container[type=flex] row col-1-mobile {
     flex: 1;
   }
 }
 @media screen and (min-width: 765px) {
-  row col-2-mobile {
+  container[type=flex] row col-2-mobile {
     flex: 2;
   }
 }
 @media screen and (min-width: 765px) {
-  row col-3-mobile {
+  container[type=flex] row col-3-mobile {
     flex: 3;
   }
 }
 @media screen and (min-width: 765px) {
-  row col-4-mobile {
+  container[type=flex] row col-4-mobile {
     flex: 4;
   }
 }
 @media screen and (min-width: 765px) {
-  row col-5-mobile {
+  container[type=flex] row col-5-mobile {
     flex: 5;
   }
 }
 @media screen and (min-width: 765px) {
-  row col-6-mobile {
+  container[type=flex] row col-6-mobile {
     flex: 6;
   }
 }
 @media screen and (min-width: 765px) {
-  row col-7-mobile {
+  container[type=flex] row col-7-mobile {
     flex: 7;
   }
 }
 @media screen and (min-width: 765px) {
-  row col-8-mobile {
+  container[type=flex] row col-8-mobile {
     flex: 8;
   }
 }
 @media screen and (min-width: 765px) {
-  row col-9-mobile {
+  container[type=flex] row col-9-mobile {
     flex: 9;
   }
 }
 @media screen and (min-width: 765px) {
-  row col-10-mobile {
+  container[type=flex] row col-10-mobile {
     flex: 10;
   }
 }
 @media screen and (min-width: 765px) {
-  row col-11-mobile {
+  container[type=flex] row col-11-mobile {
     flex: 11;
   }
 }
 @media screen and (min-width: 765px) {
-  row col-12-mobile {
+  container[type=flex] row col-12-mobile {
     flex: 12;
   }
 }
 @media screen and (min-width: 960px) {
-  row col-1-lg {
+  container[type=flex] row col-1-lg {
     flex: 1;
   }
 }
 @media screen and (min-width: 960px) {
-  row col-2-lg {
+  container[type=flex] row col-2-lg {
     flex: 2;
   }
 }
 @media screen and (min-width: 960px) {
-  row col-3-lg {
+  container[type=flex] row col-3-lg {
     flex: 3;
   }
 }
 @media screen and (min-width: 960px) {
-  row col-4-lg {
+  container[type=flex] row col-4-lg {
     flex: 4;
   }
 }
 @media screen and (min-width: 960px) {
-  row col-5-lg {
+  container[type=flex] row col-5-lg {
     flex: 5;
   }
 }
 @media screen and (min-width: 960px) {
-  row col-6-lg {
+  container[type=flex] row col-6-lg {
     flex: 6;
   }
 }
 @media screen and (min-width: 960px) {
-  row col-7-lg {
+  container[type=flex] row col-7-lg {
     flex: 7;
   }
 }
 @media screen and (min-width: 960px) {
-  row col-8-lg {
+  container[type=flex] row col-8-lg {
     flex: 8;
   }
 }
 @media screen and (min-width: 960px) {
-  row col-9-lg {
+  container[type=flex] row col-9-lg {
     flex: 9;
   }
 }
 @media screen and (min-width: 960px) {
-  row col-10-lg {
+  container[type=flex] row col-10-lg {
     flex: 10;
   }
 }
 @media screen and (min-width: 960px) {
-  row col-11-lg {
+  container[type=flex] row col-11-lg {
     flex: 11;
   }
 }
 @media screen and (min-width: 960px) {
-  row col-12-lg {
+  container[type=flex] row col-12-lg {
     flex: 12;
   }
 }
 @media screen and (min-width: 1140px) {
-  row col-1-xl {
+  container[type=flex] row col-1-xl {
     flex: 1;
   }
 }
 @media screen and (min-width: 1140px) {
-  row col-2-xl {
+  container[type=flex] row col-2-xl {
     flex: 2;
   }
 }
 @media screen and (min-width: 1140px) {
-  row col-3-xl {
+  container[type=flex] row col-3-xl {
     flex: 3;
   }
 }
 @media screen and (min-width: 1140px) {
-  row col-4-xl {
+  container[type=flex] row col-4-xl {
     flex: 4;
   }
 }
 @media screen and (min-width: 1140px) {
-  row col-5-xl {
+  container[type=flex] row col-5-xl {
     flex: 5;
   }
 }
 @media screen and (min-width: 1140px) {
-  row col-6-xl {
+  container[type=flex] row col-6-xl {
     flex: 6;
   }
 }
 @media screen and (min-width: 1140px) {
-  row col-7-xl {
+  container[type=flex] row col-7-xl {
     flex: 7;
   }
 }
 @media screen and (min-width: 1140px) {
-  row col-8-xl {
+  container[type=flex] row col-8-xl {
     flex: 8;
   }
 }
 @media screen and (min-width: 1140px) {
-  row col-9-xl {
+  container[type=flex] row col-9-xl {
     flex: 9;
   }
 }
 @media screen and (min-width: 1140px) {
-  row col-10-xl {
+  container[type=flex] row col-10-xl {
     flex: 10;
   }
 }
 @media screen and (min-width: 1140px) {
-  row col-11-xl {
+  container[type=flex] row col-11-xl {
     flex: 11;
   }
 }
 @media screen and (min-width: 1140px) {
-  row col-12-xl {
+  container[type=flex] row col-12-xl {
     flex: 12;
   }
 }
