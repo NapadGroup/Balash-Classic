@@ -4,7 +4,7 @@ container[type="flex"]
   display: flex
   row
     display: flex
-    +Generator("col", $selectors, "flex", $values, true)
+    +Generator("col", $selectors, "flex", $values, true, false)
 
 $flex-dirs: [column, column-reverse, row, row-reverse]
 
@@ -18,14 +18,14 @@ $align-selfs: [auto, flex-start, flex-end, center, baseline, stretch]
 
 $flex-wraps: [nowrap, wrap, wrap-reverse]
 
-+Generator(".flex-dir", $flex-dirs, "flex-direction", $flex-dirs, true)
++Generator(".flex-dir", $flex-dirs, "flex-direction", $flex-dirs, true, false)
 
-+Generator(".jus-content", $justify-contents, "justify-content", $justify-contents, true)
++Generator(".jus-content", $justify-contents, "justify-content", $justify-contents, true, false)
 
-+Generator(".align-items", $align-items, "align-items", $align-items, true)
++Generator(".align-items", $align-items, "align-items", $align-items, true, false)
 
-+Generator(".align-content", $align-contents, "align-content", $align-contents, true)
++Generator(".align-content", $align-contents, "align-content", $align-contents, true, false)
 
-+Generator(".align-self", $align-selfs, "align-self", $align-selfs, true)
++Generator(".align-self", $align-selfs, "align-self", $align-selfs, true, false)
 
-+Generator(".flex-wrap", $flex-wraps, "flex-wrap", $flex-wraps, true)
++Generator(".flex-wrap", $flex-wraps, "flex-wrap", $flex-wraps, true, false)
