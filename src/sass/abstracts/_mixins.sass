@@ -25,8 +25,8 @@ $values: $selectors !default
         $value: nth($values, $num)
         @if $two-var
           $value2: nth($values2, $num) !global
-        #{$selector-base}-#{$selector}-#{$width-name}
-          @media screen and (min-width: $width)
+        #{$selector-base}-#{$selector}:#{$width-name}
+          @media screen and (max-width: $width)
             #{$var}: $value
             @if $two-var
               #{$var2}: $value2
