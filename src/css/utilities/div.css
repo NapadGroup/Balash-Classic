@@ -10,18 +10,18 @@
   margin: auto;
 }
 
-.of-a {
+*[of-a] {
   overflow: auto;
 }
 
-.of-h {
+*[of-h] {
   overflow: hidden;
 }
 
-.of-v {
+*[of-v] {
   overflow: visible;
 }
 
-.of-s {
+*[of-s] {
   overflow: scroll;
 }
