@@ -1,0 +1,34 @@
+@import '../abstracts/index'
+
+$g-template-list: [repeat(1, auto), repeat(2, auto), repeat(3, auto), repeat(4, auto), repeat(5, auto), repeat(6, auto), repeat(7, auto), repeat(8, auto), repeat(9, auto), repeat(10, auto), repeat(11, auto), repeat(12, auto)]
+$Grid-list-one: []
+$Grid-list-two: []
+$Grid-selectors: []
+
+@for $num from 1 to 12 + 1
+    $Grid-list-one: append($Grid-list-one, $num, comma)
+    @for $num2 from 1 to 12 + 1
+        $Grid-list-two: append($Grid-list-two, nth($Grid-list-one, $num), comma)
+
+@for $num from 1 to 12
+    @for $num from 1 to 12 + 1
+        $Grid-list-one: append($Grid-list-one, nth($Grid-list-one, $num), comma)
+
+@for $num from 1 to 12 + 1
+    $Grid-list-two: append($Grid-list-two, $num, comma)
+    @for $num2 from 1 to 12 + 1
+        $Grid-list-one: append($Grid-list-one, nth($Grid-list-one, $num), comma)
+
+@for $num from 1 to 12
+    @for $num from 1 to 12 + 1
+        $Grid-list-two: append($Grid-list-two, nth($Grid-list-one, $num), comma)
+
+@for $num from 1 to length($Grid-list-one) + 1
+    $Grid-selectors: append($Grid-selectors, nth($Grid-list-one, $num) + "-" + nth($Grid-list-two, $num), comma)
+
+container[type="grid"]
+  display: grid
+
+  +Generator("g-template", $selectors, "grid-template-columns", $g-template-list, true, true, false)
+
+  +Generator("g", $Grid-selectors, "grid-column", $Grid-list-one, true, true, true, "grid-row", $Grid-list-two)
