@@ -1,34 +1,69 @@
 @import '../abstracts/index'
 
-$g-template-list: [repeat(1, auto), repeat(2, auto), repeat(3, auto), repeat(4, auto), repeat(5, auto), repeat(6, auto), repeat(7, auto), repeat(8, auto), repeat(9, auto), repeat(10, auto), repeat(11, auto), repeat(12, auto)]
-$Grid-list-one: []
-$Grid-list-two: []
-$Grid-selectors: []
+//
+    ////////////////////////////////////////////////////////////
+   /////  This Grid System was completely stopped due /////////
+  /////  to bad compilation and very large css output ////////
+ /////  , and a new Grid System will soon be in GodUi. //////
+////////////////////////////////////////////////////////////
 
-@for $num from 1 to 12 + 1
-    $Grid-list-one: append($Grid-list-one, $num, comma)
-    @for $num2 from 1 to 12 + 1
-        $Grid-list-two: append($Grid-list-two, nth($Grid-list-one, $num), comma)
+// $Grid-number: 12 !default
+// $Grid-list-one: []
+// $Grid-list-two: []
+// $Grid-selectors-start: []
+// $Grid-selectors-end: []
+// $Grid-selectors: []
+// $Grid-values-one: []
+// $Grid-values-two: []
 
-@for $num from 1 to 12
-    @for $num from 1 to 12 + 1
-        $Grid-list-one: append($Grid-list-one, nth($Grid-list-one, $num), comma)
+// @for $num from 1 to $Grid-number + 1
+//     $Grid-list-one: append($Grid-list-one, $num, comma)
+//     @for $num2 from 1 to $Grid-number + 1
+//         $Grid-list-two: append($Grid-list-two, nth($Grid-list-one, $num), comma)
 
-@for $num from 1 to 12 + 1
-    $Grid-list-two: append($Grid-list-two, $num, comma)
-    @for $num2 from 1 to 12 + 1
-        $Grid-list-one: append($Grid-list-one, nth($Grid-list-one, $num), comma)
+// @for $num from 1 to $Grid-number
+//     @for $num from 1 to $Grid-number + 1
+//         $Grid-list-one: append($Grid-list-one, nth($Grid-list-one, $num), comma)
 
-@for $num from 1 to 12
-    @for $num from 1 to 12 + 1
-        $Grid-list-two: append($Grid-list-two, nth($Grid-list-one, $num), comma)
+// @for $num from 1 to $Grid-number + 1
+//     $Grid-list-two: append($Grid-list-two, $num, comma)
+//     @for $num2 from 1 to $Grid-number + 1
+//         $Grid-list-one: append($Grid-list-one, nth($Grid-list-one, $num), comma)
 
-@for $num from 1 to length($Grid-list-one) + 1
-    $Grid-selectors: append($Grid-selectors, nth($Grid-list-one, $num) + "-" + nth($Grid-list-two, $num), comma)
+// @for $num from 1 to $Grid-number
+//     @for $num from 1 to $Grid-number + 1
+//         $Grid-list-two: append($Grid-list-two, nth($Grid-list-one, $num), comma)
+
+// @for $num from 1 to length($Grid-list-one) + 1
+//     $Grid-values-one: append($Grid-values-one, nth($Grid-list-one, $num) + " / " + nth($Grid-list-two, $num), comma)
+//     $Grid-selectors-start: append($Grid-selectors-start, nth($Grid-list-one, $num) + "-" + nth($Grid-list-two, $num), comma)
+//     @for $num2 from 1 to length($Grid-list-one) + 1
+//         $Grid-values-two: append($Grid-values-two, nth($Grid-list-one, $num) + " / " + nth($Grid-list-two, $num), comma)
+//         $Grid-selectors-end: append($Grid-selectors-end, nth($Grid-list-one, $num) + "-" + nth($Grid-list-two, $num), comma)
+
+// @for $num from 1 to length($Grid-list-one)
+//     @for $num from 1 to length($Grid-list-one) + 1
+//         $Grid-values-one: append($Grid-values-one, nth($Grid-list-one, $num) + " / " + nth($Grid-list-two, $num), comma)
+//         $Grid-selectors-start: append($Grid-selectors-start, nth($Grid-list-one, $num) + "-" + nth($Grid-list-two, $num), comma)
+
+// @for $num from 1 to length($Grid-list-one) + 1
+//     $Grid-values-two: append($Grid-values-two, nth($Grid-list-one, $num) + " / " + nth($Grid-list-two, $num), comma)
+//     $Grid-selectors-end: append($Grid-selectors-end, nth($Grid-list-one, $num) + "-" + nth($Grid-list-two, $num), comma)
+//     @for $num2 from 1 to length($Grid-list-one) + 1
+//         $Grid-values-one: append($Grid-values-one, nth($Grid-list-one, $num) + " / " + nth($Grid-list-two, $num), comma)
+//         $Grid-selectors-start: append($Grid-selectors-start, nth($Grid-list-one, $num) + "-" + nth($Grid-list-two, $num), comma)
+
+// @for $num from 1 to length($Grid-list-one)
+//     @for $num from 1 to length($Grid-list-one) + 1
+//         $Grid-values-two: append($Grid-values-two, nth($Grid-list-one, $num) + " / " + nth($Grid-list-two, $num), comma)
+//         $Grid-selectors-end: append($Grid-selectors-end, nth($Grid-list-one, $num) + "-" + nth($Grid-list-two, $num), comma)
+
+// @for $num from 1 to length($Grid-selectors-start) + 1
+//     $Grid-selectors: append($Grid-selectors, nth($Grid-selectors-start, $num) + "--" + nth($Grid-selectors-end, $num), comma)
+
+$g-template-list: [repeat(1, calc(100% /1)), repeat(2, calc(100% /2)), repeat(3, calc(100% /3)), repeat(4, calc(100% /4)), repeat(5, calc(100% /5)), repeat(6, calc(100% /6)), repeat(7, calc(100% /7)), repeat(8, calc(100% /8)), repeat(9, calc(100% /9)), repeat(10, calc(100% /10)), repeat(11, calc(100% /11)), repeat(12, calc(100% /12))]
 
 container[type="grid"]
   display: grid
-
-  +Generator("g-template", $selectors, "grid-template-columns", $g-template-list, true, true, false)
-
-  +Generator("g", $Grid-selectors, "grid-column", $Grid-list-one, true, true, true, "grid-row", $Grid-list-two)
+  
++Generator("g-template", $selectors, "grid-template-columns", $g-template-list, true, true, false)
