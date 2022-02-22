@@ -8,22 +8,35 @@ $media-name-widths: ("sm": "540px", "md": "720px", "mobile": "765px", "lg": "960
 $selectors: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] !default
 $values: $selectors !default
 
-@mixin Generator($selector-base, $selectors, $var, $values, $atter, $rspns, $two-var, $var2: "None", $values2: $values)
+@mixin Generator($selector-base, $selectors, $var, $values, $type, $rspns, $two-var, $var2: "None", $values2: $values)
   @for $num from 1 to length($selectors) + 1
     $selector: nth($selectors, $num)
     $value: nth($values, $num)
     @if $two-var
       $value2: nth($values2, $num) !global
-    @if $atter
+    @if $type == "atter"
       *[#{$selector-base}-#{$selector}]
         #{$var}: $value
         @if $two-var
           #{$var2}: $value2
     @else 
-      #{$selector-base}-#{$selector}
-        #{$var}: $value
-        @if $two-var
-          #{$var2}: $value2
+      @if $type == "class"
+        .#{$selector-base}-#{$selector}
+          #{$var}: $value
+          @if $two-var
+            #{$var2}: $value2
+      @else
+        @if $type == "tagVattr"
+          #{$selector-base}[#{$selector}]
+            #{$var}: $value
+            @if $two-var
+              #{$var2}: $value2
+        @else
+          @if $type == "tagVclass"
+            #{$selector-base}.#{$selector}
+              #{$var}: $value
+              @if $two-var
+                #{$var2}: $value2
   @if $rspns == true
     @each $width-name, $width in $media-name-widths
       @for $num from 1 to length($selectors) + 1
@@ -31,15 +44,30 @@ $values: $selectors !default
         $value: nth($values, $num)
         @if $two-var
           $value2: nth($values2, $num) !global
-        @if $atter
+        @if $type == "atter"
           *[#{$selector-base}-#{$selector}-#{$width-name}]
             @media screen and (max-width: $width)
               #{$var}: $value
               @if $two-var
                 #{$var2}: $value2
-        @else 
-          #{$selector-base}-#{$selector}:#{$width-name}
-            @media screen and (max-width: $width)
-              #{$var}: $value
-              @if $two-var
-                #{$var2}: $value2
+        @else
+          @if $type == "class"
+            .#{$selector-base}-#{$selector}:#{$width-name}
+              @media screen and (max-width: $width)
+                #{$var}: $value
+                @if $two-var
+                  #{$var2}: $value2
+          @else
+            @if $type == "tagVattr"
+              #{$selector-base}[#{$selector}-#{$width-name}]
+                @media screen and (max-width: $width)
+                  #{$var}: $value
+                  @if $two-var
+                    #{$var2}: $value2
+            @else
+              @if $type == "tagVclass"
+                #{$selector-base}.#{$selector}:#{$width-name}
+                  @media screen and (max-width: $width)
+                    #{$var}: $value
+                    @if $two-var
+                      #{$var2}: $value2

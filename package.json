@@ -9,7 +9,7 @@
   "scripts": {
     "sass:compile": "sass --watch src/sass:src/css --no-source-map",
     "gulp:compile": "gulp watch",
-    "gulp:build": "gulp export; gulp build"
+    "gulp:build": "gulp exportcss; gulp build"
   },
   "repository": {
     "type": "git",
