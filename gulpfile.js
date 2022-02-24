@@ -1,3 +1,4 @@
+const { watch } = require('gulp');
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
@@ -28,5 +29,4 @@ function build() {
 };
 
 exports.build = build;
-
 exports.default = build;
