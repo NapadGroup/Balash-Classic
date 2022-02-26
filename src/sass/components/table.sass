@@ -1,0 +1,33 @@
+table
+    -webkit-appearance: none
+    padding: 2.5px
+    border-radius: 3px
+    border: 1px solid #ccc
+    border-collapse: collapse
+    border-spacing: 0
+    box-sizing: border-box
+    thead, tbody, tfoot, & 
+        tr
+            display: flow-root
+            border-bottom: 1px solid #ccc
+            &:last-child:not(&:first-child)
+                border-bottom: none
+            td, th    
+                border-left: 1px solid #ccc
+                padding: 7.5px 5px
+                &:first-child
+                    border-left: none
+            th
+                font-weight: bold
+                
+    &[modern]
+        border-radius: 0
+        border: none
+        thead, tbody, tfoot, & 
+            tr
+                border-bottom: 1px solid #ccc
+                &:first-child:is(&:last-child)
+                    border-bottom: 2.2px solid #ccc
+                td, th
+                    padding: 10px 7.5px
+                    border: none

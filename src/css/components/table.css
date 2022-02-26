@@ -1,0 +1,40 @@
+table {
+  -webkit-appearance: none;
+  padding: 2.5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-sizing: border-box;
+}
+table thead tr, table tbody tr, table tfoot tr, table tr {
+  display: flow-root;
+  border-bottom: 1px solid #ccc;
+}
+table thead tr:last-child:not(table thead tr:first-child, table tbody tr:first-child, table tfoot tr:first-child, table tr:first-child), table tbody tr:last-child:not(table thead tr:first-child, table tbody tr:first-child, table tfoot tr:first-child, table tr:first-child), table tfoot tr:last-child:not(table thead tr:first-child, table tbody tr:first-child, table tfoot tr:first-child, table tr:first-child), table tr:last-child:not(table thead tr:first-child, table tbody tr:first-child, table tfoot tr:first-child, table tr:first-child) {
+  border-bottom: none;
+}
+table thead tr td, table thead tr th, table tbody tr td, table tbody tr th, table tfoot tr td, table tfoot tr th, table tr td, table tr th {
+  border-left: 1px solid #ccc;
+  padding: 7.5px 5px;
+}
+table thead tr td:first-child, table thead tr th:first-child, table tbody tr td:first-child, table tbody tr th:first-child, table tfoot tr td:first-child, table tfoot tr th:first-child, table tr td:first-child, table tr th:first-child {
+  border-left: none;
+}
+table thead tr th, table tbody tr th, table tfoot tr th, table tr th {
+  font-weight: bold;
+}
+table[modern] {
+  border-radius: 0;
+  border: none;
+}
+table[modern] thead tr, table[modern] tbody tr, table[modern] tfoot tr, table[modern] tr {
+  border-bottom: 1px solid #ccc;
+}
+table[modern] thead tr:first-child:is(table[modern] thead tr:last-child, table[modern] tbody tr:last-child, table[modern] tfoot tr:last-child, table[modern] tr:last-child), table[modern] tbody tr:first-child:is(table[modern] thead tr:last-child, table[modern] tbody tr:last-child, table[modern] tfoot tr:last-child, table[modern] tr:last-child), table[modern] tfoot tr:first-child:is(table[modern] thead tr:last-child, table[modern] tbody tr:last-child, table[modern] tfoot tr:last-child, table[modern] tr:last-child), table[modern] tr:first-child:is(table[modern] thead tr:last-child, table[modern] tbody tr:last-child, table[modern] tfoot tr:last-child, table[modern] tr:last-child) {
+  border-bottom: 2.2px solid #ccc;
+}
+table[modern] thead tr td, table[modern] thead tr th, table[modern] tbody tr td, table[modern] tbody tr th, table[modern] tfoot tr td, table[modern] tfoot tr th, table[modern] tr td, table[modern] tr th {
+  padding: 10px 7.5px;
+  border: none;
+}
