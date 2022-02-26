@@ -1,5 +1,6 @@
 const { watch } = require('gulp');
 const gulp = require('gulp');
+const uglify = require('gulp-uglify');
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
@@ -28,5 +29,15 @@ function build() {
     .pipe(gulp.dest('./build'))
 };
 
+function buildjs() {
+  return gulp.src('./src/js/*.js')
+    .pipe(uglify())
+    .pipe(rename(function (path) {
+      path.extname = ".min.js";
+    }))
+    .pipe(gulp.dest('./build/js'))
+};
+
+exports.buildjs = buildjs;
 exports.build = build;
 exports.default = build;
