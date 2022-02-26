@@ -100,641 +100,6 @@ b {
   font-weight: bold;
 }
 
-alert {
-  z-index: 1000;
-  display: inline-flex;
-  flex-direction: column;
-  position: fixed;
-  background-color: var(--bg-secondary-color);
-  top: 20vh;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 15px;
-  visibility: hidden;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  overflow: scroll;
-}
-alert:target {
-  width: 80%;
-  max-width: 520px;
-  min-height: 200px;
-  max-height: 300px;
-  border-radius: 5px;
-  visibility: visible;
-  animation: alert 1 0.5s;
-}
-alert:target a[close] {
-  position: absolute;
-  padding: auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px 5px;
-  background: rgba(0, 0, 0, 0.5);
-  font-size: 24px;
-  width: 36px;
-  height: 36px;
-  top: 0;
-  right: 0;
-  border-radius: 50%;
-}
-alert:target a[close]::before {
-  content: "×";
-  color: #000;
-}
-
-@keyframes alert {
-  0% {
-    width: 50px;
-    min-height: 50px;
-    max-height: 50px;
-    border-radius: 50%;
-  }
-  10% {
-    border-radius: 5px;
-  }
-  25% {
-    width: 100px;
-  }
-  50% {
-    min-height: 100px;
-    max-height: 100px;
-  }
-  100% {
-    width: 80%;
-    max-width: 520px;
-    min-height: 200px;
-    max-height: 300px;
-  }
-}
-blockquote {
-  text-indent: 10px;
-  display: inline-flex;
-  flex-direction: column;
-  position: relative;
-  padding: 5px 10px;
-  font-weight: 400;
-  font-size: 1.05rem;
-}
-blockquote subquote {
-  font-size: 1rem;
-  font-weight: 300;
-}
-blockquote subquote::before {
-  content: "- ";
-}
-blockquote quote {
-  padding: 1px 5px;
-  margin-bottom: 5px;
-}
-blockquote quote::after {
-  font-size: 1.25rem;
-  content: "〞";
-  position: absolute;
-}
-blockquote quote::before {
-  font-size: 1.25rem;
-  content: "〞";
-  position: absolute;
-  left: -2px;
-}
-blockquote[modern] {
-  padding: 5px 10px;
-  font-weight: 400;
-  font-size: 1.05rem;
-  border-left: 2.5px solid var(--primary-color);
-  border-radius: 10px;
-  background-color: var(--bg-secondary-color);
-}
-blockquote[modern]::before {
-  left: -5px;
-}
-blockquote[modern] subquote {
-  display: inline;
-  margin-bottom: 2.5px;
-}
-
-button {
-  --color: var(--secondary-color);
-  padding: 10px 15px;
-  color: var(--text);
-  display: inline-block;
-  transition: 0.2s;
-  cursor: pointer;
-  border: var(--color) 1px solid;
-  border-radius: 5px;
-  min-height: 25px;
-  font-weight: 400;
-  font-size: 16px;
-}
-button.erorr {
-  --color: #d12222;
-}
-button.warn {
-  --color: #ce6504;
-}
-button.success {
-  --color: #0bca15;
-}
-button:hover {
-  color: var(--hover-text);
-}
-button:hover a:visited, button:hover a:active {
-  color: var(--hover-text);
-}
-button a:visited, button a:active {
-  color: var(--text);
-}
-button:active {
-  transform: scale(0.95);
-}
-button[theme=inline] {
-  --text:#fff;
-  --hover-text:#000;
-  background-color: var(--color);
-}
-button[theme=inline]:hover {
-  background: none;
-}
-button[theme=outline] {
-  --text:#000;
-  --hover-text:#fff;
-}
-button[theme=outline]:hover {
-  background-color: var(--color);
-}
-button[theme=shadow-fill] {
-  --text:#fff;
-  --hover-text:#fff;
-  background-color: var(--color);
-}
-button[theme=shadow-fill]:hover {
-  opacity: 0.8;
-}
-button[theme=shadow] {
-  --text: var(--color);
-  --hover-text: var(--color);
-  border: 1px solid var(--color);
-}
-button[theme=shadow]:hover {
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.2);
-}
-button[theme=close] {
-  --text:#fff;
-  --hover-text:#fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  border-radius: 50%;
-  border: none;
-  width: 25px;
-  height: 25px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-button[theme=close]::before {
-  content: "×";
-  font-size: 20px;
-  color: var(--text);
-}
-button[theme=close]:active {
-  transform: none;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-dropdown {
-  position: relative;
-  display: inline-block;
-}
-dropdown drop {
-  z-index: 10;
-  min-width: 100px;
-  transition: 250ms;
-  opacity: 0;
-  visibility: hidden;
-  border-radius: 2.5px;
-  background-color: var(--bg-secondary-color);
-  position: absolute;
-  top: calc(100% + 15px);
-  display: flex;
-  flex-direction: column;
-  padding: 5px 7.5px;
-}
-dropdown drop item {
-  padding: 2px 5px;
-  border-radius: 1px;
-  transition: 50ms;
-  margin-bottom: 2px;
-  color: #000;
-}
-dropdown drop item:hover {
-  background-color: var(--secondary-color);
-  color: #fff;
-}
-dropdown:hover drop {
-  opacity: 1;
-  visibility: visible;
-}
-
-navbar {
-  --color: var(--secondary-color);
-  --bg-color: var(--bg-secondary-color);
-  background-color: var(--bg-color);
-  z-index: 10;
-  display: block;
-  width: 100%;
-}
-navbar[dark] nav item {
-  color: #dbdbdb;
-}
-navbar[dark] nav > input[menu] {
-  border-bottom: 1px solid white;
-}
-navbar[dark] nav > input[menu]:checked::before {
-  color: white;
-}
-navbar[theme=boxed] {
-  padding: 15px;
-}
-navbar[theme=boxed] nav item {
-  cursor: pointer;
-  padding: 5px;
-  flex: 0 1 auto;
-  border-radius: 2.5px;
-  margin-right: 5px;
-}
-navbar[theme=boxed] nav item a {
-  transition: 300ms;
-}
-navbar[theme=boxed] nav item a:visited {
-  color: initial;
-}
-navbar[theme=boxed] nav item:hover, navbar[theme=boxed] nav item[active], navbar[theme=boxed] nav item a:hover {
-  color: white;
-}
-@media screen and (max-width: 654px) {
-  navbar[theme=simple] nav {
-    padding-top: 15px;
-  }
-}
-navbar[theme=simple] nav > item {
-  padding: 15px;
-}
-navbar nav {
-  display: flex;
-  align-items: center;
-}
-navbar nav > item {
-  right: 0;
-  transition: 300ms;
-}
-navbar nav > item[logo] {
-  display: block;
-  padding: 2px;
-}
-@media screen and (min-width: 765px) {
-  navbar nav > item[logo] {
-    margin-right: auto;
-  }
-  navbar nav > item[logo]:last-child {
-    margin-right: 75px;
-  }
-}
-navbar nav > item:not(navbar nav > item[logo]):hover, navbar nav > item[active] {
-  background-color: var(--color);
-}
-navbar nav > input[menu] {
-  position: absolute;
-  visibility: visible;
-  -webkit-appearance: none;
-  border-radius: 5px;
-  border-bottom: 1px solid black;
-  width: 20px;
-  height: 20px;
-  overflow: hidden;
-  transition: 50ms;
-  cursor: pointer;
-  left: 15px;
-}
-navbar nav > input[menu]::before {
-  content: "✘";
-  position: absolute;
-  padding: 0.25px 2px;
-  color: grey;
-  font-size: 16px;
-}
-navbar nav > input[menu]:checked::before {
-  position: absolute;
-  content: "✘";
-  padding: 0.25px 2px;
-  color: black;
-  font-size: 16px;
-}
-@media screen and (min-width: 654px) {
-  navbar nav > input[menu] {
-    visibility: hidden;
-  }
-}
-@media screen and (max-width: 654px) {
-  navbar nav {
-    flex-direction: column;
-  }
-  navbar nav > item {
-    margin-bottom: 2.5px;
-    transition: background-color 150ms, opacity 500ms, margin-bottom 500ms;
-  }
-  navbar nav > item:not(navbar nav > item[logo]) {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-  }
-  navbar nav > input[menu]:checked ~ item {
-    opacity: 1;
-    visibility: visible;
-    position: inherit;
-  }
-  navbar nav > input[menu]:checked ~ item[logo] {
-    margin-bottom: 15px;
-  }
-}
-
-pagi {
-  position: static;
-  display: flex;
-}
-pagi item {
-  cursor: pointer;
-  z-index: 1;
-  flex: 0 1 auto;
-  padding: 5px 10px;
-  border: 1.5px #9e9e9e solid;
-  transition: 150ms;
-}
-pagi item:first-child {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-pagi item:first-child::before {
-  content: "<";
-}
-pagi item:last-child {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-pagi item:last-child::before {
-  content: ">";
-}
-pagi item[active] {
-  background-color: var(--primary-color);
-  color: white;
-}
-pagi item[active] a:visited {
-  color: white;
-}
-pagi item[active] a:hover {
-  color: white;
-}
-pagi item[disable] {
-  cursor: default;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.1);
-  opacity: 80%;
-  color: #757575;
-}
-pagi item:hover:not(pagi item[active], pagi item[disable]) {
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-pagi item:not(pagi item:first-child) {
-  border-left: none;
-}
-
-pgbar {
-  --bar-color: var(--bg-secondary-color);
-  --active-color: var(--primary-color);
-  --color: #ffffff;
-  display: inline-block;
-  position: relative;
-  min-width: 70%;
-  min-height: 20px;
-  border-radius: 2.5px;
-  background-color: var(--bar-color);
-  filter: none;
-  overflow: hidden;
-  border-radius: 10px;
-}
-pgbar bar {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  padding: 2px 5px;
-  padding-left: calc(var(--active) / 2);
-  background-color: var(--active-color);
-  box-shadow: 2.5px 0px 0.5px var(--secondary-color);
-  width: var(--active);
-  height: 100%;
-  color: var(--color);
-  filter: none;
-}
-
-tabs {
-  display: flex;
-}
-tabs tab {
-  padding: 5px;
-  flex: 0 1 auto;
-  padding: 5px 7.5px;
-  transition-duration: 200ms;
-}
-tabs tab a:hover, tabs tab[active] {
-  color: var(--primary-color);
-}
-tabs tab:hover {
-  cursor: pointer;
-}
-tabs[full] tab {
-  flex: 1;
-  text-align: center;
-}
-tabs[theme=modern] tab {
-  border-bottom: 2.25px #757575 solid;
-}
-tabs[theme=modern] tab[active], tabs[theme=modern] tab:hover {
-  border-bottom: 2.25px #212121 solid;
-}
-tabs[theme=box] tab {
-  border-bottom: 1.5px #757575 solid;
-}
-tabs[theme=box] tab[active], tabs[theme=box] tab:hover {
-  border: 1.5px #757575 solid;
-  border-bottom: none;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-tabs[theme=toggle] tab {
-  border: 1.5px #9e9e9e solid;
-}
-tabs[theme=toggle] tab:first-child {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-tabs[theme=toggle] tab:last-child {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-tabs[theme=toggle] tab[active], tabs[theme=toggle] tab:hover {
-  background-color: var(--primary-color);
-  color: white;
-}
-tabs[theme=toggle] tab[active] a:visited, tabs[theme=toggle] tab:hover a:visited {
-  color: white;
-}
-tabs[theme=toggle] tab[active] a:hover, tabs[theme=toggle] tab:hover a:hover {
-  color: white;
-}
-tabs[theme=toggle] tab:not(tabs[theme=toggle] tab:first-child) {
-  border-left: none;
-}
-
-.tooltip-box {
-  position: relative;
-}
-.tooltip-box tooltip {
-  --width: -75px;
-  z-index: 1;
-  display: inline-block;
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-  position: absolute;
-  left: 50%;
-  bottom: 95%;
-  transition: 0.5s;
-  transform: translate(-50%, 0%);
-  color: white;
-  padding: 5px 10px;
-  font-weight: 300;
-  font-size: 12px;
-  border-radius: 2.5px;
-  text-align: center;
-  min-width: 50px;
-  max-width: var(--width);
-}
-.tooltip-box tooltip[top-left] {
-  left: 0;
-  transform: none;
-  bottom: 100%;
-}
-.tooltip-box tooltip[top-right] {
-  left: auto;
-  right: 0;
-  transform: none;
-  bottom: 100%;
-}
-.tooltip-box tooltip[left] {
-  left: 0;
-  transform: translate(0, 50%);
-  bottom: 50%;
-}
-.tooltip-box tooltip[right] {
-  left: auto;
-  right: 0;
-  transform: translate(0, 50%);
-  bottom: 50%;
-}
-.tooltip-box tooltip[bottom] {
-  bottom: 5%;
-}
-.tooltip-box tooltip[bottom-left] {
-  left: 0;
-  transform: none;
-  bottom: 5%;
-}
-.tooltip-box tooltip[bottom-right] {
-  left: auto;
-  transform: none;
-  right: 0;
-  bottom: 5%;
-}
-.tooltip-box:hover > tooltip, .tooltip-box:focus > tooltip {
-  opacity: 1;
-  display: inline-block;
-  bottom: calc(100% + 10px);
-}
-.tooltip-box:hover > tooltip[top-left], .tooltip-box:focus > tooltip[top-left] {
-  left: var(--width);
-  bottom: calc(100% + 10px);
-}
-.tooltip-box:hover > tooltip[top-right], .tooltip-box:focus > tooltip[top-right] {
-  right: var(--width);
-  bottom: calc(100% + 10px);
-}
-.tooltip-box:hover > tooltip[left], .tooltip-box:focus > tooltip[left] {
-  left: var(--width);
-  bottom: 50%;
-}
-.tooltip-box:hover > tooltip[right], .tooltip-box:focus > tooltip[right] {
-  right: var(--width);
-  bottom: 50%;
-}
-.tooltip-box:hover > tooltip[bottom], .tooltip-box:focus > tooltip[bottom] {
-  bottom: calc(-50% - 10px);
-}
-.tooltip-box:hover > tooltip[bottom-left], .tooltip-box:focus > tooltip[bottom-left] {
-  left: var(--width);
-  bottom: calc(-50% - 10px);
-}
-.tooltip-box:hover > tooltip[bottom-right], .tooltip-box:focus > tooltip[bottom-right] {
-  right: var(--width);
-  bottom: calc(-50% - 10px);
-}
-
-line {
-  padding: 10px 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-line left {
-  display: flex;
-  justify-content: flex-start;
-}
-line right {
-  display: flex;
-  justify-content: flex-end;
-}
-
-breadcrumb {
-  display: flex;
-}
-breadcrumb item {
-  padding: 2px 5px;
-}
-breadcrumb item:first-child {
-  margin-left: 0;
-}
-breadcrumb item::after {
-  color: #bdbdbd;
-  padding-left: 10px;
-  content: ">";
-}
-breadcrumb[slash] item::after {
-  content: "/";
-}
-breadcrumb[arrow] item::after {
-  content: "→";
-}
-breadcrumb[dot] item::after {
-  content: "•";
-}
-breadcrumb item:last-child {
-  padding-right: 10px;
-}
-breadcrumb item:last-child::after {
-  content: "";
-}
-
 *[primary] {
   color: var(--primary-color);
 }
@@ -2921,4 +2286,691 @@ body[theme=center-box] shaft {
   body[theme=center-box] shaft {
     width: 95%;
   }
+}
+
+contents {
+  padding: 5px;
+  display: block;
+}
+contents content {
+  display: none;
+}
+contents content[active] {
+  display: inline-block;
+}
+
+blockquote {
+  text-indent: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 1.05rem;
+}
+blockquote subquote {
+  font-size: 1rem;
+  font-weight: 300;
+}
+blockquote subquote::before {
+  content: "- ";
+}
+blockquote quote {
+  padding: 1px 5px;
+  margin-bottom: 5px;
+}
+blockquote quote::after {
+  font-size: 1.25rem;
+  content: "〞";
+  position: absolute;
+}
+blockquote quote::before {
+  font-size: 1.25rem;
+  content: "〞";
+  position: absolute;
+  left: -2px;
+}
+blockquote[modern] {
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 1.05rem;
+  border-left: 2.5px solid var(--primary-color);
+  border-radius: 10px;
+  background-color: var(--bg-secondary-color);
+}
+blockquote[modern]::before {
+  left: -5px;
+}
+blockquote[modern] subquote {
+  display: inline;
+  margin-bottom: 2.5px;
+}
+
+breadcrumb {
+  display: flex;
+}
+breadcrumb item {
+  padding: 2px 5px;
+}
+breadcrumb item:first-child {
+  margin-left: 0;
+}
+breadcrumb item::after {
+  color: #bdbdbd;
+  padding-left: 10px;
+  content: ">";
+}
+breadcrumb[slash] item::after {
+  content: "/";
+}
+breadcrumb[arrow] item::after {
+  content: "→";
+}
+breadcrumb[dot] item::after {
+  content: "•";
+}
+breadcrumb item:last-child {
+  padding-right: 10px;
+}
+breadcrumb item:last-child::after {
+  content: "";
+}
+
+button {
+  --color: var(--secondary-color);
+  padding: 10px 15px;
+  color: var(--text);
+  display: inline-block;
+  transition: 0.2s;
+  cursor: pointer;
+  border: var(--color) 1px solid;
+  border-radius: 5px;
+  min-height: 25px;
+  font-weight: 400;
+  font-size: 16px;
+}
+button.erorr {
+  --color: #d12222;
+}
+button.warn {
+  --color: #ce6504;
+}
+button.success {
+  --color: #0bca15;
+}
+button:hover {
+  color: var(--hover-text);
+}
+button:hover a:visited, button:hover a:active {
+  color: var(--hover-text);
+}
+button a:visited, button a:active {
+  color: var(--text);
+}
+button:active {
+  transform: scale(0.95);
+}
+button[theme=inline] {
+  --text:#fff;
+  --hover-text:#000;
+  background-color: var(--color);
+}
+button[theme=inline]:hover {
+  background: none;
+}
+button[theme=outline] {
+  --text:#000;
+  --hover-text:#fff;
+}
+button[theme=outline]:hover {
+  background-color: var(--color);
+}
+button[theme=shadow-fill] {
+  --text:#fff;
+  --hover-text:#fff;
+  background-color: var(--color);
+}
+button[theme=shadow-fill]:hover {
+  opacity: 0.8;
+}
+button[theme=shadow] {
+  --text: var(--color);
+  --hover-text: var(--color);
+  border: 1px solid var(--color);
+}
+button[theme=shadow]:hover {
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.2);
+}
+button[theme=close] {
+  --text:#fff;
+  --hover-text:#fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+  border: none;
+  width: 25px;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+button[theme=close]::before {
+  content: "×";
+  font-size: 20px;
+  color: var(--text);
+}
+button[theme=close]:active {
+  transform: none;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+navbar {
+  --color: var(--secondary-color);
+  --bg-color: var(--bg-secondary-color);
+  background-color: var(--bg-color);
+  z-index: 10;
+  display: block;
+  width: 100%;
+}
+navbar[dark] nav item {
+  color: #dbdbdb;
+}
+navbar[dark] nav > input[menu] {
+  border-bottom: 1px solid white;
+}
+navbar[dark] nav > input[menu]:checked::before {
+  color: white;
+}
+navbar[theme=boxed] {
+  padding: 15px;
+}
+navbar[theme=boxed] nav item {
+  cursor: pointer;
+  padding: 5px;
+  flex: 0 1 auto;
+  border-radius: 2.5px;
+  margin-right: 5px;
+}
+navbar[theme=boxed] nav item a {
+  transition: 300ms;
+}
+navbar[theme=boxed] nav item a:visited {
+  color: initial;
+}
+navbar[theme=boxed] nav item:hover, navbar[theme=boxed] nav item[active], navbar[theme=boxed] nav item a:hover {
+  color: white;
+}
+@media screen and (max-width: 654px) {
+  navbar[theme=simple] nav {
+    padding-top: 15px;
+  }
+}
+navbar[theme=simple] nav > item {
+  padding: 15px;
+}
+navbar nav {
+  display: flex;
+  align-items: center;
+}
+navbar nav > item {
+  right: 0;
+  transition: 300ms;
+}
+navbar nav > item[logo] {
+  display: block;
+  padding: 2px;
+}
+@media screen and (min-width: 765px) {
+  navbar nav > item[logo] {
+    margin-right: auto;
+  }
+  navbar nav > item[logo]:last-child {
+    margin-right: 75px;
+  }
+}
+navbar nav > item:not(navbar nav > item[logo]):hover, navbar nav > item[active] {
+  background-color: var(--color);
+}
+navbar nav > input[menu] {
+  position: absolute;
+  visibility: visible;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  border-bottom: 1px solid black;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  transition: 50ms;
+  cursor: pointer;
+  left: 15px;
+}
+navbar nav > input[menu]::before {
+  content: "✘";
+  position: absolute;
+  padding: 0.25px 2px;
+  color: grey;
+  font-size: 16px;
+}
+navbar nav > input[menu]:checked::before {
+  position: absolute;
+  content: "✘";
+  padding: 0.25px 2px;
+  color: black;
+  font-size: 16px;
+}
+@media screen and (min-width: 654px) {
+  navbar nav > input[menu] {
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 654px) {
+  navbar nav {
+    flex-direction: column;
+  }
+  navbar nav > item {
+    margin-bottom: 2.5px;
+    transition: background-color 150ms, opacity 500ms, margin-bottom 500ms;
+  }
+  navbar nav > item:not(navbar nav > item[logo]) {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  navbar nav > input[menu]:checked ~ item {
+    opacity: 1;
+    visibility: visible;
+    position: inherit;
+  }
+  navbar nav > input[menu]:checked ~ item[logo] {
+    margin-bottom: 15px;
+  }
+}
+
+pagi {
+  position: static;
+  display: flex;
+}
+pagi item {
+  cursor: pointer;
+  z-index: 1;
+  flex: 0 1 auto;
+  padding: 5px 10px;
+  border: 1.5px #9e9e9e solid;
+  transition: 150ms;
+}
+pagi item:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+pagi item:first-child::before {
+  content: "<";
+}
+pagi item:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+pagi item:last-child::before {
+  content: ">";
+}
+pagi item[active] {
+  background-color: var(--primary-color);
+  color: white;
+}
+pagi item[active] a:visited {
+  color: white;
+}
+pagi item[active] a:hover {
+  color: white;
+}
+pagi item[disable] {
+  cursor: default;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 80%;
+  color: #757575;
+}
+pagi item:hover:not(pagi item[active], pagi item[disable]) {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+pagi item:not(pagi item:first-child) {
+  border-left: none;
+}
+
+pgbar {
+  --bar-color: var(--bg-secondary-color);
+  --active-color: var(--primary-color);
+  --color: #ffffff;
+  display: inline-block;
+  position: relative;
+  min-width: 70%;
+  min-height: 20px;
+  border-radius: 2.5px;
+  background-color: var(--bar-color);
+  filter: none;
+  overflow: hidden;
+  border-radius: 10px;
+}
+pgbar bar {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 2px 5px;
+  padding-left: calc(var(--active) / 2);
+  background-color: var(--active-color);
+  box-shadow: 2.5px 0px 0.5px var(--secondary-color);
+  width: var(--active);
+  height: 100%;
+  color: var(--color);
+  filter: none;
+}
+
+table {
+  -webkit-appearance: none;
+  padding: 2.5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-sizing: border-box;
+}
+table thead tr, table tbody tr, table tfoot tr, table tr {
+  display: flow-root;
+  border-bottom: 1px solid #ccc;
+}
+table thead tr:last-child:not(table thead tr:first-child, table tbody tr:first-child, table tfoot tr:first-child, table tr:first-child), table tbody tr:last-child:not(table thead tr:first-child, table tbody tr:first-child, table tfoot tr:first-child, table tr:first-child), table tfoot tr:last-child:not(table thead tr:first-child, table tbody tr:first-child, table tfoot tr:first-child, table tr:first-child), table tr:last-child:not(table thead tr:first-child, table tbody tr:first-child, table tfoot tr:first-child, table tr:first-child) {
+  border-bottom: none;
+}
+table thead tr td, table thead tr th, table tbody tr td, table tbody tr th, table tfoot tr td, table tfoot tr th, table tr td, table tr th {
+  border-left: 1px solid #ccc;
+  padding: 7.5px 5px;
+}
+table thead tr td:first-child, table thead tr th:first-child, table tbody tr td:first-child, table tbody tr th:first-child, table tfoot tr td:first-child, table tfoot tr th:first-child, table tr td:first-child, table tr th:first-child {
+  border-left: none;
+}
+table thead tr th, table tbody tr th, table tfoot tr th, table tr th {
+  font-weight: bold;
+}
+table[modern] {
+  border-radius: 0;
+  border: none;
+}
+table[modern] thead tr, table[modern] tbody tr, table[modern] tfoot tr, table[modern] tr {
+  border-bottom: 1px solid #ccc;
+}
+table[modern] thead tr:first-child:is(table[modern] thead tr:last-child, table[modern] tbody tr:last-child, table[modern] tfoot tr:last-child, table[modern] tr:last-child), table[modern] tbody tr:first-child:is(table[modern] thead tr:last-child, table[modern] tbody tr:last-child, table[modern] tfoot tr:last-child, table[modern] tr:last-child), table[modern] tfoot tr:first-child:is(table[modern] thead tr:last-child, table[modern] tbody tr:last-child, table[modern] tfoot tr:last-child, table[modern] tr:last-child), table[modern] tr:first-child:is(table[modern] thead tr:last-child, table[modern] tbody tr:last-child, table[modern] tfoot tr:last-child, table[modern] tr:last-child) {
+  border-bottom: 2.2px solid #ccc;
+}
+table[modern] thead tr td, table[modern] thead tr th, table[modern] tbody tr td, table[modern] tbody tr th, table[modern] tfoot tr td, table[modern] tfoot tr th, table[modern] tr td, table[modern] tr th {
+  padding: 10px 7.5px;
+  border: none;
+}
+
+tabs {
+  display: flex;
+}
+tabs tab {
+  padding: 5px;
+  flex: 0 1 auto;
+  padding: 5px 7.5px;
+  transition-duration: 200ms;
+}
+tabs tab a:hover, tabs tab[active] {
+  color: var(--primary-color);
+}
+tabs tab:hover {
+  cursor: pointer;
+}
+tabs[full] tab {
+  flex: 1;
+  text-align: center;
+}
+tabs[theme=modern] tab {
+  border-bottom: 2.25px #757575 solid;
+}
+tabs[theme=modern] tab[active], tabs[theme=modern] tab:hover {
+  border-bottom: 2.25px #212121 solid;
+}
+tabs[theme=box] tab {
+  border-bottom: 1.5px #757575 solid;
+}
+tabs[theme=box] tab[active], tabs[theme=box] tab:hover {
+  border: 1.5px #757575 solid;
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+tabs[theme=toggle] tab {
+  border: 1.5px #9e9e9e solid;
+}
+tabs[theme=toggle] tab:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+tabs[theme=toggle] tab:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+tabs[theme=toggle] tab[active], tabs[theme=toggle] tab:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+tabs[theme=toggle] tab[active] a:visited, tabs[theme=toggle] tab:hover a:visited {
+  color: white;
+}
+tabs[theme=toggle] tab[active] a:hover, tabs[theme=toggle] tab:hover a:hover {
+  color: white;
+}
+tabs[theme=toggle] tab:not(tabs[theme=toggle] tab:first-child) {
+  border-left: none;
+}
+
+alert {
+  z-index: 1000;
+  display: inline-flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: var(--bg-secondary-color);
+  top: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  visibility: hidden;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  overflow: scroll;
+}
+alert:target {
+  width: 80%;
+  max-width: 520px;
+  min-height: 200px;
+  max-height: 300px;
+  border-radius: 5px;
+  visibility: visible;
+  animation: alert 1 0.5s;
+}
+alert:target a[close] {
+  position: absolute;
+  padding: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 5px;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+  width: 36px;
+  height: 36px;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+}
+alert:target a[close]::before {
+  content: "×";
+  color: #000;
+}
+
+@keyframes alert {
+  0% {
+    width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+  }
+  10% {
+    border-radius: 5px;
+  }
+  25% {
+    width: 100px;
+  }
+  50% {
+    min-height: 100px;
+    max-height: 100px;
+  }
+  100% {
+    width: 80%;
+    max-width: 520px;
+    min-height: 200px;
+    max-height: 300px;
+  }
+}
+dropdown {
+  position: relative;
+  display: inline-block;
+}
+dropdown drop {
+  z-index: 10;
+  min-width: 100px;
+  transition: 250ms;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 2.5px;
+  background-color: var(--bg-secondary-color);
+  position: absolute;
+  top: calc(100% + 15px);
+  display: flex;
+  flex-direction: column;
+  padding: 5px 7.5px;
+}
+dropdown drop item {
+  padding: 2px 5px;
+  border-radius: 1px;
+  transition: 50ms;
+  margin-bottom: 2px;
+  color: #000;
+}
+dropdown drop item:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+dropdown:hover drop {
+  opacity: 1;
+  visibility: visible;
+}
+
+line {
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+line left {
+  display: flex;
+  justify-content: flex-start;
+}
+line right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tooltip-box {
+  position: relative;
+}
+.tooltip-box tooltip {
+  --width: -75px;
+  z-index: 1;
+  display: inline-block;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  left: 50%;
+  bottom: 95%;
+  transition: 0.5s;
+  transform: translate(-50%, 0%);
+  color: white;
+  padding: 5px 10px;
+  font-weight: 300;
+  font-size: 12px;
+  border-radius: 2.5px;
+  text-align: center;
+  min-width: 50px;
+  max-width: var(--width);
+}
+.tooltip-box tooltip[top-left] {
+  left: 0;
+  transform: none;
+  bottom: 100%;
+}
+.tooltip-box tooltip[top-right] {
+  left: auto;
+  right: 0;
+  transform: none;
+  bottom: 100%;
+}
+.tooltip-box tooltip[left] {
+  left: 0;
+  transform: translate(0, 50%);
+  bottom: 50%;
+}
+.tooltip-box tooltip[right] {
+  left: auto;
+  right: 0;
+  transform: translate(0, 50%);
+  bottom: 50%;
+}
+.tooltip-box tooltip[bottom] {
+  bottom: 5%;
+}
+.tooltip-box tooltip[bottom-left] {
+  left: 0;
+  transform: none;
+  bottom: 5%;
+}
+.tooltip-box tooltip[bottom-right] {
+  left: auto;
+  transform: none;
+  right: 0;
+  bottom: 5%;
+}
+.tooltip-box:hover > tooltip, .tooltip-box:focus > tooltip {
+  opacity: 1;
+  display: inline-block;
+  bottom: calc(100% + 10px);
+}
+.tooltip-box:hover > tooltip[top-left], .tooltip-box:focus > tooltip[top-left] {
+  left: var(--width);
+  bottom: calc(100% + 10px);
+}
+.tooltip-box:hover > tooltip[top-right], .tooltip-box:focus > tooltip[top-right] {
+  right: var(--width);
+  bottom: calc(100% + 10px);
+}
+.tooltip-box:hover > tooltip[left], .tooltip-box:focus > tooltip[left] {
+  left: var(--width);
+  bottom: 50%;
+}
+.tooltip-box:hover > tooltip[right], .tooltip-box:focus > tooltip[right] {
+  right: var(--width);
+  bottom: 50%;
+}
+.tooltip-box:hover > tooltip[bottom], .tooltip-box:focus > tooltip[bottom] {
+  bottom: calc(-50% - 10px);
+}
+.tooltip-box:hover > tooltip[bottom-left], .tooltip-box:focus > tooltip[bottom-left] {
+  left: var(--width);
+  bottom: calc(-50% - 10px);
+}
+.tooltip-box:hover > tooltip[bottom-right], .tooltip-box:focus > tooltip[bottom-right] {
+  right: var(--width);
+  bottom: calc(-50% - 10px);
 }
