@@ -41,5 +41,11 @@
     "src",
     "LICENSE",
     "README.md"
-  ]
+  ],
+  "dependencies": {
+    "clear": "^0.1.0"
+  },
+  "bin": {
+    "godui": "cli/main.js"
+  }
 }
