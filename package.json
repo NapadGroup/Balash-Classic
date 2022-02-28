@@ -1,6 +1,6 @@
 {
   "name": "godratmand-ui",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Godratmand Web Ui Framework",
   "main": "src/sass/GodUi.sass",
   "directories": {
