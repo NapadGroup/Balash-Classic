@@ -1,11 +1,11 @@
 #! /usr/bin/env node
 
 fs = require('fs');
-http = require('http');
 
 BaseURL = 'https://unpkg.com/godratmand-ui@latest/build';
 
-jsonfile = fs.readFileSync('godui.json');
+localdir = process.cwd();
+jsonfile = fs.readFileSync(`${localdir}/godui.json`);
 json = JSON.parse(jsonfile);
 
 Used = json.Used;
