@@ -14,7 +14,8 @@ Systems = json.Systems;
 FormUse = json.FormUse;
 dist = json.dist;
 
-cssImport = ""
+cssImport = `<link rel="stylesheet" href="${BaseURL}/core/core.min.css">\n`
+
 jsImport = ""
 
 Used.forEach(function(item) {
@@ -24,11 +25,13 @@ Used.forEach(function(item) {
 if (Utilities) {
     cssImport += `<link rel="stylesheet" href="${BaseURL}/utilities/utilities.min.css">\n`
 }
+if (FormUse) {
+    cssImport += `<link rel="stylesheet" href="${BaseURL}/form/form.min.css">\n`
+}
 
 if (Systems.Flex) {
     cssImport += `<link rel="stylesheet" href="${BaseURL}/layout/flex.min.css">\n`
 }
-
 if (Systems.Shaft) {
     cssImport += `<link rel="stylesheet" href="${BaseURL}/layout/shaft.min.css">\n`
 }
@@ -37,7 +40,6 @@ if (Systems.Grid) {
     cssImport += `<link rel="stylesheet" href="${BaseURL}/layout/grid.min.css">\n`
     jsImport += `<script src="${BaseURL}/js/Grid-system.min.js"></script>\n`
 }
-
 if (Systems.Switch) {
     cssImport += `<link rel="stylesheet" href="${BaseURL}/layout/contents.min.css">\n`
     jsImport += `<script src="${BaseURL}/js/Switch.min.js"></script>\n`
