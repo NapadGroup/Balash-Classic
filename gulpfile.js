@@ -22,14 +22,8 @@ exports.watch = function () {
   gulp.watch('./src/sass/**/*.sass', exportcss);
 };
 
-buildfilter = ['form/radiobtn.css', 'form/input-box.css', 'form/text.css', 'form/textarea.css',
-               'form/toggle.css', 'form/checkbox.css', 'core/base.css', 'core/typography.css', 
-               'utilities/basic.css', 'utilities/display.css', 'utilities/div.css', 
-               'utilities/position.css', 'utilities/size.css', 'utilities/text.css'];
-
 function build() {
-  return gulp.src('./src/css/**/*.css')
-    .pipe(ignore.exclude(buildfilter))
+  return gulp.src('./src/css/GodUi.css')
     .pipe(cssnano())
     .pipe(rename(function (path) {
       path.extname = ".min.css";
@@ -38,9 +32,8 @@ function build() {
 };
 
 function buildrtl() {
-  return gulp.src('./src/css/**/*.css')
+  return gulp.src('./src/css/GodUi.css')
     .pipe(rtlcss())
-    .pipe(ignore.exclude(buildfilter))
     .pipe(cssnano())
     .pipe(rename(function (path) {
       path.extname = ".rtl.min.css";
@@ -54,7 +47,7 @@ function buildjs() {
     .pipe(rename(function (path) {
       path.extname = ".min.js";
     }))
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./build'))
 };
 
 exports.buildjs = buildjs;
