@@ -12,14 +12,24 @@ pgbar
     overflow: hidden
     border-radius: 10px
     bar
-        position: absolute
-        display: flex
-        align-items: center
-        padding: 2px 5px
-        padding-left: calc( var(--active) / 2)
+        @extend %bar
+        box-shadow:2.5px 0 .5px var(--secondary-color)
         background-color: var(--active-color)
-        box-shadow: 2.5px 0px .5px var(--secondary-color)
         width: var(--active)
-        height: 100%
-        color: var(--color)
-        filter: none
+    bar2
+        @extend %bar
+        right: 0
+        box-shadow: -2.5px 0 .5px var(--active-shadow-color2)
+        background-color: var(--active-color2)
+        width: var(--active2)
+
+
+%bar
+    position: absolute
+    display: flex
+    align-items: center
+    padding: 2px 5px
+    padding-left: calc( var(--active) / 2)
+    height: 100%
+    color: var(--color)
+    filter: none
