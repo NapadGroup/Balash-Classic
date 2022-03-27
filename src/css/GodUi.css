@@ -67,7 +67,8 @@ body {
 }
 
 * {
-  font-family: Arial, Helvetica, -apple-system, Roboto, "Vazir", Oxygen, Ubuntu, "Open Sans", sans-serif;
+  font-family: Arial, "Vazir", Helvetica, -apple-system, Roboto, Oxygen, Ubuntu, "Open Sans", sans-serif /*!rtl: 'Vazir', Arial, Helvetica, -apple-system, Roboto, Oxygen, Ubuntu, 'Open Sans', sans-serif*/;
+  direction: ltr /*!rtl: rtl*/;
 }
 
 h1, h2, h3, h4, h5, h6, *[title] {
@@ -721,6 +722,7 @@ input[type=checkbox]:not(input[type=checkbox][toggle], input[type=checkbox][menu
   padding: 0.25px 2px;
   color: white;
   font-size: 16px;
+  /*rtl:raw:transform: translateY(-5%)*/
 }
 input[type=checkbox]:not(input[type=checkbox][toggle], input[type=checkbox][menu]):focus {
   box-shadow: 0 0 5px var(--color);
@@ -2373,7 +2375,8 @@ blockquote quote::before {
   font-size: 1.25rem;
   content: "〞";
   position: absolute;
-  left: -2px;
+  left: -2px /*rtl:ignore*/;
+  /*rtl:raw:right: -10px*/
 }
 blockquote[modern] {
   padding: 5px 10px;
@@ -2409,7 +2412,7 @@ breadcrumb[slash] item::after {
   content: "/";
 }
 breadcrumb[arrow] item::after {
-  content: "→";
+  content: "→" /*!rtl: "←"*/;
 }
 breadcrumb[dot] item::after {
   content: "•";
@@ -2514,6 +2517,7 @@ button[theme=close]::before {
   content: "×";
   font-size: 20px;
   color: var(--text);
+  /*rtl:raw:transform: translateY(5%)*/
 }
 button[theme=close]:active {
   transform: none;
@@ -2682,7 +2686,7 @@ pagi item[disable] {
   cursor: default;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.1);
-  opacity: 80%;
+  opacity: 0.8;
   color: #757575;
 }
 pagi item:hover:not(pagi item[active], pagi item[disable]) {

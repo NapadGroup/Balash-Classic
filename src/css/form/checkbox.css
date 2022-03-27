@@ -29,6 +29,7 @@ input[type=checkbox]:not(input[type=checkbox][toggle], input[type=checkbox][menu
   padding: 0.25px 2px;
   color: white;
   font-size: 16px;
+  /*rtl:raw:transform: translateY(-5%)*/
 }
 input[type=checkbox]:not(input[type=checkbox][toggle], input[type=checkbox][menu]):focus {
   box-shadow: 0 0 5px var(--color);

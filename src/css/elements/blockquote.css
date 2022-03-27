@@ -28,7 +28,8 @@ blockquote quote::before {
   font-size: 1.25rem;
   content: "〞";
   position: absolute;
-  left: -2px;
+  left: -2px /*rtl:ignore*/;
+  /*rtl:raw:right: -10px*/
 }
 blockquote[modern] {
   padding: 5px 10px;

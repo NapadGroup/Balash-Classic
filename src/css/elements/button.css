@@ -92,6 +92,7 @@ button[theme=close]::before {
   content: "×";
   font-size: 20px;
   color: var(--text);
+  /*rtl:raw:transform: translateY(5%)*/
 }
 button[theme=close]:active {
   transform: none;

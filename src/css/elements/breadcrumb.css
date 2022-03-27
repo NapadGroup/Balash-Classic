@@ -17,7 +17,7 @@ breadcrumb[slash] item::after {
   content: "/";
 }
 breadcrumb[arrow] item::after {
-  content: "→";
+  content: "→" /*!rtl: "←"*/;
 }
 breadcrumb[dot] item::after {
   content: "•";

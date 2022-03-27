@@ -4,6 +4,7 @@ const ignore = require('gulp-ignore');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
+const rtlcss = require('gulp-rtlcss');
 const cssnano = require('gulp-cssnano');
 const rename = require("gulp-rename");
 
@@ -36,6 +37,17 @@ function build() {
     .pipe(gulp.dest('./build'))
 };
 
+function buildrtl() {
+  return gulp.src('./src/css/**/*.css')
+    .pipe(rtlcss())
+    .pipe(ignore.exclude(buildfilter))
+    .pipe(cssnano())
+    .pipe(rename(function (path) {
+      path.extname = ".rtl.min.css";
+    }))
+    .pipe(gulp.dest('./build'))
+};
+
 function buildjs() {
   return gulp.src('./src/js/*.js')
     .pipe(uglify())
@@ -47,4 +59,5 @@ function buildjs() {
 
 exports.buildjs = buildjs;
 exports.build = build;
+exports.buildrtl = buildrtl;
 exports.default = build;
