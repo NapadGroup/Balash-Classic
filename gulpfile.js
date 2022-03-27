@@ -10,6 +10,9 @@ const rename = require("gulp-rename");
 function exportcss() {
   return gulp.src('./src/sass/**/*.sass')
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+      cascade: false
+    }))
     .pipe(gulp.dest('./src/css'));
 };
 
@@ -24,11 +27,7 @@ buildfilter = ['form/radiobtn.css', 'form/input-box.css', 'form/text.css', 'form
                'utilities/position.css', 'utilities/size.css', 'utilities/text.css'];
 
 function build() {
-
   return gulp.src('./src/css/**/*.css')
-    .pipe(autoprefixer({
-      cascade: false
-    }))
     .pipe(ignore.exclude(buildfilter))
     .pipe(cssnano())
     .pipe(rename(function (path) {

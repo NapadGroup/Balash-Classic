@@ -15,6 +15,7 @@
 }
 
 .position-sticky {
+  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -44,6 +45,7 @@
 
 @media screen and (max-width: 540px) {
   .position-sticky:sm {
+    position: -webkit-sticky;
     position: sticky;
   }
 }
@@ -74,6 +76,7 @@
 
 @media screen and (max-width: 720px) {
   .position-sticky:md {
+    position: -webkit-sticky;
     position: sticky;
   }
 }
@@ -104,6 +107,7 @@
 
 @media screen and (max-width: 765px) {
   .position-sticky:mobile {
+    position: -webkit-sticky;
     position: sticky;
   }
 }
@@ -134,6 +138,7 @@
 
 @media screen and (max-width: 960px) {
   .position-sticky:lg {
+    position: -webkit-sticky;
     position: sticky;
   }
 }
@@ -164,6 +169,7 @@
 
 @media screen and (max-width: 1140px) {
   .position-sticky:xl {
+    position: -webkit-sticky;
     position: sticky;
   }
 }

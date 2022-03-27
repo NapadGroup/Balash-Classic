@@ -8,6 +8,7 @@ pgbar {
   min-height: 20px;
   border-radius: 2.5px;
   background-color: var(--bar-color);
+  -webkit-filter: none;
   filter: none;
   overflow: hidden;
   border-radius: 10px;
@@ -32,5 +33,6 @@ pgbar bar, pgbar bar2 {
   padding-left: calc(var(--active) / 2);
   height: 100%;
   color: var(--color);
+  -webkit-filter: none;
   filter: none;
 }

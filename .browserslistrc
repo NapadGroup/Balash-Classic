@@ -1,0 +1,12 @@
+>= 0.3%
+last 3 major versions
+not dead
+Chrome >= 45.0
+Firefox >= 38.0
+Firefox ESR
+Edge >= 12.0
+Opera >= 23.0
+iOS >= 9.0
+Android >= 5.0
+Safari >= 9.0
+not Explorer <= 11.0

@@ -18,8 +18,22 @@
 *[dark] {
   color: #fafafa;
 }
+*:-webkit-any-link {
+  color: var(--primary-color);
+}
+*:-moz-any-link {
+  color: var(--primary-color);
+}
 *:any-link {
   color: var(--primary-color);
+}
+*:-webkit-any-link:hover {
+  color: var(--secondary-color);
+  opacity: 0.8;
+}
+*:-moz-any-link:hover {
+  color: var(--secondary-color);
+  opacity: 0.8;
 }
 *:any-link:hover {
   color: var(--secondary-color);

@@ -33,8 +33,22 @@
 *[dark] {
   color: #fafafa;
 }
+*:-webkit-any-link {
+  color: var(--primary-color);
+}
+*:-moz-any-link {
+  color: var(--primary-color);
+}
 *:any-link {
   color: var(--primary-color);
+}
+*:-webkit-any-link:hover {
+  color: var(--secondary-color);
+  opacity: 0.8;
+}
+*:-moz-any-link:hover {
+  color: var(--secondary-color);
+  opacity: 0.8;
 }
 *:any-link:hover {
   color: var(--secondary-color);
@@ -459,6 +473,7 @@ b, *[bold] {
 }
 
 .position-sticky {
+  position: -webkit-sticky;
   position: sticky;
 }
 
@@ -488,6 +503,7 @@ b, *[bold] {
 
 @media screen and (max-width: 540px) {
   .position-sticky:sm {
+    position: -webkit-sticky;
     position: sticky;
   }
 }
@@ -518,6 +534,7 @@ b, *[bold] {
 
 @media screen and (max-width: 720px) {
   .position-sticky:md {
+    position: -webkit-sticky;
     position: sticky;
   }
 }
@@ -548,6 +565,7 @@ b, *[bold] {
 
 @media screen and (max-width: 765px) {
   .position-sticky:mobile {
+    position: -webkit-sticky;
     position: sticky;
   }
 }
@@ -578,6 +596,7 @@ b, *[bold] {
 
 @media screen and (max-width: 960px) {
   .position-sticky:lg {
+    position: -webkit-sticky;
     position: sticky;
   }
 }
@@ -608,6 +627,7 @@ b, *[bold] {
 
 @media screen and (max-width: 1140px) {
   .position-sticky:xl {
+    position: -webkit-sticky;
     position: sticky;
   }
 }
@@ -2683,6 +2703,7 @@ pgbar {
   min-height: 20px;
   border-radius: 2.5px;
   background-color: var(--bar-color);
+  -webkit-filter: none;
   filter: none;
   overflow: hidden;
   border-radius: 10px;
@@ -2707,6 +2728,7 @@ pgbar bar, pgbar bar2 {
   padding-left: calc(var(--active) / 2);
   height: 100%;
   color: var(--color);
+  -webkit-filter: none;
   filter: none;
 }
 
@@ -2831,6 +2853,7 @@ alert:target {
   max-height: 300px;
   border-radius: 5px;
   visibility: visible;
+  -webkit-animation: alert 1 0.5s;
   animation: alert 1 0.5s;
 }
 alert:target a[close] {
@@ -2851,6 +2874,31 @@ alert:target a[close] {
 alert:target a[close]::before {
   content: "×";
   color: #000;
+}
+
+@-webkit-keyframes alert {
+  0% {
+    width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+  }
+  10% {
+    border-radius: 5px;
+  }
+  25% {
+    width: 100px;
+  }
+  50% {
+    min-height: 100px;
+    max-height: 100px;
+  }
+  100% {
+    width: 80%;
+    max-width: 520px;
+    min-height: 200px;
+    max-height: 300px;
+  }
 }
 
 @keyframes alert {
