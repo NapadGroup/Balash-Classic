@@ -1,5 +1,6 @@
 *[hide] {
   visibility: hidden;
+  display: none !important;
 }
 
 *[show] {

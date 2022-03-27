@@ -41,9 +41,15 @@ button[theme=inline] {
 button[theme=inline]:hover {
   background: none;
 }
+button[theme=inline][dark] {
+  --hover-text:#dfdfdf;
+}
 button[theme=outline] {
   --text:#000;
   --hover-text:#fff;
+}
+button[theme=outline][dark] {
+  background-color: var(--bg-scondary-color);
 }
 button[theme=outline]:hover {
   background-color: var(--color);
@@ -59,11 +65,15 @@ button[theme=shadow-fill]:hover {
 button[theme=shadow] {
   --text: var(--color);
   --hover-text: var(--color);
+  background-color: var(--bg-secondary-color);
   border: 1px solid var(--color);
 }
 button[theme=shadow]:hover {
   z-index: 2;
   background: rgba(0, 0, 0, 0.2);
+}
+button[theme=shadow]:hover[dark] {
+  background: rgba(255, 255, 255, 0.2);
 }
 button[theme=close] {
   --text:#fff;

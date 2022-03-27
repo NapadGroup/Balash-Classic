@@ -16,17 +16,29 @@
 :root {
   --primary-color: #ca8f21;
   --secondary-color: #af7b19;
-  --bg-primary-color: #fff;
-  --bg-secondary-color: #f3f3f6;
+  --bg-primary-color: var(--bg-light-primary-color);
+  --bg-light-primary-color: #fff;
+  --bg-dark-primary-color: #1d1d1d;
+  --bg-secondary-color: var(--bg-light-secondary-color);
+  --bg-light-secondary-color: #f3f3f6;
+  --bg-dark-secondary-color: #0f0f0f;
 }
 
 * {
   padding: 0;
   margin: 0;
+  transition: all 150ms ease-in-out;
   text-decoration: none;
+}
+*[dark] {
+  color: #fafafa;
 }
 *:any-link {
   color: var(--primary-color);
+}
+*:any-link:hover {
+  color: var(--secondary-color);
+  opacity: 0.8;
 }
 *:before, *:after, * {
   box-sizing: inherit;
@@ -96,8 +108,18 @@ p {
   font-size: 1rem;
 }
 
-b {
+b, *[bold] {
   font-weight: bold;
+}
+
+*[small] {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+}
+
+*[italic] {
+  font-style: italic;
 }
 
 *[primary] {
@@ -393,6 +415,7 @@ b {
 
 *[hide] {
   visibility: hidden;
+  display: none !important;
 }
 
 *[show] {
@@ -737,7 +760,7 @@ input[type=radio]::before {
   content: "";
   z-index: 1;
   position: absolute;
-  background: #fff;
+  background: var(--bg-primary-color);
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -757,6 +780,7 @@ input[type=radio]:focus {
 
 input:is([type=text], [type=email], [type=password]) {
   --color: var(--primary-color);
+  background-color: var(--bg-scondary-color);
   position: relative;
   -webkit-appearance: none;
   border: 1px solid #757575;
@@ -777,6 +801,7 @@ input:is([type=text], [type=email], [type=password]):focus {
 
 textarea {
   --color: var(--primary-color);
+  background-color: var(--bg-scondary-color);
   position: relative;
   -webkit-appearance: none;
   border: 1px solid #757575;
@@ -2418,9 +2443,15 @@ button[theme=inline] {
 button[theme=inline]:hover {
   background: none;
 }
+button[theme=inline][dark] {
+  --hover-text:#dfdfdf;
+}
 button[theme=outline] {
   --text:#000;
   --hover-text:#fff;
+}
+button[theme=outline][dark] {
+  background-color: var(--bg-scondary-color);
 }
 button[theme=outline]:hover {
   background-color: var(--color);
@@ -2436,11 +2467,15 @@ button[theme=shadow-fill]:hover {
 button[theme=shadow] {
   --text: var(--color);
   --hover-text: var(--color);
+  background-color: var(--bg-secondary-color);
   border: 1px solid var(--color);
 }
 button[theme=shadow]:hover {
   z-index: 2;
   background: rgba(0, 0, 0, 0.2);
+}
+button[theme=shadow]:hover[dark] {
+  background: rgba(255, 255, 255, 0.2);
 }
 button[theme=close] {
   --text:#fff;
@@ -2653,14 +2688,23 @@ pgbar {
   border-radius: 10px;
 }
 pgbar bar {
+  box-shadow: 2.5px 0 0.5px var(--secondary-color);
+  background-color: var(--active-color);
+  width: var(--active);
+}
+pgbar bar2 {
+  right: 0;
+  box-shadow: -2.5px 0 0.5px var(--active-shadow-color2);
+  background-color: var(--active-color2);
+  width: var(--active2);
+}
+
+pgbar bar, pgbar bar2 {
   position: absolute;
   display: flex;
   align-items: center;
   padding: 2px 5px;
   padding-left: calc(var(--active) / 2);
-  background-color: var(--active-color);
-  box-shadow: 2.5px 0px 0.5px var(--secondary-color);
-  width: var(--active);
   height: 100%;
   color: var(--color);
   filter: none;
