@@ -1,15 +1,25 @@
 :root
     --primary-color: #ca8f21
     --secondary-color: #af7b19
-    --bg-primary-color: #fff
-    --bg-secondary-color: #f3f3f6
+    --bg-primary-color: var(--bg-light-primary-color)
+    --bg-light-primary-color: #fff
+    --bg-dark-primary-color: #1d1d1d
+    --bg-secondary-color: var(--bg-light-secondary-color)
+    --bg-light-secondary-color: #f3f3f6
+    --bg-dark-secondary-color: #0f0f0f
 
 *
     padding: 0
     margin: 0
+    transition: all 150ms ease-in-out
     text-decoration: none
+    &[dark]
+        color: #fafafa
     &:any-link
         color: var(--primary-color)
+        &:hover
+            color: var(--secondary-color)
+            opacity: .8
     &:before, &:after, &
         box-sizing: inherit
 
