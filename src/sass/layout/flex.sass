@@ -4,7 +4,7 @@ container[type="flex"]
   display: flex
   row
     display: flex
-    +Generator("col", $selectors, "flex", $values, false, true, false)
+    +Generator("col", $selectors, "flex", $values, atter, true, false)
 
 $flex-dirs: [column, column-reverse, row, row-reverse]
 
@@ -28,4 +28,4 @@ $flex-wraps: [nowrap, wrap, wrap-reverse]
 
 +Generator("align-self", $align-selfs, "align-self", $align-selfs, atter, true, false)
 
-+Generator("flex-wrap", $flex-wraps, "flex-wrap", $flex-wraps, atter, true, false)
++Generator("flex", $flex-wraps, "flex-wrap", $flex-wraps, atter, true, false)
