@@ -2,6 +2,7 @@ body
     --bg-color: var(--bg-secondary-color)
     --bg-color2: var(--bg-primary-color)
     --color: var(--primary-color)
+    --color2: var(--secondary-color)
     &[theme="phonix"]
         padding: 10px
         @media screen and (min-width: 765px)
@@ -34,3 +35,75 @@ body
                 box-shadow: 1.5px 1.5px 2px rgba(0, 0, 0, .5)
             @media screen and (max-width: 486px)
                 width: 95%
+    &[theme="book"]
+        z-index: -2
+        position: relative
+        background-color: var(--bg-color)
+        &::before
+            z-index: -1
+            content: " "
+            position: fixed
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-color: var(--color)
+            border-radius: 20px
+            width: 75vw
+            height: 85vh
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5)
+        @media screen and (min-width: 768px)
+            ::after
+                z-index: 1
+                content: " "
+                position: fixed
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                background-color: var(--color2)
+                border-radius: 1px
+                width: 5px
+                height: 85vh
+                box-shadow: 0 0px 10px 1.5px rgba(0, 0, 0, 5%)
+        shaft
+            z-index: 0
+            position: fixed
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            border-radius: 20px
+            width: 74vw
+            height: 84.2vh
+            background-color: var(--bg-color2)
+            // overflow-y: auto
+            // overflow-x: hidden
+            overflow: hidden
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5)
+            @media screen and (min-width: 768px)
+                display: flex
+            page
+                display: flex
+                height: 100%
+                flex-direction: column
+                padding: 1rem 2rem
+                position: relative
+                header
+                    border-bottom: 1px solid var(--bg-color)
+                    padding-bottom: 5px
+                    order: 1
+                    position: absolute
+                    width: 100%
+                article
+                    order: 2
+                    margin-bottom: 1.5rem
+                    margin-top: 2.5rem
+                    overflow-x: auto
+                footer
+                    border-top: 1px solid var(--bg-color)
+                    padding-top: 5px
+                    position: absolute
+                    bottom: 1rem
+                    width: 100%
+                    order: 3
+                footer, header
+                    a
+                        cursor: pointer
