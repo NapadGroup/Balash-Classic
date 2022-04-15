@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./images/banner.jpg" width="750px">
+<img src="./images/banner.jpg">
 
 **GodUi** the Fast, lightweight & esey Web Ui Framework
 
