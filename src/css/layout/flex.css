@@ -1,6 +1,3 @@
-container[type=flex] {
-  display: flex;
-}
 container[type=flex] row {
   display: flex;
 }
