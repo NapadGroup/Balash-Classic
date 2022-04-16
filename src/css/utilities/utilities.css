@@ -302,6 +302,10 @@
   margin: auto;
 }
 
+*[center-w] {
+  margin-inline: auto;
+}
+
 *[of-a] {
   overflow: auto;
 }
