@@ -1,0 +1,29 @@
+card 
+    --radius: 15px
+    --color: var(--primary-color)
+    display: flex
+    flex-direction: column
+    align-items: center
+    overflow: hidden
+    min-width: 120px
+    max-width: 324px
+    border-radius: var(--radius)
+    box-shadow: inset 0 0 2.5px .5px var(--color)
+    position: relative
+    img
+        order: 1
+        position: relative
+        width: 100%
+    header
+        order: 2
+        text-align: center
+        padding: 1rem 0
+    contents
+        order: 3
+        padding: 0 .2rem 0 .2rem
+    & > content
+        order: 3
+        padding: 0 1.5rem .5rem 1.5rem
+    footer
+        order: 4
+        padding: .5rem 1.5rem
