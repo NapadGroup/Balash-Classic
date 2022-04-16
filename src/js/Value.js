@@ -1,4 +1,4 @@
-ValueElements = document.querySelectorAll('*[value]');
+ValueElements = document.querySelectorAll('*[values]');
 
 ValueOptions = {
     "h": "height",
@@ -23,7 +23,7 @@ ValueOptions = {
 };
 
 ValueElements.forEach(function(element) {
-    values = element.getAttribute('value').split(' ');
+    values = element.getAttribute('values').split(' ');
     values.forEach(function(value) {
         ValueOptions.all.forEach(function(valueoption) {
             if (value.search(valueoption) != -1) {
