@@ -1,0 +1,47 @@
+ol, ul
+    padding: 2.5px 7px
+    margin-top: 1rem
+    ol, ul
+        margin-left: 20px
+        margin-top: 0
+        padding: 0
+    li
+        padding: 2px 5px
+        &[father]::marker
+            content: " "
+    &[style="dot"]
+        list-style: circle
+    &[style="fill-dot"]
+        list-style: disc
+    &[style="square"]
+        list-style: square
+    &[style="number"]
+        list-style: decimal
+    &[style="number-roman"]
+        list-style: upper-roman
+    &[style="alpha"]
+        list-style: upper-alpha
+    &[style="adad"]
+        list-style: persian
+    &[style="alefba"]
+        list-style: persian-alphabetic
+    &[style="abjad"]
+        list-style: persian-abjad
+    &[style="atter"]
+        li::marker
+            content: attr(marker)
+
+@counter-style persian
+    system: numeric
+    symbols: '\6F0' '\6F1' '\6F2' '\6F3' '\6F4' '\6F5' '\6F6' '\6F7' '\6F8' '\6F9'
+    suffix: ' -'
+
+@counter-style persian-abjad
+    system: fixed
+    symbols: '\627' '\628' '\62C' '\62F' '\647\200D' '\648' '\632' '\62D' '\637' '\6CC' '\6A9' '\644' '\645' '\646' '\633' '\639' '\641' '\635' '\642' '\631' '\634' '\62A' '\62B' '\62E' '\630' '\636' '\638' '\63A'
+    suffix: ' )'
+
+@counter-style persian-alphabetic 
+    system: fixed
+    symbols: '\627' '\628' '\67E' '\62A' '\62B' '\62C' '\686' '\62D' '\62E' '\62F' '\630' '\631' '\632' '\698' '\633' '\634' '\635' '\636' '\637' '\638' '\639' '\63A' '\641' '\642' '\6A9' '\6AF' '\644' '\645' '\646' '\648' '\647\200D' '\6CC'
+    suffix: ' )'

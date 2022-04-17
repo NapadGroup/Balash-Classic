@@ -1,0 +1,62 @@
+@charset "UTF-8";
+ol, ul {
+  padding: 2.5px 7px;
+  margin-top: 1rem;
+}
+ol ol, ol ul, ul ol, ul ul {
+  margin-left: 20px;
+  margin-top: 0;
+  padding: 0;
+}
+ol li, ul li {
+  padding: 2px 5px;
+}
+ol li[father]::marker, ul li[father]::marker {
+  content: " ";
+}
+ol[style=dot], ul[style=dot] {
+  list-style: circle;
+}
+ol[style=fill-dot], ul[style=fill-dot] {
+  list-style: disc;
+}
+ol[style=square], ul[style=square] {
+  list-style: square;
+}
+ol[style=number], ul[style=number] {
+  list-style: decimal;
+}
+ol[style=number-roman], ul[style=number-roman] {
+  list-style: upper-roman;
+}
+ol[style=alpha], ul[style=alpha] {
+  list-style: upper-alpha;
+}
+ol[style=adad], ul[style=adad] {
+  list-style: persian;
+}
+ol[style=alefba], ul[style=alefba] {
+  list-style: persian-alphabetic;
+}
+ol[style=abjad], ul[style=abjad] {
+  list-style: persian-abjad;
+}
+ol[style=atter] li::marker, ul[style=atter] li::marker {
+  content: attr(marker);
+}
+
+@counter-style persian {
+  system: numeric;
+  symbols: "۰" "۱" "۲" "۳" "۴" "۵" "۶" "۷" "۸" "۹";
+  suffix: " -";
+}
+@counter-style persian-abjad {
+  system: fixed;
+  symbols: "ا" "ب" "ج" "د" "ه‍" "و" "ز" "ح" "ط" "ی" "ک" "ل" "م" "ن" "س" "ع" "ف" "ص" "ق" "ر" "ش" "ت" "ث" "خ" "ذ" "ض" "ظ" "غ";
+  suffix: " )";
+}
+@counter-style persian-alphabetic {
+  system: fixed;
+  symbols: "ا" "ب" "پ" "ت" "ث" "ج" "چ" "ح" "خ" "د" "ذ" "ر" "ز" "ژ" "س" "ش" "ص" "ض" "ط" "ظ" "ع" "غ" "ف" "ق" "ک" "گ" "ل" "م" "ن" "و" "ه‍" "ی";
+  suffix: " )";
+}
