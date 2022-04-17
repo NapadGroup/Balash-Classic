@@ -29,7 +29,25 @@ navbar
                     color: initial
                 &:hover, &[active], a:hover
                     color: white
-                    
+        &[vertical]
+            display: inline-block
+            nav
+                display: inline-flex
+                flex-direction: column
+                & > item
+                    min-width: 11rem
+                    margin-right: inherit
+                    margin-bottom: .35rem
+                    &[logo]
+                        border-bottom: 1px solid var(--color)
+                        border-radius: 0
+                @media screen and (max-width: 654px)
+                    display: flex
+                    & > item
+                        min-width: auto
+            &[centered]
+                nav > item
+                    text-align: center
     &[theme="simple"]
         nav
             @media screen and (max-width: 654px)
@@ -95,3 +113,5 @@ navbar
                 position: inherit
                 &[logo]
                     margin-bottom: 15px
+        // @media screen and (max-width: 654px)
+        //     display: none

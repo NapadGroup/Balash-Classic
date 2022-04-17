@@ -35,6 +35,33 @@ navbar[theme=boxed] nav item a:visited {
 navbar[theme=boxed] nav item:hover, navbar[theme=boxed] nav item[active], navbar[theme=boxed] nav item a:hover {
   color: white;
 }
+navbar[theme=boxed][vertical] {
+  display: inline-block;
+}
+navbar[theme=boxed][vertical] nav {
+  display: inline-flex;
+  flex-direction: column;
+}
+navbar[theme=boxed][vertical] nav > item {
+  min-width: 11rem;
+  margin-right: inherit;
+  margin-bottom: 0.35rem;
+}
+navbar[theme=boxed][vertical] nav > item[logo] {
+  border-bottom: 1px solid var(--color);
+  border-radius: 0;
+}
+@media screen and (max-width: 654px) {
+  navbar[theme=boxed][vertical] nav {
+    display: flex;
+  }
+  navbar[theme=boxed][vertical] nav > item {
+    min-width: auto;
+  }
+}
+navbar[theme=boxed][vertical][centered] nav > item {
+  text-align: center;
+}
 @media screen and (max-width: 654px) {
   navbar[theme=simple] nav {
     padding-top: 15px;
