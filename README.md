@@ -8,4 +8,4 @@
 
 ---
 
-**By** [GGroup](https://github.com/GodratGroup) &copy;
+**By** [NapādGroup](https://github.com/NapadGroup) &copy;
