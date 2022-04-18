@@ -3427,11 +3427,12 @@ line right {
   justify-content: flex-end;
 }
 
-.tooltip-box {
+*[tooltip] {
+  --width: -75px;
   position: relative;
 }
-.tooltip-box tooltip {
-  --width: -75px;
+*[tooltip]::before {
+  content: attr(tooltip);
   z-index: 1;
   display: inline-block;
   opacity: 0;
@@ -3450,71 +3451,71 @@ line right {
   min-width: 50px;
   max-width: var(--width);
 }
-.tooltip-box tooltip[top-left] {
+*[tooltip][top-left]::before {
   left: 0;
   transform: none;
   bottom: 100%;
 }
-.tooltip-box tooltip[top-right] {
+*[tooltip][top-right]::before {
   left: auto;
   right: 0;
   transform: none;
   bottom: 100%;
 }
-.tooltip-box tooltip[left] {
+*[tooltip][left]::before {
   left: 0;
   transform: translate(0, 50%);
   bottom: 50%;
 }
-.tooltip-box tooltip[right] {
+*[tooltip][right]::before {
   left: auto;
   right: 0;
   transform: translate(0, 50%);
   bottom: 50%;
 }
-.tooltip-box tooltip[bottom] {
+*[tooltip][bottom]::before {
   bottom: 5%;
 }
-.tooltip-box tooltip[bottom-left] {
+*[tooltip][bottom-left]::before {
   left: 0;
   transform: none;
   bottom: 5%;
 }
-.tooltip-box tooltip[bottom-right] {
+*[tooltip][bottom-right]::before {
   left: auto;
   transform: none;
   right: 0;
   bottom: 5%;
 }
-.tooltip-box:hover > tooltip, .tooltip-box:focus > tooltip {
+*[tooltip]:hover::before, *[tooltip]:focus::before {
   opacity: 1;
   display: inline-block;
   bottom: calc(100% + 10px);
 }
-.tooltip-box:hover > tooltip[top-left], .tooltip-box:focus > tooltip[top-left] {
+*[tooltip]:hover[top-left]::before, *[tooltip]:focus[top-left]::before {
   left: var(--width);
   bottom: calc(100% + 10px);
 }
-.tooltip-box:hover > tooltip[top-right], .tooltip-box:focus > tooltip[top-right] {
+*[tooltip]:hover[top-right]::before, *[tooltip]:focus[top-right]::before {
   right: var(--width);
   bottom: calc(100% + 10px);
 }
-.tooltip-box:hover > tooltip[left], .tooltip-box:focus > tooltip[left] {
+*[tooltip]:hover[left]::before, *[tooltip]:focus[left]::before {
   left: var(--width);
   bottom: 50%;
 }
-.tooltip-box:hover > tooltip[right], .tooltip-box:focus > tooltip[right] {
+*[tooltip]:hover[right]::before, *[tooltip]:focus[right]::before {
   right: var(--width);
   bottom: 50%;
 }
-.tooltip-box:hover > tooltip[bottom], .tooltip-box:focus > tooltip[bottom] {
+*[tooltip]:hover[bottom]::before, *[tooltip]:focus[bottom]::before {
   bottom: calc(-50% - 10px);
 }
-.tooltip-box:hover > tooltip[bottom-left], .tooltip-box:focus > tooltip[bottom-left] {
+*[tooltip]:hover[bottom-left]::before, *[tooltip]:focus[bottom-left]::before {
   left: var(--width);
   bottom: calc(-50% - 10px);
 }
-.tooltip-box:hover > tooltip[bottom-right], .tooltip-box:focus > tooltip[bottom-right] {
+*[tooltip]:hover[bottom-right]::before, *[tooltip]:focus[bottom-right]::before {
   right: var(--width);
   bottom: calc(-50% - 10px);
 }

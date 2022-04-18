@@ -1,7 +1,8 @@
-.tooltip-box
+*[tooltip]
+    --width: -75px
     position: relative
-    tooltip
-        --width: -75px
+    &::before
+        content: attr(tooltip)
         z-index: 1
         display: inline-block
         opacity: 0
@@ -19,56 +20,57 @@
         text-align: center
         min-width: 50px
         max-width: var(--width)
-        &[top-left]
-            left: 0
-            transform: none
-            bottom: 100%
-        &[top-right]
-            left: auto
-            right: 0
-            transform: none
-            bottom: 100%
-        &[left]
-            left: 0
-            transform: translate(0, 50%)
-            bottom: 50%
-        &[right]
-            left: auto
-            right: 0
-            transform: translate(0, 50%)
-            bottom: 50%
-        &[bottom]
-            bottom: 5%
-        &[bottom-left]
-            left: 0
-            transform: none
-            bottom: 5%
-        &[bottom-right]
-            left: auto
-            transform: none
-            right: 0
-            bottom: 5%
-    &:hover > tooltip, &:focus > tooltip
+    &[top-left]::before
+        left: 0
+        transform: none
+        bottom: 100%
+    &[top-right]::before
+        left: auto
+        right: 0
+        transform: none
+        bottom: 100%
+    &[left]::before
+        left: 0
+        transform: translate(0, 50%)
+        bottom: 50%
+    &[right]::before
+        left: auto
+        right: 0
+        transform: translate(0, 50%)
+        bottom: 50%
+    &[bottom]::before
+        bottom: 5%
+    &[bottom-left]::before
+        left: 0
+        transform: none
+        bottom: 5%
+    &[bottom-right]::before
+        left: auto
+        transform: none
+        right: 0
+        bottom: 5%
+    &:hover::before, &:focus::before
         opacity: 1
         display: inline-block
         bottom: calc( 100% + 10px )
-        &[top-left]
+    &:hover, &:focus
+        &[top-left]::before
             left: var(--width)
             bottom: calc( 100% + 10px )
-        &[top-right]
+        &[top-right]::before
             right: var(--width)
             bottom: calc( 100% + 10px )
-        &[left]
+        &[left]::before
             left: var(--width)
             bottom: 50%
-        &[right]
+        &[right]::before
             right: var(--width)
             bottom: 50%
-        &[bottom]
+        &[bottom]::before
             bottom: calc( -50% + -10px )
-        &[bottom-left]
+        &[bottom-left]::before
             left: var(--width)
             bottom: calc( -50% + -10px )
-        &[bottom-right]
+        &[bottom-right]::before
             right: var(--width)
             bottom: calc( -50% + -10px )
