@@ -2,9 +2,8 @@ tabs {
   display: flex;
 }
 tabs tab {
-  padding: 5px;
   flex: 0 1 auto;
-  padding: 5px 7.5px;
+  padding: 7.5px 12px;
   transition-duration: 200ms;
 }
 tabs tab a:hover, tabs tab[active] {
@@ -25,12 +24,15 @@ tabs[theme=modern] tab[active], tabs[theme=modern] tab:hover {
 }
 tabs[theme=box] tab {
   border-bottom: 1.5px #757575 solid;
-}
-tabs[theme=box] tab[active], tabs[theme=box] tab:hover {
-  border: 1.5px #757575 solid;
-  border-bottom: none;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+tabs[theme=box] tab[active] {
+  border: 1.5px #757575 solid;
+  border-bottom: none;
+}
+tabs[theme=box] tab:hover {
+  box-shadow: inset 0 0.5px 0 1px rgba(255, 255, 255, 0.2);
 }
 tabs[theme=toggle] tab {
   border: 1.5px #9e9e9e solid;
