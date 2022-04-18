@@ -3538,7 +3538,7 @@ dropdown {
   position: relative;
   display: inline-block;
 }
-dropdown drop {
+dropdown drops {
   z-index: 10;
   min-width: 100px;
   transition: 250ms;
@@ -3552,18 +3552,18 @@ dropdown drop {
   flex-direction: column;
   padding: 5px 7.5px;
 }
-dropdown drop item {
-  padding: 2px 5px;
+dropdown drops item {
+  padding: 3px 7.5px;
   border-radius: 1px;
   transition: 50ms;
   margin-bottom: 2px;
   color: #000;
 }
-dropdown drop item:hover {
+dropdown drops item:hover {
   background-color: var(--secondary-color);
   color: #fff;
 }
-dropdown:hover drop {
+dropdown:hover drops {
   opacity: 1;
   visibility: visible;
 }
