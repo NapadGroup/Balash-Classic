@@ -2767,6 +2767,165 @@ contents content[active] {
   display: inline-block;
 }
 
+body[loading] {
+  position: relative;
+}
+body[loading]::before {
+  z-index: 2000;
+  content: " ";
+  position: fixed;
+}
+body[loading][loading=spinner]::before {
+  top: 45vh;
+  left: 47vw;
+  width: 72px;
+  height: 72px;
+  border-top: 3px solid var(--primary-color);
+  border-right: 3px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: rotation 3s forwards linear;
+  animation: rotation 3s forwards linear;
+}
+body[loading][loading=simple-spinner]::before {
+  top: 45vh;
+  left: 47vw;
+  width: 72px;
+  height: 72px;
+  border: 3px solid red;
+  border-color: transparent;
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  -webkit-animation: rotation 3s forwards linear;
+  animation: rotation 3s forwards linear;
+}
+body[loading][loading=spinner]::after, body[loading][loading=simple-spinner]::after {
+  content: "";
+  z-index: 1999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-primary-color);
+  -webkit-animation: fide-out 3s forwards ease-in-out;
+  animation: fide-out 3s forwards ease-in-out;
+}
+body[loading][loading=bar]::before {
+  height: 10px;
+  left: 0;
+  top: 0;
+  background: var(--primary-color);
+  -webkit-animation: width-animate 2s forwards linear;
+  animation: width-animate 2s forwards linear;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    opacity: 100%;
+  }
+  25% {
+    transform: rotate(360deg);
+    opacity: 100%;
+  }
+  50% {
+    transform: rotate(720deg);
+    opacity: 100%;
+  }
+  75% {
+    transform: rotate(1080deg);
+    opacity: 100%;
+  }
+  90% {
+    transform: rotate(1440deg);
+    opacity: 80%;
+  }
+  95% {
+    opacity: 40%;
+  }
+  100% {
+    transform: rotate(1800deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    opacity: 100%;
+  }
+  25% {
+    transform: rotate(360deg);
+    opacity: 100%;
+  }
+  50% {
+    transform: rotate(720deg);
+    opacity: 100%;
+  }
+  75% {
+    transform: rotate(1080deg);
+    opacity: 100%;
+  }
+  90% {
+    transform: rotate(1440deg);
+    opacity: 80%;
+  }
+  95% {
+    opacity: 40%;
+  }
+  100% {
+    transform: rotate(1800deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fide-out {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fide-out {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes width-animate {
+  0% {
+    width: 0;
+    opacity: 100%;
+  }
+  90% {
+    width: 100%;
+    opacity: 80%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+@keyframes width-animate {
+  0% {
+    width: 0;
+    opacity: 100%;
+  }
+  90% {
+    width: 100%;
+    opacity: 80%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
 blockquote {
   text-indent: 10px;
   display: inline-flex;
