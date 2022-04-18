@@ -55,10 +55,6 @@
   opacity: 0.8;
 }
 *:before, *:after, * {
-  box-sizing: inherit;
-}
-
-html {
   box-sizing: border-box;
 }
 
