@@ -13,13 +13,9 @@ pagi
         &:first-child
             border-top-left-radius: 5px
             border-bottom-left-radius: 5px
-            &::before
-             content: "<"
         &:last-child
             border-top-right-radius: 5px
             border-bottom-right-radius: 5px
-            &::before
-             content: ">"
         &[active]
             background-color: var(--primary-color)
             color: white
@@ -36,5 +32,7 @@ pagi
         &:hover:not(&[active], &[disable])
             z-index: 2
             background-color: rgba(0, 0, 0, .2)
+            &[dark]
+                background-color: rgba(255, 255, 255, .2)
         &:not(&:first-child)
             border-left: none

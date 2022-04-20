@@ -14,15 +14,9 @@ pagi item:first-child {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-pagi item:first-child::before {
-  content: "<";
-}
 pagi item:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-}
-pagi item:last-child::before {
-  content: ">";
 }
 pagi item[active] {
   background-color: var(--primary-color);
@@ -44,6 +38,9 @@ pagi item[disable] {
 pagi item:hover:not(pagi item[active], pagi item[disable]) {
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.2);
+}
+pagi item:hover:not(pagi item[active], pagi item[disable])[dark] {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 pagi item:not(pagi item:first-child) {
   border-left: none;
