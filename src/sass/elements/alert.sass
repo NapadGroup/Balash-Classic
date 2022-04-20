@@ -10,16 +10,19 @@ alert
     padding: 15px
     visibility: hidden
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .2)
-    overflow: scroll
-    &:target
+    overflow-x: hidden
+    overflow-y: auto
+    animation: alert-close .5s
+    &:target, &[active]
         width: 80%
         max-width: 520px
         min-height: 200px
-        max-height: 300px
+        max-height: 65vh
         border-radius: 5px
         visibility: visible
-        animation: alert 1 .5s
+        animation: alert 1 .5s ease-in-out forwards
         a[close]
+            cursor: pointer
             position: absolute
             padding: auto
             display: inline-flex
@@ -36,7 +39,10 @@ alert
             &::before
                 content: "\00D7"
                 color: #000
-
+            &[dark]
+                background: rgba(255, 255, 255, .5)
+                &::before
+                    color: #fff
 
 @keyframes alert
     0%
@@ -55,4 +61,20 @@ alert
         width: 80%
         max-width: 520px
         min-height: 200px
-        max-height: 300px
+        max-height: 65vh
+
+@keyframes alert-close
+    0%
+        width: 80%
+        max-width: 520px
+        min-height: 200px
+        max-height: 65vh
+        transform: translate(-50%, 0)
+        opacity: 1
+    100%
+        width: 80%
+        max-width: 520px
+        min-height: 200px
+        max-height: 65vh
+        transform: translate(-50%, -50vh)
+        opacity: 0

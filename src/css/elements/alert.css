@@ -11,19 +11,23 @@ alert {
   padding: 15px;
   visibility: hidden;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-animation: alert-close 0.5s;
+  animation: alert-close 0.5s;
 }
-alert:target {
+alert:target, alert[active] {
   width: 80%;
   max-width: 520px;
   min-height: 200px;
-  max-height: 300px;
+  max-height: 65vh;
   border-radius: 5px;
   visibility: visible;
-  -webkit-animation: alert 1 0.5s;
-  animation: alert 1 0.5s;
+  -webkit-animation: alert 1 0.5s ease-in-out forwards;
+  animation: alert 1 0.5s ease-in-out forwards;
 }
-alert:target a[close] {
+alert:target a[close], alert[active] a[close] {
+  cursor: pointer;
   position: absolute;
   padding: auto;
   display: inline-flex;
@@ -38,9 +42,15 @@ alert:target a[close] {
   right: 0;
   border-radius: 50%;
 }
-alert:target a[close]::before {
+alert:target a[close]::before, alert[active] a[close]::before {
   content: "×";
   color: #000;
+}
+alert:target a[close][dark], alert[active] a[close][dark] {
+  background: rgba(255, 255, 255, 0.5);
+}
+alert:target a[close][dark]::before, alert[active] a[close][dark]::before {
+  color: #fff;
 }
 
 @-webkit-keyframes alert {
@@ -64,7 +74,7 @@ alert:target a[close]::before {
     width: 80%;
     max-width: 520px;
     min-height: 200px;
-    max-height: 300px;
+    max-height: 65vh;
   }
 }
 
@@ -89,6 +99,42 @@ alert:target a[close]::before {
     width: 80%;
     max-width: 520px;
     min-height: 200px;
-    max-height: 300px;
+    max-height: 65vh;
+  }
+}
+@-webkit-keyframes alert-close {
+  0% {
+    width: 80%;
+    max-width: 520px;
+    min-height: 200px;
+    max-height: 65vh;
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  100% {
+    width: 80%;
+    max-width: 520px;
+    min-height: 200px;
+    max-height: 65vh;
+    transform: translate(-50%, -50vh);
+    opacity: 0;
+  }
+}
+@keyframes alert-close {
+  0% {
+    width: 80%;
+    max-width: 520px;
+    min-height: 200px;
+    max-height: 65vh;
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  100% {
+    width: 80%;
+    max-width: 520px;
+    min-height: 200px;
+    max-height: 65vh;
+    transform: translate(-50%, -50vh);
+    opacity: 0;
   }
 }
