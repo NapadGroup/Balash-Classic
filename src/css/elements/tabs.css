@@ -31,7 +31,7 @@ tabs[theme=box] tab[active] {
   border: 1.5px #757575 solid;
   border-bottom: none;
 }
-tabs[theme=box] tab:hover {
+tabs[theme=box] tab:hover:not(tabs[theme=box] tab[active]) {
   box-shadow: inset 0 0.5px 0 1px rgba(255, 255, 255, 0.2);
 }
 tabs[theme=toggle] tab {
