@@ -70,6 +70,7 @@ inputbox[icon] input:focus {
 }
 inputbox[disable] {
   color: #616161;
+  pointer-events: none;
 }
 
 input[type=radio] {
@@ -158,6 +159,7 @@ input[type=checkbox][toggle] {
   padding: 2px;
   transition: 250ms;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 input[type=checkbox][toggle]::before {
   content: "";

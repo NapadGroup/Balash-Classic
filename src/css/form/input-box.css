@@ -24,4 +24,5 @@ inputbox[icon] input:focus {
 }
 inputbox[disable] {
   color: #616161;
+  pointer-events: none;
 }
