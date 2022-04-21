@@ -1,6 +1,5 @@
 const { watch } = require('gulp');
 const gulp = require('gulp');
-const ignore = require('gulp-ignore');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
