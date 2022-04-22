@@ -1,4 +1,4 @@
-const { watch } = require('gulp');
+const { watch, series, parallel } = require('gulp');
 const gulp = require('gulp');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass')(require('sass'));
@@ -6,6 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const rtlcss = require('gulp-rtlcss');
 const cssnano = require('gulp-cssnano');
 const rename = require("gulp-rename");
+const zip = require('gulp-zip');
 
 function exportcss() {
   return gulp.src('./src/sass/**/*.sass')
@@ -49,7 +50,14 @@ function buildjs() {
     .pipe(gulp.dest('./build'))
 };
 
+function buildzip() {
+  return gulp.src('./build/**/*')
+    .pipe(zip('GodUi.zip'))
+    .pipe(gulp.dest('./build'))
+}
+
 exports.buildjs = buildjs;
 exports.build = build;
 exports.buildrtl = buildrtl;
-exports.default = build;
+exports.buildzip = buildzip;
+exports.compile, exports.default = gulp.series(exportcss, parallel(build, buildrtl), buildjs, buildzip);
