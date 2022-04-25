@@ -1,4 +1,4 @@
-input:is([type=text], [type=email], [type=password]) {
+input:is([type=text], [type=email], [type=password], input[type=number]) {
   --color: var(--primary-color);
   background-color: var(--bg-scondary-color);
   position: relative;
@@ -14,7 +14,7 @@ input:is([type=text], [type=email], [type=password]) {
   cursor: pointer;
   transition: 150ms;
 }
-input:is([type=text], [type=email], [type=password]):focus {
+input:is([type=text], [type=email], [type=password], input[type=number]):focus {
   outline: none;
   box-shadow: 0 0 2.5px var(--color);
 }
