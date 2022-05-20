@@ -1,0 +1,59 @@
+media
+    display: inline-block
+    width: 85%
+    @media screen and (max-width: 768px)
+        width: 100%
+    &[type="audio"]
+        padding: .1rem .2rem
+        border: 1.5px solid var(--secondary-color)
+        border-radius: .5rem
+        box-shadow: inset 0 0 1px var(--primary-color)
+        div[controls]
+            width: 100%
+            padding: .2rem .5rem
+            display: flex
+            align-items: center
+            justify-content: space-between
+            @media screen and (max-width: 765px)
+                span[time], span[remaintime]
+                    display: none
+            span
+                font-weight: 500
+                color: var(--primary-color)
+                padding: 1px 5px
+                text-align: center
+                width: 100%
+                &[time], &[remaintime]
+                    flex: 2
+                    font-size: .9rem
+                    pointer-events: none
+                &[remaintime]::before
+                    content: "-"
+                &[ply-pus]
+                    flex: 1
+                    font-size: 2rem
+                    transform: translateY(-8%)
+            pgbar
+                position: relative
+                flex: 10
+                border-radius: 3px
+                input[type="range"]
+                    width: 100%
+                    height: 100%
+                    -webkit-appearance: none
+                    position: absolute
+                    z-index: 3
+                    opacity: 0
+            span, input[type="range"]
+                cursor: pointer
+            div[volume]
+                flex: 1
+                padding: 2.5px
+                display: flex
+                align-items: center
+                flex-direction: column
+                transform: translateY(2%)
+                span
+                    text-align: center
+                span[remove]
+                    margin-top: -5px

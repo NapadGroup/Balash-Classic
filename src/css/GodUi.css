@@ -3855,3 +3855,80 @@ ol[style=atter] li::marker, ul[style=atter] li::marker {
   symbols: "ا" "ب" "پ" "ت" "ث" "ج" "چ" "ح" "خ" "د" "ذ" "ر" "ز" "ژ" "س" "ش" "ص" "ض" "ط" "ظ" "ع" "غ" "ف" "ق" "ک" "گ" "ل" "م" "ن" "و" "ه‍" "ی";
   suffix: " )";
 }
+media {
+  display: inline-block;
+  width: 85%;
+}
+@media screen and (max-width: 768px) {
+  media {
+    width: 100%;
+  }
+}
+media[type=audio] {
+  padding: 0.1rem 0.2rem;
+  border: 1.5px solid var(--secondary-color);
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 1px var(--primary-color);
+}
+media[type=audio] div[controls] {
+  width: 100%;
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 765px) {
+  media[type=audio] div[controls] span[time], media[type=audio] div[controls] span[remaintime] {
+    display: none;
+  }
+}
+media[type=audio] div[controls] span {
+  font-weight: 500;
+  color: var(--primary-color);
+  padding: 1px 5px;
+  text-align: center;
+  width: 100%;
+}
+media[type=audio] div[controls] span[time], media[type=audio] div[controls] span[remaintime] {
+  flex: 2;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+media[type=audio] div[controls] span[remaintime]::before {
+  content: "-";
+}
+media[type=audio] div[controls] span[ply-pus] {
+  flex: 1;
+  font-size: 2rem;
+  transform: translateY(-8%);
+}
+media[type=audio] div[controls] pgbar {
+  position: relative;
+  flex: 10;
+  border-radius: 3px;
+}
+media[type=audio] div[controls] pgbar input[type=range] {
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+}
+media[type=audio] div[controls] span, media[type=audio] div[controls] input[type=range] {
+  cursor: pointer;
+}
+media[type=audio] div[controls] div[volume] {
+  flex: 1;
+  padding: 2.5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(2%);
+}
+media[type=audio] div[controls] div[volume] span {
+  text-align: center;
+}
+media[type=audio] div[controls] div[volume] span[remove] {
+  margin-top: -5px;
+}
