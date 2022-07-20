@@ -12,6 +12,7 @@
   left: 50%;
   bottom: 95%;
   transition: 0.5s;
+  -webkit-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
   color: white;
   padding: 5px 10px;
@@ -24,23 +25,27 @@
 }
 *[tooltip][top-left]::before {
   left: 0;
+  -webkit-transform: none;
   transform: none;
   bottom: 100%;
 }
 *[tooltip][top-right]::before {
   left: auto;
   right: 0;
+  -webkit-transform: none;
   transform: none;
   bottom: 100%;
 }
 *[tooltip][left]::before {
   left: 0;
+  -webkit-transform: translate(0, 50%);
   transform: translate(0, 50%);
   bottom: 50%;
 }
 *[tooltip][right]::before {
   left: auto;
   right: 0;
+  -webkit-transform: translate(0, 50%);
   transform: translate(0, 50%);
   bottom: 50%;
 }
@@ -49,11 +54,13 @@
 }
 *[tooltip][bottom-left]::before {
   left: 0;
+  -webkit-transform: none;
   transform: none;
   bottom: 5%;
 }
 *[tooltip][bottom-right]::before {
   left: auto;
+  -webkit-transform: none;
   transform: none;
   right: 0;
   bottom: 5%;

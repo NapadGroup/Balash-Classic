@@ -43,7 +43,8 @@ media[type=audio] div[controls] span[remaintime]::before {
 media[type=audio] div[controls] span[ply-pus] {
   flex: 1;
   font-size: 2rem;
-  transform: translateY(-8%);
+  -webkit-transform: translateY(-5%);
+  transform: translateY(-5%);
 }
 media[type=audio] div[controls] pgbar {
   position: relative;
@@ -67,6 +68,7 @@ media[type=audio] div[controls] div[volume] {
   display: flex;
   align-items: center;
   flex-direction: column;
+  -webkit-transform: translateY(2%);
   transform: translateY(2%);
 }
 media[type=audio] div[controls] div[volume] span {

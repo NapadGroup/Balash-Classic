@@ -796,6 +796,7 @@ input[type=radio]:checked::before {
   height: 60%;
   left: 50%;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 input[type=radio]:focus {
@@ -2658,6 +2659,7 @@ body[theme=center-box] shaft {
   margin: auto;
   border: solid 1px var(--color);
   border-radius: 5px;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 654px) {
@@ -2682,6 +2684,7 @@ body[theme=book]::before {
   position: fixed;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-color: var(--color);
   border-radius: 20px;
@@ -2696,6 +2699,7 @@ body[theme=book]::before {
     position: fixed;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background-color: var(--color2);
     border-radius: 1px;
@@ -2709,6 +2713,7 @@ body[theme=book] shaft {
   position: fixed;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   border-radius: 20px;
   width: 74vw;
@@ -2819,22 +2824,27 @@ body[loading][loading=bar]::before {
 
 @-webkit-keyframes rotation {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     opacity: 100%;
   }
   25% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
     opacity: 100%;
   }
   50% {
+    -webkit-transform: rotate(720deg);
     transform: rotate(720deg);
     opacity: 100%;
   }
   75% {
+    -webkit-transform: rotate(1080deg);
     transform: rotate(1080deg);
     opacity: 100%;
   }
   90% {
+    -webkit-transform: rotate(1440deg);
     transform: rotate(1440deg);
     opacity: 80%;
   }
@@ -2842,6 +2852,7 @@ body[loading][loading=bar]::before {
     opacity: 40%;
   }
   100% {
+    -webkit-transform: rotate(1800deg);
     transform: rotate(1800deg);
     opacity: 0;
   }
@@ -2849,22 +2860,27 @@ body[loading][loading=bar]::before {
 
 @keyframes rotation {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     opacity: 100%;
   }
   25% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
     opacity: 100%;
   }
   50% {
+    -webkit-transform: rotate(720deg);
     transform: rotate(720deg);
     opacity: 100%;
   }
   75% {
+    -webkit-transform: rotate(1080deg);
     transform: rotate(1080deg);
     opacity: 100%;
   }
   90% {
+    -webkit-transform: rotate(1440deg);
     transform: rotate(1440deg);
     opacity: 80%;
   }
@@ -2872,6 +2888,7 @@ body[loading][loading=bar]::before {
     opacity: 40%;
   }
   100% {
+    -webkit-transform: rotate(1800deg);
     transform: rotate(1800deg);
     opacity: 0;
   }
@@ -3034,6 +3051,7 @@ button a:visited, button a:active {
   color: var(--text);
 }
 button:active {
+  -webkit-transform: scale(0.95);
   transform: scale(0.95);
 }
 button[theme=inline] {
@@ -3098,6 +3116,7 @@ button[theme=close]::before {
   /*rtl:raw:transform: translateY(5%)*/
 }
 button[theme=close]:active {
+  -webkit-transform: none;
   transform: none;
   background: rgba(0, 0, 0, 0.6);
 }
@@ -3448,6 +3467,7 @@ alert {
   background-color: var(--bg-secondary-color);
   top: 20vh;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   padding: 15px;
   visibility: hidden;
@@ -3549,6 +3569,7 @@ alert:target a[close][dark]::before, alert[active] a[close][dark]::before {
     max-width: 520px;
     min-height: 200px;
     max-height: 65vh;
+    -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     opacity: 1;
   }
@@ -3557,6 +3578,7 @@ alert:target a[close][dark]::before, alert[active] a[close][dark]::before {
     max-width: 520px;
     min-height: 200px;
     max-height: 65vh;
+    -webkit-transform: translate(-50%, -50vh);
     transform: translate(-50%, -50vh);
     opacity: 0;
   }
@@ -3567,6 +3589,7 @@ alert:target a[close][dark]::before, alert[active] a[close][dark]::before {
     max-width: 520px;
     min-height: 200px;
     max-height: 65vh;
+    -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     opacity: 1;
   }
@@ -3575,6 +3598,7 @@ alert:target a[close][dark]::before, alert[active] a[close][dark]::before {
     max-width: 520px;
     min-height: 200px;
     max-height: 65vh;
+    -webkit-transform: translate(-50%, -50vh);
     transform: translate(-50%, -50vh);
     opacity: 0;
   }
@@ -3643,6 +3667,7 @@ line right {
   left: 50%;
   bottom: 95%;
   transition: 0.5s;
+  -webkit-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
   color: white;
   padding: 5px 10px;
@@ -3655,23 +3680,27 @@ line right {
 }
 *[tooltip][top-left]::before {
   left: 0;
+  -webkit-transform: none;
   transform: none;
   bottom: 100%;
 }
 *[tooltip][top-right]::before {
   left: auto;
   right: 0;
+  -webkit-transform: none;
   transform: none;
   bottom: 100%;
 }
 *[tooltip][left]::before {
   left: 0;
+  -webkit-transform: translate(0, 50%);
   transform: translate(0, 50%);
   bottom: 50%;
 }
 *[tooltip][right]::before {
   left: auto;
   right: 0;
+  -webkit-transform: translate(0, 50%);
   transform: translate(0, 50%);
   bottom: 50%;
 }
@@ -3680,11 +3709,13 @@ line right {
 }
 *[tooltip][bottom-left]::before {
   left: 0;
+  -webkit-transform: none;
   transform: none;
   bottom: 5%;
 }
 *[tooltip][bottom-right]::before {
   left: auto;
+  -webkit-transform: none;
   transform: none;
   right: 0;
   bottom: 5%;
@@ -3900,7 +3931,8 @@ media[type=audio] div[controls] span[remaintime]::before {
 media[type=audio] div[controls] span[ply-pus] {
   flex: 1;
   font-size: 2rem;
-  transform: translateY(-8%);
+  -webkit-transform: translateY(-5%);
+  transform: translateY(-5%);
 }
 media[type=audio] div[controls] pgbar {
   position: relative;
@@ -3924,6 +3956,7 @@ media[type=audio] div[controls] div[volume] {
   display: flex;
   align-items: center;
   flex-direction: column;
+  -webkit-transform: translateY(2%);
   transform: translateY(2%);
 }
 media[type=audio] div[controls] div[volume] span {
