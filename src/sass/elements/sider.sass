@@ -1,0 +1,46 @@
+sider
+    --bg-color: var(--bg-secondary-color)
+    --mark: '»'
+    display: inline-flex
+    min-width: 20%
+    align-items: center
+    flex-direction: column
+    background-color: var(--bg-color)
+    padding: 1.5rem 1rem
+    item
+        width: 100%
+        padding: .2rem .5rem
+        &[logo]
+            padding: .1rem .1rem 1rem .1rem
+        &:not(&[logo], &[footer])
+            cursor: pointer
+    &[theme="minimal"]
+        padding: 0
+        item
+            position: relative
+            &[logo]
+                padding: 1rem
+            &:last-child
+                margin-bottom: 1rem
+            &:first-child
+                margin-top: 1rem
+            &:not(&[logo], &[footer])
+                padding: .5rem 1rem
+                &:hover, &[active]
+                    background-color: rgba(0, 0, 0, 30%)
+        &[w-mark]
+            item[active]::before
+                color: var(--primary-color)
+                content: var(--mark)
+                position: absolute
+                font-size: 24px
+                top: 0
+                right: 5px
+    &[theme="line"]
+        item:not(item[logo], item[footer])
+            width: 90%
+            margin: .25rem 0
+            background-color: rgba(0, 0, 0, 30%)
+            border-radius: 5px
+            &:hover, &[active]
+                background-color: var(--secondary-color)

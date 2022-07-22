@@ -1,0 +1,59 @@
+@charset "UTF-8";
+sider {
+  --bg-color: var(--bg-secondary-color);
+  --mark: "»";
+  display: inline-flex;
+  min-width: 20%;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  padding: 1.5rem 1rem;
+}
+sider item {
+  width: 100%;
+  padding: 0.2rem 0.5rem;
+}
+sider item[logo] {
+  padding: 0.1rem 0.1rem 1rem 0.1rem;
+}
+sider item:not(sider item[logo], sider item[footer]) {
+  cursor: pointer;
+}
+sider[theme=minimal] {
+  padding: 0;
+}
+sider[theme=minimal] item {
+  position: relative;
+}
+sider[theme=minimal] item[logo] {
+  padding: 1rem;
+}
+sider[theme=minimal] item:last-child {
+  margin-bottom: 1rem;
+}
+sider[theme=minimal] item:first-child {
+  margin-top: 1rem;
+}
+sider[theme=minimal] item:not(sider[theme=minimal] item[logo], sider[theme=minimal] item[footer]) {
+  padding: 0.5rem 1rem;
+}
+sider[theme=minimal] item:not(sider[theme=minimal] item[logo], sider[theme=minimal] item[footer]):hover, sider[theme=minimal] item:not(sider[theme=minimal] item[logo], sider[theme=minimal] item[footer])[active] {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+sider[theme=minimal][w-mark] item[active]::before {
+  color: var(--primary-color);
+  content: var(--mark);
+  position: absolute;
+  font-size: 24px;
+  top: 0;
+  right: 5px;
+}
+sider[theme=line] item:not(item[logo], item[footer]) {
+  width: 90%;
+  margin: 0.25rem 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+sider[theme=line] item:not(item[logo], item[footer]):hover, sider[theme=line] item:not(item[logo], item[footer])[active] {
+  background-color: var(--secondary-color);
+}
