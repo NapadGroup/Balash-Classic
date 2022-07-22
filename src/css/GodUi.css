@@ -3872,15 +3872,20 @@ sider {
   background-color: var(--bg-color);
   padding: 1.5rem 1rem;
 }
-sider item {
-  width: 100%;
-  padding: 0.2rem 0.5rem;
-}
 sider item[logo] {
   padding: 0.1rem 0.1rem 1rem 0.1rem;
 }
 sider item:not(sider item[logo], sider item[footer]) {
   cursor: pointer;
+}
+sider item, sider dropdown {
+  width: 100%;
+  padding: 0.2rem 0.5rem;
+}
+sider dropdown drops {
+  top: 0;
+  left: calc(100% + 10px);
+  min-width: 100%;
 }
 sider[theme=minimal] {
   padding: 0;
@@ -3897,10 +3902,10 @@ sider[theme=minimal] item:last-child {
 sider[theme=minimal] item:first-child {
   margin-top: 1rem;
 }
-sider[theme=minimal] item:not(sider[theme=minimal] item[logo], sider[theme=minimal] item[footer]) {
+sider[theme=minimal] item:not(sider[theme=minimal] item[logo], sider[theme=minimal] item[footer], sider[theme=minimal] dropdown[logo], sider[theme=minimal] dropdown[footer]), sider[theme=minimal] dropdown:not(sider[theme=minimal] item[logo], sider[theme=minimal] item[footer], sider[theme=minimal] dropdown[logo], sider[theme=minimal] dropdown[footer]) {
   padding: 0.5rem 1rem;
 }
-sider[theme=minimal] item:not(sider[theme=minimal] item[logo], sider[theme=minimal] item[footer]):hover, sider[theme=minimal] item:not(sider[theme=minimal] item[logo], sider[theme=minimal] item[footer])[active] {
+sider[theme=minimal] item:not(sider[theme=minimal] item[logo], sider[theme=minimal] item[footer], sider[theme=minimal] dropdown[logo], sider[theme=minimal] dropdown[footer]):hover, sider[theme=minimal] item:not(sider[theme=minimal] item[logo], sider[theme=minimal] item[footer], sider[theme=minimal] dropdown[logo], sider[theme=minimal] dropdown[footer])[active], sider[theme=minimal] dropdown:not(sider[theme=minimal] item[logo], sider[theme=minimal] item[footer], sider[theme=minimal] dropdown[logo], sider[theme=minimal] dropdown[footer]):hover, sider[theme=minimal] dropdown:not(sider[theme=minimal] item[logo], sider[theme=minimal] item[footer], sider[theme=minimal] dropdown[logo], sider[theme=minimal] dropdown[footer])[active] {
   background-color: rgba(0, 0, 0, 0.3);
 }
 sider[theme=minimal][w-mark] item[active]::before {
@@ -3911,12 +3916,15 @@ sider[theme=minimal][w-mark] item[active]::before {
   top: 0;
   right: 5px;
 }
-sider[theme=line] item:not(item[logo], item[footer]) {
+sider[theme=line] item:not(item[logo], item[footer]), sider[theme=line] dropdown {
   width: 90%;
   margin: 0.25rem 0;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
 }
-sider[theme=line] item:not(item[logo], item[footer]):hover, sider[theme=line] item:not(item[logo], item[footer])[active] {
+sider[theme=line] item:not(item[logo], item[footer]):hover, sider[theme=line] item:not(item[logo], item[footer])[active], sider[theme=line] dropdown:hover, sider[theme=line] dropdown[active] {
   background-color: var(--secondary-color);
+}
+sider[theme=line] item:not(item[logo], item[footer]) drops, sider[theme=line] dropdown drops {
+  left: calc(100% + 30px);
 }

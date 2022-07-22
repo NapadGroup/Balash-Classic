@@ -8,12 +8,18 @@ sider
     background-color: var(--bg-color)
     padding: 1.5rem 1rem
     item
-        width: 100%
-        padding: .2rem .5rem
         &[logo]
             padding: .1rem .1rem 1rem .1rem
         &:not(&[logo], &[footer])
             cursor: pointer
+    item, dropdown
+        width: 100%
+        padding: .2rem .5rem
+    dropdown
+        drops
+            top: 0
+            left: calc( 100% + 10px )
+            min-width: 100%
     &[theme="minimal"]
         padding: 0
         item
@@ -24,6 +30,7 @@ sider
                 margin-bottom: 1rem
             &:first-child
                 margin-top: 1rem
+        item, dropdown
             &:not(&[logo], &[footer])
                 padding: .5rem 1rem
                 &:hover, &[active]
@@ -37,10 +44,12 @@ sider
                 top: 0
                 right: 5px
     &[theme="line"]
-        item:not(item[logo], item[footer])
+        item:not(item[logo], item[footer]), dropdown
             width: 90%
             margin: .25rem 0
             background-color: rgba(0, 0, 0, 30%)
             border-radius: 5px
             &:hover, &[active]
                 background-color: var(--secondary-color)
+            drops
+                left: calc( 100% + 30px )
