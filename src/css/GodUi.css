@@ -62,9 +62,9 @@ body {
   background-color: var(--bg-primary-color);
 }
 
-/*rtl:raw:@import url(https://lib.arvancloud.com/vazir-font/30.1.0/font-face.min.css);*/
+/*rtl:raw:@import url(https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css);*/
 * {
-  font-family: Arial, "Vazir", Helvetica, -apple-system, Roboto, Oxygen, Ubuntu, "Open Sans", sans-serif /*!rtl: 'Vazir', Arial, Helvetica, -apple-system, Roboto, Oxygen, Ubuntu, 'Open Sans', sans-serif*/;
+  font-family: Arial, Vazirmatn, Helvetica, -apple-system, Roboto, Oxygen, Ubuntu, "Open Sans", sans-serif /*!rtl: Vazirmatn, Arial, Helvetica, -apple-system, Roboto, Oxygen, Ubuntu, 'Open Sans', sans-serif*/;
   direction: ltr /*!rtl: rtl*/;
 }
 
@@ -2626,25 +2626,6 @@ body {
   --bg-color2: var(--bg-primary-color);
   --color: var(--primary-color);
   --color2: var(--secondary-color);
-}
-body[theme=phonix] {
-  padding: 10px;
-}
-@media screen and (min-width: 765px) {
-  body[theme=phonix] {
-    background-color: var(--bg-color);
-  }
-  body[theme=phonix] shaft {
-    display: block;
-    background-color: var(--bg-color2);
-    width: 70%;
-    margin: auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    border: 2.5px solid var(--color);
-    border-radius: 15px;
-    padding: 15px;
-  }
 }
 body[theme=center-box] {
   background-color: var(--bg-color);
